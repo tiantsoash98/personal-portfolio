@@ -25,7 +25,6 @@
     column-gap: var(--column-gap);
 }
 
-
 $columns:(
     auto: 'auto',
     full: '1 / -1',
@@ -44,7 +43,6 @@ $columns:(
 );
 
 .col {
-
     @each $key, $value in $columns {
         &-#{$key} {
             grid-column: unquote($value);

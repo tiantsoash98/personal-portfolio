@@ -2,24 +2,25 @@
     <header class="header pt-10">
         <div class="container">
             <div class="row">
-                <div class="header__logo col-6 col-lg-3">Tiantsoa Rabemananjara</div>
-                <div class="header__availability col-6 col-lg-3">Available for freelance work</div>
-                <div class="header__links-wrapper col-12 col-lg-5 col-start-0 col-start-lg-8">
+                <div class="header__logo col-3 col-md-3">
+                    <NuxtLink to="/">Tiantsoa Rabemananjara</NuxtLink>
+                </div>
+                <div class="header__availability col-3 col-md-3">Available for freelance work</div>
+                <div class="header__links-wrapper col-full col-md-5 col-lg-4 col-start-0 col-start-md-8 col-start-lg-9">
                     <div class="header__link-wrapper">
-                        About
+                        <NuxtLink to="/about">About</NuxtLink>
                     </div>
                     <div class="header__link-wrapper">
-                        Projects
+                        <NuxtLink to="/works">Works</NuxtLink>
                     </div>
                     <div class="header__link-wrapper">
-                        Playground
+                        <NuxtLink to="/playground">Playground</NuxtLink>
                     </div>
                     <div class="header__link-wrapper">
-                        Contact
-                    </div>  
+                        <NuxtLink to="/contact">Contact</NuxtLink>
+                    </div>
                 </div>
             </div>
-            
         </div>
     </header>
 </template>

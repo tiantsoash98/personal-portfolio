@@ -13,6 +13,17 @@ $breakpoints:(
     // Font
     --font-family-primary: 'Neue Montreal', 'Arial', sans-serif;
 
+    // Typography
+    --title-h1: 5.5rem;
+    --title-h2: 4.22rem;
+    --title-h3: 3.1rem;
+    --title-h4: 2.44rem;
+    --title-h5: 1.77rem;
+    --title-h6: 1.33rem;
+    --paragraph-text: 1.25rem;
+    --callout-text: 0.95rem;
+    --footnote-text: 0.88rem;
+
     // Colors
     --color-neutral-0: #ffffff;
     --color-neutral-50: #F3F3F3;
@@ -59,9 +70,9 @@ $breakpoints:(
 
     // Layout
     --container-max-width: 100%;
-    --grid-columns: 12;
+    --grid-columns: 6;
     --column-gap: var(--spacing-4);
-    --container-horizontal-padding: var(--spacing-20);
+    --container-horizontal-padding: var(--spacing-10);
     --section-vertical-padding: var(--spacing-40);
 
     // Z-index
@@ -91,4 +102,22 @@ $breakpoints:(
     --br-min-width-md:    #{map-get($map: $breakpoints, $key: medium) + 1px};
     --br-min-width-sm:    #{map-get($map: $breakpoints, $key: small) + 1px};
     --br-min-width-xxs:   #{map-get($map: $breakpoints, $key: tiny) + 1px};
+}
+
+@media screen and (min-width: 992px) {
+    :root {
+        --grid-columns: 12;
+        --container-horizontal-padding: var(--spacing-20);
+        --section-vertical-padding: var(--spacing-40);
+        
+        --title-h1: 5.5rem;
+        --title-h2: 4.22rem;
+        --title-h3: 3.1rem;
+        --title-h4: 2.44rem;
+        --title-h5: 1.77rem;
+        --title-h6: 1.33rem;
+        --paragraph-text: 1.25rem;
+        --callout-text: 0.95rem;
+        --footnote-text: 0.88rem;
+    }
 }
