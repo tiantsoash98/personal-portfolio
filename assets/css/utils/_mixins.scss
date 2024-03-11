@@ -1,0 +1,109 @@
+// Typography
+@mixin h1 {
+    font-family: var(--font-family-primary);
+    font-size: 5.5rem;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-weight: 400;
+}
+@mixin h2 {
+    font-family: var(--font-family-primary);
+    font-size: 4.22rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-weight: 400;
+}
+@mixin h3 {
+    font-family: var(--font-family-primary);
+    font-size: 3.1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-weight: 400;
+}
+@mixin h4 {
+    font-family: var(--font-family-primary);
+    font-size: 2.44rem;
+    letter-spacing: 0;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+@mixin h5 {
+    font-family: var(--font-family-primary);
+    font-size: 1.77rem;
+    letter-spacing: 0;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+@mixin h6 {
+    font-family: var(--font-family-primary);
+    font-size: 1.33rem;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+@mixin p {  
+    font-family: var(--font-family-primary);
+    font-size: 1.25rem;
+    letter-spacing: 0.015em;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+@mixin callout-text {
+    font-family: var(--font-family-primary);
+    font-size: 0.95em;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+@mixin footnote-text {
+    font-family: var(--font-family-primary);
+    font-size: 0.88em;
+    letter-spacing: 0;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+
+// For media max-width
+@mixin media($breakpoint, $orientation: "") {
+    @if $orientation != "" {
+        @media screen and (max-width: map-get($map: $breakpoints, $key: $breakpoint)) and (orientation: $orientation){
+            @content;
+        }
+    }
+    @else {
+        @media screen and (max-width: map-get($map: $breakpoints, $key: $breakpoint)){
+            @content;
+        }
+    }
+    
+}
+
+// For media min-width
+@mixin media-min-width($breakpoint, $orientation: "") {
+    // Add +1px to value to avoid conflict with max-width on given breakpoint
+    $value: map-get($map: $breakpoints, $key: $breakpoint) + 1;
+
+    @if $orientation != "" {
+        @media screen and (min-width: $value) and (orientation: $orientation){
+            @content;
+        }
+    }
+    @else {
+        @media screen and (min-width: $value){
+            @content;
+        }
+    }
+}
+
+// For media orientation portrait
+@mixin media-portrait(){
+    @media screen and (orientation: portrait){
+        @content;
+    }
+}

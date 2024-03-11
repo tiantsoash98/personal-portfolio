@@ -1,0 +1,94 @@
+// Breakpoints
+$breakpoints:(
+    ultra-large: 1920px,
+    extra-large: 1440px,
+    large: 1280px,
+    medium: 991px, // tablet
+    small: 767px, // mobile landscape
+    extra-small: 576px, // mobile portrait
+    tiny: 320px, // tiny screens
+);
+
+:root {
+    // Font
+    --font-family-primary: 'Neue Montreal', 'Arial', sans-serif;
+
+    // Colors
+    --color-neutral-0: #ffffff;
+    --color-neutral-50: #F3F3F3;
+    --color-neutral-100: #E7E7E7;
+    --color-neutral-150: #DBDBDB;
+    --color-neutral-200: #D0D0D0;
+    --color-neutral-300: #B8B8B8;
+    --color-neutral-400: #A0A0A0;
+    --color-neutral-500: #898989;
+    --color-neutral-600: #717171;
+    --color-neutral-700: #595959;
+    --color-neutral-800: #414141;
+    --color-neutral-900: #2A2A2A;
+    --color-neutral-950: #121212;
+    --color-earth: #ed5d2f;
+
+    // Spacing
+    --spacing-0: 0rem;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-7: 1.75rem;
+    --spacing-8: 2rem;
+    --spacing-9: 2.25rem;
+    --spacing-10: 2.5rem;
+    --spacing-11: 2.75rem;
+    --spacing-12: 3rem;
+    --spacing-13: 3.25rem;
+    --spacing-14: 3.5rem;
+    --spacing-15: 3.75rem;
+    --spacing-16: 4rem;
+    --spacing-17: 4.25rem;
+    --spacing-18: 4.5rem;
+    --spacing-19: 4.75rem;
+    --spacing-20: 5rem; // 80px
+    --spacing-30: 7.5rem; // 120px
+    --spacing-40: 10rem; // 160px
+    --spacing-50: 12.5rem; // 200px
+    --spacing-60: 15rem; // 240px
+    --spacing-64: 16rem; // 264px
+
+    // Layout
+    --container-max-width: 100%;
+    --grid-columns: 12;
+    --column-gap: var(--spacing-4);
+    --container-horizontal-padding: 3vw;
+    --section-vertical-padding: var(--spacing-40);
+
+    // Z-index
+    --z-index-loader: 1000;
+    --z-index-nav: 100;
+    --z-index-menu: 90;
+
+    // Easing
+    --default-ease: '.43,.194,.021,1';
+    --alias-default-ease: cubic-bezier(.43,.195,.02,1);
+
+    // Navbar 
+    --default-show-nav-menu-breakpoint: 991px;
+
+    // Breakpoints
+    --br-xxl:   #{map-get($map: $breakpoints, $key: ultra-large)};
+    --br-xl:    #{map-get($map: $breakpoints, $key: extra-large)};
+    --br-lg:    #{map-get($map: $breakpoints, $key: large)};
+    --br-md:    #{map-get($map: $breakpoints, $key: medium)};
+    --br-sm:    #{map-get($map: $breakpoints, $key: small)};
+    --br-xxs:   #{map-get($map: $breakpoints, $key: tiny)};
+
+    // Min width values
+    --br-min-width-xxl:   #{map-get($map: $breakpoints, $key: ultra-large) + 1px};
+    --br-min-width-xl:    #{map-get($map: $breakpoints, $key: extra-large) + 1px};
+    --br-min-width-lg:    #{map-get($map: $breakpoints, $key: large) + 1px};
+    --br-min-width-md:    #{map-get($map: $breakpoints, $key: medium) + 1px};
+    --br-min-width-sm:    #{map-get($map: $breakpoints, $key: small) + 1px};
+    --br-min-width-xxs:   #{map-get($map: $breakpoints, $key: tiny) + 1px};
+}
