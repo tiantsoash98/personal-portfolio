@@ -25,61 +25,78 @@
     column-gap: var(--column-gap);
 }
 
-.col {
-    grid-column-end: -1;
 
-    @for $i from 1 through 12 {
-        &-#{$i} {
-            grid-column: auto/span $i;
+$columns:(
+    auto: 'auto',
+    full: '1 / -1',
+    1: 'span 1 / span 1',
+    2: 'span 2 / span 2',
+    3: 'span 3 / span 3',
+    4: 'span 4 / span 4',
+    5: 'span 5 / span 5',
+    6: 'span 6 / span 6',
+    7: 'span 7 / span 7',
+    8: 'span 8 / span 8',
+    9: 'span 9 / span 9',
+    10: 'span 10 / span 10',
+    11: 'span 11 / span 11',
+    12: 'span 12 / span 12',
+);
+
+.col {
+
+    @each $key, $value in $columns {
+        &-#{$key} {
+            grid-column: unquote($value);
         }
     }
     @include media-min-width(small) {
-        @for $i from 1 through 12 {
-            &-sm-#{$i} {
-                grid-column: auto/span $i;
+        @each $key, $value in $columns {
+            &-sm-#{$key} {
+                grid-column: unquote($value);
             }
         }
     }
     @include media-min-width(medium) {
-        @for $i from 1 through 12 {
-            &-md-#{$i} {
-                grid-column: auto/span $i;
+        @each $key, $value in $columns {
+            &-md-#{$key} {
+                grid-column: unquote($value);
             }
         }
     }
     @include media-min-width(large) {
-        @for $i from 1 through 12 {
-            &-lg-#{$i} {
-                grid-column: auto/span $i;
+        @each $key, $value in $columns {
+            &-lg-#{$key} {
+                grid-column: unquote($value);
             }
         }
     }
 }
 
-.offset {
+.col-start {
     @for $i from 1 through 12 {
         &-#{$i} {
-            grid-column-start: $i + 1;
+            grid-column-start: $i;
         }
     }
     @include media-min-width(small) {
         @for $i from 1 through 12 {
             &-sm-#{$i} {
-                grid-column-start: $i + 1;
+                grid-column-start: $i;
             }
         }
     }
     @include media-min-width(medium) {
         @for $i from 1 through 12 {
             &-md-#{$i} {
-                grid-column-start: $i + 1;
+                grid-column-start: $i;
             }
         }
     }
     @include media-min-width(large) {
         @for $i from 1 through 12 {
             &-lg-#{$i} {
-                grid-column-start: $i + 1;
+                grid-column-start: $i;
             }
         }
     } 
