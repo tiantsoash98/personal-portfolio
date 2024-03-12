@@ -50,8 +50,8 @@ onMounted(() => {
         position: absolute;
         bottom: 0%;
         left: 0%;
-        width: 100vw;
-        height: 70vw;
+        width: 100%;
+        height: min(100vh, 100vw);
         transform: translateY(50%);
     }
     &__main-wrapper {

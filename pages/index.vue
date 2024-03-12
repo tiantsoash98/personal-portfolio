@@ -20,6 +20,10 @@
         <section class="section featured-works" id="featured-works">
             <FeaturedWorksMarquee/>
             <FeaturedWorksList/>
+            <!-- <div class="home-featured-works__playground">
+                <ButtonSecondary text="Explore the playground" :hasIcon="true"/>
+            </div> -->
+            
         </section>
     </div>
 </template>
@@ -38,5 +42,12 @@
             align-items: flex-start;
         }
     }    
+    &-featured-works {
+        &__playground {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 </style>
