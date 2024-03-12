@@ -30,7 +30,7 @@
             description="A beautiful website dedicated to exploring the beauty of shapes"
             :roles="['Art Direction', 'Web Design', 'Web Development']"
             year="2023"
-            img-src="/Volumen.jpg"
+            img-src="/Traveller.jpg"
             :is-inverted="false"
         />
     </div>

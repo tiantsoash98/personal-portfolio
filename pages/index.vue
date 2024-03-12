@@ -20,10 +20,9 @@
         <section class="section featured-works" id="featured-works">
             <FeaturedWorksMarquee/>
             <FeaturedWorksList/>
-            <!-- <div class="home-featured-works__playground">
-                <ButtonSecondary text="Explore the playground" :hasIcon="true"/>
+            <!-- <div class="featured-works-list__ellipse-wrapper">
+                <div class="ellipse-decor"></div>
             </div> -->
-            
         </section>
     </div>
 </template>
