@@ -28,7 +28,7 @@ const props = defineProps({
 .button-secondary{
     $root:&;
     border-radius: var(--spacing-20);
-    border: 1px solid var(--color-neutral-400);
+    // border: 1px solid var(--color-neutral-400);
 
     &:hover {
         #{$root}__frame  {
@@ -47,7 +47,7 @@ const props = defineProps({
         width: 100%;
         height: 100%; 
         border-radius: var(--spacing-20);
-        background-color: transparent;
+        background-color: var(--color-neutral-900);
         transition: transform var(--default-animation-duration) var(--alias-default-ease); 
     }
     &__content-wrapper {

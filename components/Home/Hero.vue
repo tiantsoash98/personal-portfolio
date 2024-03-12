@@ -1,5 +1,5 @@
 <template>
-    <div class="hero pb-16">
+    <div class="hero pb-12 pt-12">
         <div class="hero__ellipse-wrapper">
             <div class="ellipse-decor"></div>
         </div>

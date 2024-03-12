@@ -36,7 +36,6 @@
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw;
 
     &__links-wrapper {
         display: flex;
