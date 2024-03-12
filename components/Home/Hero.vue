@@ -72,9 +72,6 @@ onMounted(() => {
         width: 100%;
         display: flex;
     }
-    &__social {
-        text-transform: uppercase;
-    }
     &__timezone {
         text-align: right;
     }

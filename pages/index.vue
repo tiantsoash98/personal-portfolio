@@ -23,6 +23,7 @@
             </div>
         </section>
         <HomeWorkProcess/>
+        <HomeTestimonials/>
     </div>
 </template>
 

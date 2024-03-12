@@ -31,7 +31,7 @@
 
 <style lang="scss" scoped>
 .header {
-    position: absolute;
+    position: fixed;
     z-index: var(--z-index-nav);
     top: 0;
     left: 0;

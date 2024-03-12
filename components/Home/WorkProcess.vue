@@ -6,10 +6,10 @@
                 <h3 class="work-process__label col-full col-md-6 paragraph-text">My work process</h3>
                 <p class="work-process__label col-full col-md-6 title-h3">A clear process is the key to successful projects. These five steps are what I closely follow to create high-quality products.</p>
             </div>
-            <div class="work-process__items-wrapper row mt-30" role="list">
-                <div class="work-process__ellipse-wrapper">
-                    <div class="ellipse-decor"></div>
-                </div>
+            <div class="work-process__ellipse-wrapper">
+                <div class="ellipse-decor"></div>
+            </div>
+            <div class="work-process__items-wrapper row mt-40" role="list">  
                 <HomeWorkProcessItem
                     role="listitem" 
                     :index="'01'"
@@ -58,12 +58,12 @@
 .work-process{
     &__ellipse-wrapper {
         position: absolute;
-        top: 0%;
+        bottom: 0%;
         right: 0%;
-        transform: translate(60%, -20%);
+        transform: translate(60%, 25%);
         z-index: -1;
         width: 80vw;
-        height: 110vh;
+        height: 100vh;
     }
     &__items-wrapper {
         row-gap: var(--spacing-20);

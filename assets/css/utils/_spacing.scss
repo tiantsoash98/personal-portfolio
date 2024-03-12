@@ -126,6 +126,9 @@ $columns:(
     &-40 { #{$type}-#{$direction}: var(--spacing-40); }
     &-50 { #{$type}-#{$direction}: var(--spacing-50); }
     &-60 { #{$type}-#{$direction}: var(--spacing-60); }
+    &-64 { #{$type}-#{$direction}: var(--spacing-64); }
+    &-96 { #{$type}-#{$direction}: var(--spacing-96); }
+    &-128 { #{$type}-#{$direction}: var(--spacing-128); }
 }
 
 $directions:(

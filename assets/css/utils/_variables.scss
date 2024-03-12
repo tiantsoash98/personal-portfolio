@@ -68,6 +68,8 @@ $breakpoints:(
     --spacing-50: 12.5rem; // 200px
     --spacing-60: 15rem; // 240px
     --spacing-64: 16rem; // 264px
+    --spacing-96: 24rem;
+    --spacing-128: 32rem;
 
     // Layout
     --container-max-width: 100%;
@@ -88,22 +90,6 @@ $breakpoints:(
 
     // Navbar 
     --default-show-nav-menu-breakpoint: 991px;
-
-    // Breakpoints
-    --br-xxl:   #{map-get($map: $breakpoints, $key: ultra-large)};
-    --br-xl:    #{map-get($map: $breakpoints, $key: extra-large)};
-    --br-lg:    #{map-get($map: $breakpoints, $key: large)};
-    --br-md:    #{map-get($map: $breakpoints, $key: medium)};
-    --br-sm:    #{map-get($map: $breakpoints, $key: small)};
-    --br-xxs:   #{map-get($map: $breakpoints, $key: tiny)};
-
-    // Min width values
-    --br-min-width-xxl:   #{map-get($map: $breakpoints, $key: ultra-large) + 1px};
-    --br-min-width-xl:    #{map-get($map: $breakpoints, $key: extra-large) + 1px};
-    --br-min-width-lg:    #{map-get($map: $breakpoints, $key: large) + 1px};
-    --br-min-width-md:    #{map-get($map: $breakpoints, $key: medium) + 1px};
-    --br-min-width-sm:    #{map-get($map: $breakpoints, $key: small) + 1px};
-    --br-min-width-xxs:   #{map-get($map: $breakpoints, $key: tiny) + 1px};
 }
 
 @media screen and (min-width: 992px) {
@@ -112,7 +98,7 @@ $breakpoints:(
         --container-horizontal-padding: var(--spacing-20);
         --section-vertical-padding: var(--spacing-60);
         
-        --title-h1: 5.2rem;
+        --title-h1: 5.1rem;
         --title-h2: 4.22rem;
         --title-h3: 3.1rem;
         --title-h4: 2.44rem;
