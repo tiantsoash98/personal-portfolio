@@ -1,6 +1,8 @@
 <template>
     <div class="hero">
-        <div class="hero__ellipse ellipse-decor"></div>
+        <div class="hero__ellipse-wrapper">
+            <div class="ellipse-decor"></div>
+        </div>
         <div class="hero__main-wrapper container">
             <div class="hero-spacer"></div>
             <div class="hero__content-wrapper row pt-20 pb-20">
@@ -9,21 +11,21 @@
                     <span class="title-h1">Web Designer & Creative Developer helping passionate people grow their businesses</span>
                 </div>
                 <div class="hero__button-wrapper col-full col-lg-4">
-                    <ButtonPrimary :text="'Explore my work'"></ButtonPrimary>
+                    <ButtonPrimary :text="'Explore my work'"/>
                 </div>
             </div>
             <div class="hero__footer row">
-                <div class="col-3 col-lg-3"> 
-
+                <div class="hero__footer-item col-3 col-lg-3"> 
+                    <IconArrowDown class="hero__arrow"/>
                 </div>
-                <div class="col-full col-md-6 col-lg-6">
+                <div class="hero__footer-item col-full col-md-6 col-lg-6">
                     <ul class="hero__socials-wrapper">
                         <li class="hero__social"><a class="hover-link" href="#">Email</a></li>
                         <li class="hero__social ml-8"><a class="hover-link" href="#">Linkedin</a></li>
                         <li class="hero__social ml-8"><a class="hover-link" href="#">Instagram</a></li>
                     </ul>
                 </div>
-                <div class="hero__timezone col-full col-md-6 col-lg-3">
+                <div class="hero__footer-item hero__timezone col-full col-md-6 col-lg-3">
                     <span>Local time {{ localTime }}</span>
                 </div>
             </div>
@@ -44,16 +46,14 @@ onMounted(() => {
 .hero {
     height: calc(100vh - 4rem);
 
-    &__ellipse {
+    &__ellipse-wrapper {
         position: absolute;
-        z-index: -1;
-        top: 40%;
-        left: -5%;
+        bottom: 0%;
+        left: 0%;
         width: 100vw;
-        height: 70vw;
-        opacity: 0.4;
-        background: radial-gradient(closest-side, var(--color-earth) 0%, rgba(var(--color-neutral-950-rgb), 0) 90%);
-        border-radius: 50%;
+        height: 75vw;
+        transform: translate(0%, 50%);
+        overflow: hidden;
     }
     &__main-wrapper {
         height: 100%;
@@ -66,6 +66,9 @@ onMounted(() => {
         justify-content: flex-end;
         align-items: flex-end;
     }
+    &__footer-item {
+        align-self: end;
+    }
     &__socials-wrapper {
         width: 100%;
         display: flex;
@@ -75,6 +78,9 @@ onMounted(() => {
     }
     &__timezone {
         text-align: right;
+    }
+    &__arrow {
+        width: 4rem;
     }
 }
 </style>
