@@ -1,5 +1,6 @@
 <template>
     <div class="hero">
+        <div class="hero__ellipse ellipse-decor"></div>
         <div class="hero__main-wrapper container">
             <div class="hero-spacer"></div>
             <div class="hero__content-wrapper row">
@@ -41,8 +42,20 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .hero {
-    height: calc(100vh - 7rem);
+    height: calc(100vh - 4rem);
 
+    &__ellipse {
+        position: absolute;
+        z-index: -1;
+        top: 37%;
+        left: 0%;
+        transform: scaleX(1.2);
+        width: 80vw;
+        height: 70vw;
+        opacity: 0.4;
+        background: radial-gradient(closest-side, var(--color-earth) 0%, rgba(var(--color-neutral-950-rgb), 0) 90%);
+        border-radius: 50%;
+    }
     &__main-wrapper {
         height: 100%;
         display: flex;

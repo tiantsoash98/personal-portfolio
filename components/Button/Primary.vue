@@ -2,11 +2,11 @@
     <div class="button button--large button-primary">
         <div class="button-primary__frame"></div>
         <div class="button-primary__content-wrapper">
-            <div class="button-primary__text-wrapper overflow-hidden">
+            <div class="button-primary__item-wrapper">
                 <div class="button-primary__text button-primary__text--main">{{ text }}</div>
                 <div class="button-primary__text button-primary__text--hover">{{ text }}</div>
             </div>
-            <div class="button-primary__icon-wrapper overflow-hidden">
+            <div class="button-primary__item-wrapper">
                 <IconArrowDown class="button-primary__icon button-primary__icon--main"/>
                 <IconArrowDown class="button-primary__icon button-primary__icon--hover"/>
             </div>
@@ -52,6 +52,10 @@ const props = defineProps({
         align-items: center;
         gap: var(--spacing-4);
     }
+    &__item-wrapper {
+        overflow: hidden;
+        display: flex;
+    }
     &__text {
         transition: transform var(--default-animation-duration) var(--alias-default-ease); 
 
@@ -59,9 +63,6 @@ const props = defineProps({
             position: absolute;
             top: 100%;
         }
-    }
-    &__icon-wrapper {
-        display: flex;
     }
     &__icon {
         width: 0.9rem;
