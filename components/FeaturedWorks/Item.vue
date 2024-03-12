@@ -3,7 +3,6 @@
         <div class="container">
             <div class="row">
                 <div :class="contentWrapperFullClass">
-                    <!-- <div class="featured-works-item__index footnote-text">{{ index }}</div> -->
                     <div class="featured-works-item__main-infos">
                         <div class="featured-works-item__title">{{ title }}</div>
                         <div class="featured-works-item__title title-h4 mt-2">{{ description }}</div>

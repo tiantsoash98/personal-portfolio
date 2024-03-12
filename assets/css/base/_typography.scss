@@ -60,15 +60,13 @@
     line-height: 1.5;
     font-weight: 400;
 }
-
 @mixin p {  
     font-family: var(--font-family-primary);
     font-size: var(--paragraph-text);
-    letter-spacing: 0.015em;
+    letter-spacing: 0;
     line-height: 1.5;
     font-weight: 400;
 }
-
 @mixin callout-text {
     font-family: var(--font-family-primary);
     font-size: var(--callout-text);
@@ -76,7 +74,6 @@
     line-height: 1.5;
     font-weight: 400;
 }
-
 @mixin footnote-text {
     font-family: var(--font-family-primary);
     font-size: var(--footnote-text);
@@ -106,7 +103,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body {
