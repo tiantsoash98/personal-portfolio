@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div :class="contentWrapperFullClass">
-                    <div class="featured-works-item__index footnote-text"></div>
+                    <!-- <div class="featured-works-item__index footnote-text">{{ index }}</div> -->
                     <div class="featured-works-item__main-infos">
                         <div class="featured-works-item__title">{{ title }}</div>
                         <div class="featured-works-item__title title-h4 mt-2">{{ description }}</div>
@@ -71,7 +71,7 @@ const imgWrapperFullClass = computed(() => {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        gap: var(--spacing-14);
+        gap: var(--spacing-12);
     }
     &__second-infos {
         width: 100%;

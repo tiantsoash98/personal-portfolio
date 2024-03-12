@@ -3,7 +3,7 @@
         <FeaturedWorksItem 
             role="listitem" 
             class="mb-40"
-            index="01 - 03"
+            index="01"
             title="Volumen"
             description="A beautiful website dedicated to exploring the beauty of shapes"
             :roles="['Art Direction', 'Web Design', 'Web Development']"
@@ -14,18 +14,18 @@
         <FeaturedWorksItem 
             role="listitem" 
             class="mb-40"
-            index="02 - 03"
+            index="02"
             title="Adoba"
             description="A super clean website for a 3D visualization architecture studio"
             :roles="['Art Direction', 'Web Design', 'Web Development']"
             year="2024"
-            img-src="/Volumen.jpg"
+            img-src="/Adoba.jpg"
             :is-inverted="true"
         />
         <FeaturedWorksItem 
             role="listitem" 
             class="mb-40"
-            index="03 - 03"
+            index="03"
             title="Traveller"
             description="A beautiful website dedicated to exploring the beauty of shapes"
             :roles="['Art Direction', 'Web Design', 'Web Development']"
