@@ -1,5 +1,5 @@
 <template>
-    <div class="hero">
+    <div class="hero pb-16">
         <div class="hero__ellipse-wrapper">
             <div class="ellipse-decor"></div>
         </div>
@@ -44,16 +44,15 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .hero {
-    height: calc(100vh - 4rem);
+    height: 100vh;
 
     &__ellipse-wrapper {
         position: absolute;
         bottom: 0%;
         left: 0%;
         width: 100vw;
-        height: 75vw;
-        transform: translate(0%, 50%);
-        overflow: hidden;
+        height: 70vw;
+        transform: translateY(50%);
     }
     &__main-wrapper {
         height: 100%;
