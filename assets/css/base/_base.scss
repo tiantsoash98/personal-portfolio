@@ -23,10 +23,6 @@ body {
     color: var(--color-neutral-150);
 }
 
-.no-scroll {
-    overflow: hidden;
-}
-
 a {
     text-decoration: none;
     color: var(--color-neutral-150);
@@ -55,4 +51,8 @@ button {
 
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
+}
+
+svg {
+    fill: currentColor;
 }

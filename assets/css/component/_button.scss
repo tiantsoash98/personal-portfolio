@@ -1,0 +1,7 @@
+.button{
+    cursor: pointer;
+
+    &--large {
+        padding: var(--spacing-4) var(--spacing-8);
+    }
+}

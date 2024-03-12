@@ -8,11 +8,11 @@
                     <span class="title-h1">Web Designer & Creative Developer helping passionate people grow their businesses</span>
                 </div>
                 <div class="hero__button-wrapper col-full col-lg-4">
-                    <Button :text="'Explore my work'"></Button>
+                    <ButtonPrimary :text="'Explore my work'"></ButtonPrimary>
                 </div>
             </div>
             <div class="hero__footer row">
-                <div class="col-3 col-lg-3">
+                <div class="col-3 col-lg-3"> 
 
                 </div>
                 <div class="col-full col-md-6 col-lg-6">
@@ -50,8 +50,9 @@ onMounted(() => {
         justify-content: space-between;
     }
     &__button-wrapper {
-        text-align: right;
-        align-self: flex-end;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
     &__socials-wrapper {
         width: 100%;

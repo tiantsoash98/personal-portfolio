@@ -81,6 +81,7 @@ $breakpoints:(
     --z-index-menu: 90;
 
     // Easing
+    --default-animation-duration: 0.9s;
     --default-ease: '.43,.194,.021,1';
     --alias-default-ease: cubic-bezier(.43,.195,.02,1);
 
