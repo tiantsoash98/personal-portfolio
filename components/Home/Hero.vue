@@ -3,7 +3,7 @@
         <div class="hero__ellipse ellipse-decor"></div>
         <div class="hero__main-wrapper container">
             <div class="hero-spacer"></div>
-            <div class="hero__content-wrapper row">
+            <div class="hero__content-wrapper row pt-20 pb-20">
                 <div class="hero__headline-wrapper col-full col-lg-8">
                     <h1 class="text-visually-hidden">Web Designer & Creative Developer helping passionate people grow their businesses</h1>
                     <span class="title-h1">Web Designer & Creative Developer helping passionate people grow their businesses</span>
@@ -47,10 +47,9 @@ onMounted(() => {
     &__ellipse {
         position: absolute;
         z-index: -1;
-        top: 37%;
-        left: 0%;
-        transform: scaleX(1.2);
-        width: 80vw;
+        top: 40%;
+        left: -5%;
+        width: 100vw;
         height: 70vw;
         opacity: 0.4;
         background: radial-gradient(closest-side, var(--color-earth) 0%, rgba(var(--color-neutral-950-rgb), 0) 90%);
