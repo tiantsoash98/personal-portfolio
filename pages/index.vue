@@ -23,7 +23,7 @@
             </div>
         </section>
         <HomeWorkProcess/>
-        <HomeTestimonials/>
+        <TestimonialsMain/>
     </div>
 </template>
 

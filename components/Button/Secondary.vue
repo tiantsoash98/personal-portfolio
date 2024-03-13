@@ -1,14 +1,16 @@
 <template>
-    <div class="button button--large button-secondary">
+    <div :class="`button button-secondary button--${size}`">
         <div class="button-secondary__frame"></div>
         <div class="button-secondary__content-wrapper">
-            <div class="button-secondary__item-wrapper">
+            <div class="button-secondary__item-wrapper" v-if="text">
                 <div class="button-secondary__text button-secondary__text--main">{{ text }}</div>
                 <div class="button-secondary__text button-secondary__text--hover">{{ text }}</div>
             </div>
             <div class="button-secondary__item-wrapper" v-if="hasIcon">
-                <IconArrowRight class="button-secondary__icon button-secondary__icon--main"/>
-                <IconArrowRight class="button-secondary__icon button-secondary__icon--hover"/>
+                <IconArrowRight class="button-secondary__icon button-secondary__icon--main" v-if="icon == 'arrow-right'"/>
+                <IconArrowRight class="button-secondary__icon button-secondary__icon--hover" v-if="icon == 'arrow-right'"/>
+                <IconArrowLeft class="button-secondary__icon button-secondary__icon--main" v-if="icon == 'arrow-left'"/>
+                <IconArrowLeft class="button-secondary__icon button-secondary__icon--hover" v-if="icon == 'arrow-left'"/>
             </div>
         </div>
     </div>
@@ -17,9 +19,17 @@
 <script setup>
 const props = defineProps({
     text: String,
+    size: {
+        type: String,
+        default: 'large'
+    },
     hasIcon : {
         type: Boolean,
-        default: false
+        default: false,
+    },
+    icon: {
+        type: String,
+        default: 'arrow-right',
     }
 })
 </script>
@@ -69,7 +79,7 @@ const props = defineProps({
         }
     }
     &__icon {
-        height: 0.9rem;
+        height: var(--button-icon-height);
         transition: transform var(--default-animation-duration) var(--alias-default-ease); 
 
         &--hover {
