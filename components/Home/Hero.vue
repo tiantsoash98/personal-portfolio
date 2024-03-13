@@ -26,7 +26,7 @@
                     </ul>
                 </div>
                 <div class="hero__footer-item hero__timezone col-full col-md-6 col-lg-3">
-                    <span>Local time {{ localTime }}</span>
+                    <span>Local time {{ time }}</span>
                 </div>
             </div>
         </div>
@@ -34,11 +34,15 @@
 </template>
 
 <script setup>
-const localTime = ref("00:00:00 AM GMT+3")
+const { init, destroy } = useInitScript()
+const time = useCurrentTime()
 
 onMounted(() => {
-    const time = useLocalTime()
-    localTime.value = time.data.value
+    init()
+})
+
+onUnmounted(() => {
+    destroy()
 })
 </script>
 

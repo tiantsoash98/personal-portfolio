@@ -1,23 +1,31 @@
-export default ( )=> {
-    const data = ref("00:00:00 AM GMT+3")
-
+export default () => {
     const optionsTime = {
         timeZone: 'Europe/Moscow',
         timeZoneName: 'short',
         hour: '2-digit',
         hour12: 'true',
         minute: 'numeric',
-    };
+    }
 
-    const formatter = new Intl.DateTimeFormat([], optionsTime);
-    updateTime();
-    setInterval(updateTime, 1000);
-
+    const currentTime = useCurrentTime()
+    var interval = null
+    const formatter = new Intl.DateTimeFormat([], optionsTime)
+    
     function updateTime() {
-        data.value = formatter.format(new Date());
+        currentTime.value = formatter.format(new Date())
+    }
+
+    const initLocalTime = () => {
+        updateTime()
+        interval = setInterval(updateTime, 1000)
+    }
+
+    const destroyLocalTime = () => {
+        if(interval)
+            clearInterval(interval)
     }
 
     return {
-        data
+        initLocalTime
     }
 }
