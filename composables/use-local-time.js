@@ -7,12 +7,12 @@ export default () => {
         minute: 'numeric',
     }
 
-    const currentTime = useCurrentTime()
+    const localTimeState = useLocalTimeState()
     var interval = null
     const formatter = new Intl.DateTimeFormat([], optionsTime)
     
     function updateTime() {
-        currentTime.value = formatter.format(new Date())
+        localTimeState.value = formatter.format(new Date())
     }
 
     const initLocalTime = () => {
@@ -26,6 +26,7 @@ export default () => {
     }
 
     return {
-        initLocalTime
+        initLocalTime,
+        destroyLocalTime
     }
 }

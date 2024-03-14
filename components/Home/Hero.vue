@@ -35,7 +35,7 @@
 
 <script setup>
 const { init, destroy } = useInitScript()
-const time = useCurrentTime()
+const time = useLocalTimeState()
 
 onMounted(() => {
     init()

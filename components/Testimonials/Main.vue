@@ -35,14 +35,21 @@
                             content="“En tant que chef de projet, travailler avec Tiantsoa est facile. Particulièrement sur l'aspect UI où il a su être force de proposition pour aboutir à un design agréable et intuitif en prenant en compte les nombreuses contraintes techniques.”"
                         />
                     </swiper-slide>
+                    <swiper-slide>
+                        <TestimonialsItem
+                            name="John Doe"
+                            role="3D Artist"
+                            content="“Franchement, travailler avec Tiantsoa est un plaisir ! Je recommande vivement pour vos projets de site web”"
+                        />
+                    </swiper-slide>
                     <div class="row mt-16">
                         <div class="col-full col-md-5"></div>
                         <div class="swiper__button-wrapper col-full col-md-7">
                             <div class="swiper__button swiper__button--prev">
-                                <ButtonSecondary text="" has-icon="true" size="small"/>
+                                <ButtonSecondary text="" :has-icon="true" size="small"/>
                             </div>
                             <div class="swiper__button swiper__button--next ml-2">
-                                <ButtonSecondary text="" has-icon="true" size="small"/>
+                                <ButtonSecondary text="" :has-icon="true" size="small"/>
                             </div>
                         </div> 
                     </div>
