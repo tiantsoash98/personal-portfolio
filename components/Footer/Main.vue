@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer pt-64">
+    <footer class="footer pt-40">
         <FooterCTA/>
         <FooterActions/>
         <div class="footer__ellipse-wrapper">

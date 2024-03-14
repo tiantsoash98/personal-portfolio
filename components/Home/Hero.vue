@@ -26,7 +26,7 @@
                     </ul>
                 </div>
                 <div class="hero__footer-item hero__timezone col-full col-md-6 col-lg-3">
-                    <span>Local time {{ time }}</span>
+                    <span>Local time {{ localTime }}</span>
                 </div>
             </div>
         </div>
@@ -34,16 +34,7 @@
 </template>
 
 <script setup>
-const { init, destroy } = useInitScript()
-const time = useLocalTimeState()
-
-onMounted(() => {
-    init()
-})
-
-onUnmounted(() => {
-    destroy()
-})
+const localTime = useLocalTimeState()
 </script>
 
 <style lang="scss" scoped>
