@@ -13,6 +13,18 @@
             :roles="['Art Direction', 'Web Design', 'Web Development']"
             :collaborations="['Jamy Rasanda: 3D Artist']"
         />
+        <WorkVideo
+            video="/works/adoba/adoba-main.mp4"
+        />
+        <WorkSection
+            title="Challenge"
+            text="The challenge was to design and develop a website, highlighting the studio’s portfolio through a creative and minimalist approach with an emphasis on engaging animations and micro-interactions."
+        />
+        <WorkImg
+            img="/works/adoba/adoba-screen-1.jpg"
+        />
+        
+        
     </main>
 </template>
 
