@@ -13,7 +13,7 @@
         <div class="work-hero__ellipse-wrapper">
             <div class="ellipse-decor"></div>
         </div>
-        <div class="work-hero__overlay container pb-16">
+        <div class="work-hero__overlay container pb-30">
             <div class="row">
                  <div class="work-hero__content-wrapper col-full col-sm-4 col-md-6 col-lg-4">
                     <h1 class="text-visually-hidden">{{ project }}</h1>
@@ -36,7 +36,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .work-hero {
-    height: 100vh;
+    height: 105vh;
 
     &__img-wrapper {
         height: 100%;

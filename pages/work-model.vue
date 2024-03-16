@@ -3,14 +3,15 @@
         <WorkHero
             project="Adoba"
             description="A super clean website for Adoba - a 3D visualization architecture studio."
-            img="/works/volumen/volumen-hero.jpg"
-            link
+            img="/works/adoba/adoba-hero.jpg"
         />
         <WorkInfo 
-            text="Starting from a personal experiment one tuesday afternoon, where I simply wanted to create a design with a bold title like 'Waka Waka', Volumen evolved into a full-fledged website through collaboration with Jamy Rasanda, 3D Artist."
-            :roles="['Art Direction', 'Web Design', 'Web Development']"
+            text="Adoba is a 3D architectural visualization studio that offers immersive digital solutions and innovative visual experiences in the world of architecture, real estate and construction. They ambition to empower architects and real estate developers by showcasing their projects to potential clients and investors in the most captivating way."
             year="2024"
-            :with="['Art Direction', 'Web Design', 'Web Development']"
+            link="https://adoba.agency/"
+            client="Adoba"
+            :roles="['Art Direction', 'Web Design', 'Web Development']"
+            :collaborations="['Jamy Rasanda: 3D Artist']"
         />
     </main>
 </template>
