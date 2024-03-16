@@ -1,10 +1,10 @@
 <template>
-    <div class="testimonial row">
+    <div class="testimonial row mt-4 mt-md-0">
         <div class="col-full col-md-5">
             <div class="testimonial__name font-medium">{{ name }}</div>
             <div class="testimonial__role">{{ role }}</div>
         </div>
-        <div class="testimonal__content-wrapper col-full col-md-7 mt-6 mt-md-0">
+        <div class="testimonal__content-wrapper col-full col-md-7">
             <div class="testimonial__content title-h4" >{{ content }}</div>
         </div>
     </div>

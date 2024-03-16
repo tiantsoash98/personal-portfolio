@@ -4,7 +4,7 @@
             <div class="border-item"></div>
             <div class="work-process__header-wrapper row mt-16">
                 <h3 class="work-process__label col-full col-md-6 paragraph-text">My work process</h3>
-                <p class="work-process__label col-full col-md-6 title-h3 mt-4 mt-md-0">A clear process is the key to successful projects. These five steps are what I closely follow to create high-quality products.</p>
+                <p class="work-process__label col-full col-md-6 title-h3">A clear process is the key to successful projects. These five steps are what I closely follow to create high-quality products.</p>
             </div>
             <div class="work-process__ellipse-wrapper">
                 <div class="ellipse-decor"></div>

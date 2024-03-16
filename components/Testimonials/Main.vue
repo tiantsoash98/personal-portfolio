@@ -42,7 +42,7 @@
                             content="“Franchement, travailler avec Tiantsoa est un plaisir ! Je recommande vivement pour vos projets de site web”"
                         />
                     </swiper-slide>
-                    <div class="row mt-16">
+                    <div class="row mt-12">
                         <div class="col-full col-md-5"></div>
                         <div class="swiper__button-wrapper col-full col-md-7">
                             <div class="swiper__button swiper__button--prev">

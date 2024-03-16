@@ -6,6 +6,8 @@
                 class="work-hero__img img img-load" 
                 sizes="sm:100vw md:100vw lg:100vw 100vw"
                 :alt="`${project} main image`"
+                width="1920"
+                height="1080"
                 loading="lazy"
             />
         </div>
