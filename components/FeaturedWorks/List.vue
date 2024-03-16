@@ -1,47 +1,30 @@
 <template>
     <div class="featured-works-list mt-40" role="list">
         <FeaturedWorksItem 
+            v-for="(work, index) in works"
+            :key="work.link"
             role="listitem" 
             class="mb-40"
-            index="01"
-            title="Volumen"
-            description="A beautiful website dedicated to exploring the beauty of shapes"
-            :roles="['Art Direction', 'Web Design', 'Web Development']"
-            year="2023"
-            img-src="/Volumen.jpg"
-            :is-inverted="false"
+            :index="fullIndex(index)"
+            :title="work.project"
+            :description="work.description"
+            :roles="work.roles"
+            :year="work.year"
+            :img-src="work.img"
+            :link="work.link"
+            :is-inverted="isEven(index)"
         />
-        <FeaturedWorksItem 
-            role="listitem" 
-            class="mb-40"
-            index="02"
-            title="Adoba"
-            description="A super clean website for a 3D visualization architecture studio"
-            :roles="['Art Direction', 'Web Design', 'Web Development']"
-            year="2024"
-            img-src="/Adoba.jpg"
-            :is-inverted="true"
-        />
-        <FeaturedWorksItem 
-            role="listitem" 
-            class="mb-40"
-            index="03"
-            title="Traveller"
-            description="A beautiful website dedicated to exploring the beauty of shapes"
-            :roles="['Art Direction', 'Web Design', 'Web Development']"
-            year="2023"
-            img-src="/Traveller.jpg"
-            :is-inverted="false"
-        />
-        <div class="featured-works-list__ellipse-wrapper">
-            <div class="ellipse-decor"></div>
-        </div>
     </div>
-    
 </template>
 
 <script setup>
+const works = await queryContent('work')
+    .only(['project', 'description', 'img', 'year', 'roles', 'link'])
+    .limit(3)
+    .find()
 
+const fullIndex = (index) => `0${ index }`
+const isEven = (index) => ((index - 1) % 2) == 0
 </script>
 
 <style lang="scss" scoped>

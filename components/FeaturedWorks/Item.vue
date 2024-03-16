@@ -17,7 +17,9 @@
                             <span class="featured-works-item__year">{{ year }}</span>
                         </div>
                     </div>
-                    <ButtonSecondary text="See case" :hasIcon="true"/>
+                    <NuxtLink :to="link">
+                        <ButtonSecondary text="See case" :hasIcon="true"/>
+                    </NuxtLink>
                 </div>
                 <figure :class="imgWrapperFullClass">
                     <NuxtImg :src="imgSrc" class="img featured-works-item__img"/>
@@ -38,8 +40,9 @@ const props = defineProps({
     title: String,
     description: String,
     roles: Array,
-    year: String,
+    year: Number,
     imgSrc: String,
+    link: String,
     isInverted: Boolean
 })
 
