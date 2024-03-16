@@ -22,7 +22,7 @@
         left: 0%;
         z-index: -1;
         width: 100%;
-        height: min(140vh, 100vw);
+        height: min(130vh, 100vw);
         transform: translateY(50%);
     }
 }

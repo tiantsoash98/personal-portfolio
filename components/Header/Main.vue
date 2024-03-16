@@ -15,7 +15,7 @@
                         <NuxtLink to="/about">About</NuxtLink>
                     </div>
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/works">Works</NuxtLink>
+                        <NuxtLink to="/work-model">Works</NuxtLink>
                     </div>
                     <div class="header__link-wrapper header__hide-on-scroll">
                         <NuxtLink to="/playground">Playground</NuxtLink>

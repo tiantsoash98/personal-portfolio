@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <main class="page">
         <HomeHero/>
         <section class="section home-about">
             <div class="container">
@@ -24,7 +24,7 @@
         </section>
         <HomeWorkProcess/>
         <TestimonialsMain/>
-    </div>
+    </main>
 </template>
 
 <script setup>
