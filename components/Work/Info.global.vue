@@ -6,7 +6,7 @@
                     Project
                 </div>
                 <div class="work-info__wrapper col-full col-md-8 col-lg-6">
-                    <p class="work-info__text title-h5">{{ text }}</p>
+                    <p class="work-info__text title-h5"><ContentSlot unwrap="p"/></p>
                     <div class="work-info__details-wrapper mt-16">
                         <div class="work-info__list-wrapper">
                             <span class="work-info__label callout-text">Roles</span>
@@ -39,8 +39,7 @@
 
 <script setup>
 const props = defineProps({
-    text: String,
-    year: String,
+    year: Number,
     link: String,
     client: String,
     roles: Array,

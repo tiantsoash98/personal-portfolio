@@ -8,6 +8,7 @@
             </NuxtLink>
         </template>
       </ContentDoc>
+      <FeaturedWorksMain/>
     </main>
 </template>  
 

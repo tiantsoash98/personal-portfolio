@@ -6,7 +6,7 @@
                     <h6 class="paragraph-text" v-if="title">{{ title }}</h6>
                 </div>
                 <div class="work-section__text-wrapper col-full col-md-7 col-lg-5">
-                    <p class="work-section__text title-h5">{{ text }}</p>
+                    <p class="work-section__text title-h5"><ContentSlot unwrap="p"/></p>
                 </div>
             </div>
         </div>
@@ -16,7 +16,6 @@
 <script setup>
 const props = defineProps({
     title: String,
-    text: String
 })
 </script>
 

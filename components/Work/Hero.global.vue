@@ -20,8 +20,8 @@
                  <div class="work-hero__content-wrapper col-full col-sm-4 col-md-6 col-lg-4">
                     <h1 class="text-visually-hidden">{{ project }}</h1>
                     <div class="work-hero__title title-h1">{{ project }}</div>
-                    <h2 class="text-visually-hidden">{{ description }}</h2>
-                    <div class="work-hero__description title-h5 mt-4">{{ description }}</div>
+                    <h2 class="text-visually-hidden"><ContentSlot unwrap="p"/></h2>
+                    <div class="work-hero__description title-h5 mt-4"><ContentSlot unwrap="p"/></div>
                  </div>
             </div>
         </div>      
@@ -32,7 +32,6 @@
 const props = defineProps({
     img: String,
     project: String,
-    description: String,
 })
 </script>
 
