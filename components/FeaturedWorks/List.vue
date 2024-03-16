@@ -33,6 +33,9 @@
             img-src="/Traveller.jpg"
             :is-inverted="false"
         />
+        <div class="featured-works-list__ellipse-wrapper">
+            <div class="ellipse-decor"></div>
+        </div>
     </div>
     
 </template>
@@ -42,5 +45,15 @@
 </script>
 
 <style lang="scss" scoped>
-
+.featured-works-list {
+    &__ellipse-wrapper {
+        position: absolute;
+        top: 23%;
+        left: 0%;
+        transform: translateX(-50%);
+        z-index: -1;
+        width: 90vw;
+        height: 90vh;
+    }
+}
 </style>

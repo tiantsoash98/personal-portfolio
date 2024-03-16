@@ -49,8 +49,8 @@ const contentWrapperFullClass = computed(() => {
 })
 
 const imgWrapperFullClass = computed(() => {
-    if(props.isInverted) return "featured-works-item__img-wrapper col-full col-md-6"
-    else return "featured-works-item__img-wrapper col-full col-md-6 col-start-md-7"
+    if(props.isInverted) return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6"
+    else return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6 col-start-md-7"
 })
 </script>
 
@@ -87,9 +87,6 @@ const imgWrapperFullClass = computed(() => {
         opacity: 0.4;
     }
     &__img-wrapper {
-        border-radius: 0.5rem;
-        overflow: hidden;
-
         &:hover {
             #{$root}__img {
                 transform: scale(1);

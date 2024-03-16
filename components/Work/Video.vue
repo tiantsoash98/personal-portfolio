@@ -1,18 +1,18 @@
 <template>
-    <div class="work-video mt-40">
+    <section class="work-video mb-40">
         <div class="container">
             <div class="row">
-                <div class="work-video__wrapper col-full col-md-10 col-start-md-2">
+                <div class="work-video__wrapper img-wrapper img-wrapper--radius col-full col-md-10 col-start-md-2">
                     <video 
                         :src="video" 
                         class="video"
-                        muted loop playsinline
+                        autoplay muted loop playsinline
                     >
                     </video>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
@@ -22,11 +22,5 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.work-video{
-    &__wrapper {
-        width: 100%;
-        border-radius: 1rem;
-        overflow: hidden;
-    }
-}
+
 </style>

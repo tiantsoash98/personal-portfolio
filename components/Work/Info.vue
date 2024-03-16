@@ -1,5 +1,5 @@
 <template>
-    <div class="work-info mt-30">
+    <section class="work-info mt-30 mb-30">
         <div class="container">
             <div class="row">
                 <div class="work-info__section-title col-full col-md-4 col-lg-6">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
