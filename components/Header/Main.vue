@@ -45,7 +45,12 @@
                     </div>
                 </div>
                 <div class="header__menu-wrapper">
-                    <div class="header__menu">Menu</div>
+                    <div class="header__menu hover-animation">
+                        <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">
+                            <div class="hover-animation__item hover-animation__item--main">Menu</div>
+                            <div class="hover-animation__item hover-animation__item--second">Open</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,6 +181,7 @@ const animateHeaderScrollOut = () => {
         pointer-events: none;
     }
     &__menu {
+        cursor: pointer;
         opacity: 0;
     }
 }
