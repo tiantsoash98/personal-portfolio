@@ -4,9 +4,6 @@
     --button-text-color: var(--color-neutral-950);
     --button-icon-size: calc(var(--callout-text) - 0.05rem);
     --button-border-radius: var(--spacing-20);
-    --button-hover-icon-translate-x: 0%;
-    --button-hover-icon-translate-y: -150%;
-
     color: var(--button-text-color);
     cursor: pointer;
     border-radius: var(--button-border-radius);
@@ -24,47 +21,9 @@
         --button-bg-color: transparent;
         --button-text-color: var(--color-neutral-100);
     }
-
-    &--animate-to{
-        &-top {
-            --button-hover-icon-translate-x: 0%;
-            --button-hover-icon-translate-y: -150%;
-            #{$root}__icon--hover  {
-                top: 150%;
-            }
-        }
-        &-right {
-            --button-hover-icon-translate-x: 150%;
-            --button-hover-icon-translate-y: 0%;
-            #{$root}__icon--hover  {
-                right: 150%;
-            }
-        }
-        &-bottom {
-            --button-hover-icon-translate-x: 0%;
-            --button-hover-icon-translate-y: 150%;
-            #{$root}__icon--hover  {
-                bottom: 150%;
-            }
-        }
-        &-left {
-            --button-hover-icon-translate-x: -150%;
-            --button-hover-icon-translate-y: 0%;
-            #{$root}__icon--hover  {
-                left: 150%;
-            }
-        }
-    }
-
     &:hover {
         #{$root}__frame  {
             transform: scale(1.05);
-        }
-        #{$root}__text  {
-            transform: translateY(-100%);
-        }
-        #{$root}__icon  {
-            transform: translate(var(--button-hover-icon-translate-x), var(--button-hover-icon-translate-y));
         }
     }
     &__frame {
@@ -83,24 +42,7 @@
         align-items: center;
         gap: var(--spacing-4);
     }
-    &__item-wrapper {
-        overflow: hidden;
-        display: flex;
-    }
-    &__text {
-        transition: transform var(--default-animation-duration) var(--alias-default-ease); 
-
-        &--hover {
-            position: absolute;
-            top: 100%;
-        }
-    }
     &__icon {
         width: var(--button-icon-size);
-        transition: transform var(--default-animation-duration) var(--alias-default-ease); 
-
-        &--hover {
-            position: absolute;
-        }
     }
 }

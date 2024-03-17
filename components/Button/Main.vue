@@ -1,14 +1,14 @@
 <template>
-    <div :class="`button button--${type} button--${size} button--animate-${ animateDirection }`">
+    <div :class="`button button--${type} button--${size} hover-animation`">
         <div class="button__frame"></div>
         <div class="button__content-wrapper">
-            <div class="button__item-wrapper" v-if="text">
-                <div class="button__text button__text--main">{{ text }}</div>
-                <div class="button__text button__text--hover">{{ text }}</div>
+            <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top" v-if="text">
+                <div class="button__text hover-animation__item hover-animation__item--main">{{ text }}</div>
+                <div class="button__text hover-animation__item hover-animation__item--second">{{ text }}</div>
             </div>
-            <div class="button__item-wrapper" v-if="hasIcon">
-                <component :is="icon" class="button__icon button__icon--main"/>
-                <component :is="icon" class="button__icon button__icon--hover"/>
+            <div :class="`hover-animation__wrapper hover-animation--${ animateDirection }`" v-if="hasIcon">
+                <component :is="icon" class="button__icon hover-animation__item hover-animation__item--main"/>
+                <component :is="icon" class="button__icon hover-animation__item hover-animation__item--second"/>
             </div>
         </div>
     </div>
