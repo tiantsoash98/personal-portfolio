@@ -21,11 +21,10 @@
 .works {
     &__ellipse-wrapper {
         position: absolute;
-        top: 0%;
-        left: 0%;
-        transform: translate(-50%, -50%);
+        top: -20%;
+        right: 60%;
         z-index: -1;
-        width: 80vw;
+        width: 75vw;
         height: 115vh;
     }
 }
