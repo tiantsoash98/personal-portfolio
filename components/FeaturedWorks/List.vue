@@ -19,9 +19,9 @@
 
 <script setup>
 const works = await queryContent('work')
-    .only(['project', 'description', 'img', 'year', 'roles', 'path', '_path'])
-    .limit(3)
-    .find()
+        .only(['project', 'description', 'img', 'year', 'roles', 'path', '_path'])
+        .limit(5)
+        .find()
 
 const fullIndex = (index) => `0${ index }`
 const isEven = (index) => ((index - 1) % 2) == 0

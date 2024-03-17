@@ -8,7 +8,7 @@
             <div class="hero__content-wrapper row pt-20 pb-20">
                 <div class="hero__headline-wrapper col-full col-lg-8">
                     <h1 class="text-visually-hidden">Web Designer & Creative Developer helping passionate people grow their businesses</h1>
-                    <span class="title-h1">Web Designer & Creative Developer helping passionate people grow their businesses</span>
+                    <div class="title-h1">Web Designer & Creative Developer helping passionate people grow their businesses</div>
                 </div>
                 <div class="hero__button-wrapper col-full col-lg-4">
                     <ButtonPrimary :text="'Explore my work'"/>
