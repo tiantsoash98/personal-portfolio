@@ -17,17 +17,19 @@
                             <span class="featured-works-item__year">{{ year }}</span>
                         </div>
                     </div>
-                    <NuxtLink :to="link">
+                    <NuxtLink :to="path" :target="target">
                         <ButtonSecondary text="See case" :hasIcon="true"/>
                     </NuxtLink>
                 </div>
                 <figure :class="imgWrapperFullClass">
-                    <NuxtImg :src="imgSrc" class="img featured-works-item__img"/>
-                    <div class="featured-works-item__img-filter"></div>
-                    <div class="featured-works-item__overlay">
-                        <div class="featured-works-item__title featured-works-item__overlay-item featured-works-item__overlay-item--title title-h1">{{ title }}</div>
-                        <IconArrowNarrowRight class="featured-works-item__overlay-item featured-works-item__overlay-item--arrow featured-works-item__arrow"/>
-                    </div>
+                    <NuxtLink :to="path" :target="target" class="overlay">
+                        <NuxtImg :src="imgSrc" class="img featured-works-item__img"/>
+                        <div class="featured-works-item__img-filter overlay"></div>
+                        <div class="featured-works-item__overlay overlay">
+                            <div class="featured-works-item__title featured-works-item__overlay-item featured-works-item__overlay-item--title title-h1">{{ title }}</div>
+                            <IconArrowNarrowRight class="featured-works-item__overlay-item featured-works-item__overlay-item--arrow featured-works-item__arrow"/>
+                        </div>
+                    </NuxtLink>
                 </figure>
             </div>
         </div>
@@ -42,7 +44,7 @@ const props = defineProps({
     roles: Array,
     year: Number,
     imgSrc: String,
-    link: String,
+    path: String,
     isInverted: Boolean
 })
 
@@ -54,6 +56,10 @@ const contentWrapperFullClass = computed(() => {
 const imgWrapperFullClass = computed(() => {
     if(props.isInverted) return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6"
     else return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6 col-start-md-7"
+})
+
+const target = computed(() => {
+    return props.path.startsWith('/') ? '_self' : '_blank'
 })
 </script>
 
@@ -111,10 +117,6 @@ const imgWrapperFullClass = computed(() => {
         transition: transform var(--default-animation-duration) var(--alias-default-ease);
     }
     &__img-filter {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
         pointer-events: none;
         background-color: rgba(var(--color-neutral-950-rgb), 0.2);
         backdrop-filter: blur(5px);
@@ -122,10 +124,6 @@ const imgWrapperFullClass = computed(() => {
         transition: opacity var(--default-animation-duration) var(--alias-default-ease);
     }
     &__overlay {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
         pointer-events: none;
         color: var(--color-neutral-0);
         display: flex;
