@@ -8,7 +8,12 @@
                         Hi, bonjour, salama ! I am Tiantsoa, freelance Web designer & Creative designer based in Madagascar. I closely collaborate with agencies and passionate people who want to solve problems through beautiful and user-centered products. 
                         <br><br>With a keen focus on user experience and creative interactions, I always aim to create memorable experiences that will set your brand apart.
                     </h2>
-                    <ButtonSecondary text="Get to know me" :hasIcon="true" class="mt-16"/>
+                    <ButtonMain 
+                        :text="'Get to know me'" 
+                        type="secondary"
+                        :hasIcon="true" 
+                        class="mt-16"
+                    />
                 </div>
             </div>
         </div>

@@ -46,10 +46,20 @@
                         <div class="col-full col-md-5"></div>
                         <div class="swiper__button-wrapper col-full col-md-7">
                             <div class="swiper__button swiper__button--prev">
-                                <ButtonSecondary text="" :has-icon="true" size="small"/>
+                                <ButtonMain 
+                                    text="" 
+                                    type="secondary"
+                                    size="small"
+                                    :hasIcon="true" 
+                                />
                             </div>
                             <div class="swiper__button swiper__button--next ml-2">
-                                <ButtonSecondary text="" :has-icon="true" size="small"/>
+                                <ButtonMain 
+                                    text="" 
+                                    type="secondary"
+                                    size="small"
+                                    :hasIcon="true" 
+                                />
                             </div>
                         </div> 
                     </div>

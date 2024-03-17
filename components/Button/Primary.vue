@@ -36,15 +36,6 @@ const props = defineProps({
             transform: translateY(150%);
         }
     }
-    &__frame {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%; 
-        border-radius: var(--spacing-20);
-        background-color: var(--color-neutral-0);
-        transition: transform var(--default-animation-duration) var(--alias-default-ease); 
-    }
     &__content-wrapper {
         display: flex;
         flex-direction: row;

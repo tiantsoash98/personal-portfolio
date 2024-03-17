@@ -18,7 +18,11 @@
                         </div>
                     </div>
                     <NuxtLink :to="path" :target="target">
-                        <ButtonSecondary text="See case" :hasIcon="true"/>
+                        <ButtonMain 
+                            :text="'See case'" 
+                            type="secondary"
+                            :hasIcon="true" 
+                        />
                     </NuxtLink>
                 </div>
                 <figure :class="imgWrapperFullClass">
