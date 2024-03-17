@@ -58,39 +58,44 @@
 </template>
 
 <script setup>
-const headerHasAnimatedIn = ref(false)
-const headerHasAnimatedOut = ref(false)
 const headerStartAnimateScrollPosition = useHeaderStartAnimateScrollPosition()
-const scrollPosition = useScrollPositionState()
 const { gsap } = useGsap()
 
-watch(scrollPosition, (newScrollPosition) => {
+    onMounted(() => {
+        gsap.timeline({
+            defaults: {
+                duration: 0.5,
+                ease: "power2.inOut"
+            },
+            scrollTrigger: {
+                trigger: 'body',
+                //trigger element - viewport
+                toggleActions: "play none none reverse",
+                start: `top -${ headerStartAnimateScrollPosition.value }px`,
+            }
+        })
+        .to('.header__hide-on-scroll', { 
+            opacity: 0, 
+            yPercent: -50, 
+            stagger: {
+                each: 0.08,
+                from: "end",
+            },
+            pointerEvents: 'none'
+        })
+        .fromTo('.header__menu', { 
+            opacity: 0, 
+            yPercent: 50,
+        }, { 
+            opacity: 1, 
+            yPercent: 0,
+        }, '<+0.3s')  
+        .to('.header__menu-wrapper', { 
+            pointerEvents: 'all',
+        }, '<')
+    })
 
-    // Check if new scroll position above position where it should start animating (200px)
-    if(newScrollPosition > headerStartAnimateScrollPosition.value){
-        // Check if header has already been animated in to prevent animation to trigger on each scroll
-        // Animate if not
-        if(!headerHasAnimatedIn.value){
-            animateHeaderScrollIn()
-            // Reset animated out if scroll from top
-            headerHasAnimatedOut.value = false
-            headerHasAnimatedIn.value = true
-        }
-    }
-    // Check if new scroll position below position where it should start animating (200px)
-    else {
-        // Animate on scroll back
-        // Animate only when header has been animated in
-        // Prevent animation to trigger on each scroll
-        // Animate if not
-        if(headerHasAnimatedIn.value && !headerHasAnimatedOut.value){
-            animateHeaderScrollOut()
-            // Reset animated in if scroll up
-            headerHasAnimatedIn.value = false
-            headerHasAnimatedOut.value = true
-        }
-    }
-})
+
 
 // Animate below scroll start animate position
 const animateHeaderScrollIn = () => {
@@ -123,7 +128,6 @@ const animateHeaderScrollIn = () => {
         .to('.header__menu-wrapper', { 
             pointerEvents: 'all',
         }, '<')
-        
     })
 }
 
