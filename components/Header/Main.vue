@@ -10,18 +10,38 @@
                         Available for freelance work
                     </div>
                 </div>
-                <div class="header__links-wrapper col-full col-md-5 col-lg-4 col-start-0 col-start-md-8 col-start-lg-9">
+                <div class="header__links-wrapper col-full col-md-6 col-lg-4 col-start-0 col-start-md-7 col-start-lg-9">
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/about">About</NuxtLink>
+                        <NuxtLink to="/about" class="hover-animation">
+                            <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
+                                <div class="hover-animation__item hover-animation__item--main">About</div>
+                                <div class="hover-animation__item hover-animation__item--second">Who I am</div>
+                            </div>
+                        </NuxtLink>
                     </div>
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/works">Works</NuxtLink>
+                        <NuxtLink to="/works" class="hover-animation">
+                            <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
+                                <div class="hover-animation__item hover-animation__item--main">Works</div>
+                                <div class="hover-animation__item hover-animation__item--second">Projects</div>
+                            </div>
+                        </NuxtLink>
                     </div>
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/playground">Playground</NuxtLink>
+                        <NuxtLink to="/playground" class="hover-animation">
+                            <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
+                                <div class="hover-animation__item hover-animation__item--main">Playground</div>
+                                <div class="hover-animation__item hover-animation__item--second">Explorations</div>
+                            </div>
+                        </NuxtLink>
                     </div>
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/contact">Contact</NuxtLink>
+                        <NuxtLink to="/contact" class="hover-animation">
+                            <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">
+                                <div class="hover-animation__item hover-animation__item--main">Contact</div>
+                                <div class="hover-animation__item hover-animation__item--second">Let's talk</div>
+                            </div>
+                        </NuxtLink>
                     </div>
                 </div>
                 <div class="header__menu-wrapper">
@@ -85,15 +105,19 @@ const animateHeaderScrollIn = () => {
             stagger: {
                 each: 0.08,
                 from: "end",
-            } 
+            },
+            pointerEvents: 'none'
         })
         .fromTo('.header__menu', { 
             opacity: 0, 
             yPercent: 50 
         }, { 
             opacity: 1, 
-            yPercent: 0 
+            yPercent: 0,
         }, '<+0.3s')  
+        .to('.header__menu-wrapper', { 
+            pointerEvents: 'all',
+        }, '<')
         
     })
 }
@@ -116,12 +140,16 @@ const animateHeaderScrollOut = () => {
             stagger: {
                 each: 0.08,
                 from: "start",
-            } 
+            },
+            pointerEvents: 'all'
         })
         .to('.header__menu', { 
             opacity: 0,
-            yPercent: 50
+            yPercent: 50,
         }, '<-0.1s')
+        .to('.header__menu-wrapper', { 
+            pointerEvents: 'none'
+        }, '<')
     })
 }
 </script>
@@ -137,14 +165,15 @@ const animateHeaderScrollOut = () => {
 
     &__links-wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
     &__link-wrapper {
-        overflow: hidden;
+        flex: 1;
     }
     &__menu-wrapper {
         position: absolute;
         right: 0;
+        pointer-events: none;
     }
     &__menu {
         opacity: 0;
