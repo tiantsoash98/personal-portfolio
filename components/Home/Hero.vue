@@ -15,6 +15,7 @@
                         :text="'Explore my work'" 
                         :hasIcon="true"
                         icon="IconArrowDown"
+                        animate-direction="to-bottom"
                     />
                 </div>
             </div>

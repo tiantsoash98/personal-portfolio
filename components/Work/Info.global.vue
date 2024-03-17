@@ -28,7 +28,11 @@
                     <div class="work-info__label mt-8">{{ year }}</div>
                     <div class="work-info__button-wrapper mt-12">
                         <a :href="link" target="_blank">
-                            <ButtonPrimary text="Visit live site" />
+                            <ButtonMain 
+                                :text="'Visit live site'" 
+                                :hasIcon="true"
+                                animate-direction="to-right"
+                            />
                         </a>
                     </div>
                 </div>

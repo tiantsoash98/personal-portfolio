@@ -1,5 +1,5 @@
 <template>
-    <div :class="`button button--${type} button--${size}`">
+    <div :class="`button button--${type} button--${size} button--animate-${ animateDirection }`">
         <div class="button__frame"></div>
         <div class="button__content-wrapper">
             <div class="button__item-wrapper" v-if="text">
@@ -7,10 +7,6 @@
                 <div class="button__text button__text--hover">{{ text }}</div>
             </div>
             <div class="button__item-wrapper" v-if="hasIcon">
-                <!-- <IconArrowRight class="button__icon button__icon--main" v-if="icon == 'arrow-right'"/>
-                <IconArrowRight class="button__icon button__icon--hover" v-if="icon == 'arrow-right'"/>
-                <IconArrowLeft class="button__icon button__icon--main" v-if="icon == 'arrow-left'"/>
-                <IconArrowLeft class="button__icon button__icon--hover" v-if="icon == 'arrow-left'"/> -->
                 <component :is="icon" class="button__icon button__icon--main"/>
                 <component :is="icon" class="button__icon button__icon--hover"/>
             </div>
@@ -36,6 +32,10 @@ const props = defineProps({
     icon: {
         type: String,
         default: 'IconArrowRight',
+    },
+    animateDirection: {
+        type: String,
+        default: 'to-right'
     }
 })
 </script>

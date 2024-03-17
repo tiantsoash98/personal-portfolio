@@ -4,7 +4,10 @@
         <template #not-found>
             <h1>Oups...the content was not found</h1>
             <NuxtLink to="/">
-                <ButtonPrimary text="Back home"/>
+              <ButtonMain 
+                  :text="'Back home'" 
+                  :hasIcon="true" 
+              />
             </NuxtLink>
         </template>
       </ContentDoc>

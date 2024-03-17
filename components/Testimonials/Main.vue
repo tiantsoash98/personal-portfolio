@@ -52,6 +52,7 @@
                                     size="small"
                                     :hasIcon="true" 
                                     icon="IconArrowLeft"
+                                    animate-direction="to-left"
                                 />
                             </div>
                             <div class="swiper__button swiper__button--next ml-2">
