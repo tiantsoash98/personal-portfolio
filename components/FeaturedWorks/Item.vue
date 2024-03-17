@@ -7,7 +7,7 @@
                         <div class="featured-works-item__title">{{ title }}</div>
                         <div class="featured-works-item__title title-h4 mt-2">{{ description }}</div>
                     </div>
-                    <div class="featured-works-item__second-infos">
+                    <div class="featured-works-item__second-infos mt-10">
                         <div class="featured-works-item__list-wrapper">
                             <ul class="featured-works-item__roles">
                                 <li v-for="role in roles" :key="role">{{ role }}</li>
@@ -17,7 +17,7 @@
                             <span class="featured-works-item__year">{{ year }}</span>
                         </div>
                     </div>
-                    <NuxtLink :to="path" :target="target">
+                    <NuxtLink :to="path" :target="target" class="mt-12">
                         <ButtonMain 
                             :text="'See case'" 
                             type="secondary"
@@ -27,7 +27,11 @@
                 </div>
                 <figure :class="imgWrapperFullClass">
                     <NuxtLink :to="path" :target="target" class="overlay">
-                        <NuxtImg :src="imgSrc" class="img featured-works-item__img"/>
+                        <NuxtImg 
+                            :src="imgSrc" 
+                            class="img featured-works-item__img"
+                            sizes="sm:90vw md:50vw lg:50vw 90vw"
+                        />
                         <div class="featured-works-item__img-filter overlay"></div>
                         <div class="featured-works-item__overlay overlay">
                             <div class="featured-works-item__title featured-works-item__overlay-item featured-works-item__overlay-item--title title-h1">{{ title }}</div>
@@ -53,8 +57,8 @@ const props = defineProps({
 })
 
 const contentWrapperFullClass = computed(() => {
-    if(props.isInverted) return "featured-works-item__content-wrapper col-full col-md-5 col-lg-4 col-start-lg-9 pt-40 pb-40"
-    else return "featured-works-item__content-wrapper col-full col-md-5 col-lg-4 col-start-lg-1 pt-40 pb-40"
+    if(props.isInverted) return "featured-works-item__content-wrapper col-full col-md-5 col-lg-4 col-start-md-8 col-start-lg-9 pt-10 pb-0 pt-md-40 pb-md-40"
+    else return "featured-works-item__content-wrapper col-full col-md-5 col-lg-4 col-start-lg-1 pt-10 pb-0 pt-md-40 pb-md-40"
 })
 
 const imgWrapperFullClass = computed(() => {
@@ -83,7 +87,6 @@ const target = computed(() => {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        gap: var(--spacing-12);
     }
     &__second-infos {
         width: 100%;
@@ -100,6 +103,7 @@ const target = computed(() => {
         opacity: 0.4;
     }
     &__img-wrapper {
+        min-height: 50vh;
         &:hover {
             #{$root}__img {
                 transform: scale(1);
