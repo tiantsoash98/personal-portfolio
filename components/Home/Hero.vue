@@ -11,7 +11,11 @@
                     <div class="title-h1">Web Designer & Creative Developer helping passionate people grow their businesses</div>
                 </div>
                 <div class="hero__button-wrapper col-full col-lg-4">
-                    <ButtonMain :text="'Explore my work'" :hasIcon="true"/>
+                    <ButtonMain 
+                        :text="'Explore my work'" 
+                        :hasIcon="true"
+                        icon="IconArrowDown"
+                    />
                 </div>
             </div>
             <div class="hero__footer row">

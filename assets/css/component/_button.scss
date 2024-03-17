@@ -2,7 +2,7 @@
     $root:&;
     --button-bg-color: var(--color-neutral-100);
     --button-text-color: var(--color-neutral-950);
-    --button-icon-size: var(--callout-text);
+    --button-icon-size: calc(var(--callout-text) - 0.05rem);
     --button-border-radius: var(--spacing-20);
     color: var(--button-text-color);
     cursor: pointer;

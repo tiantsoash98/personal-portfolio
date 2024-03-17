@@ -51,6 +51,7 @@
                                     type="secondary"
                                     size="small"
                                     :hasIcon="true" 
+                                    icon="IconArrowLeft"
                                 />
                             </div>
                             <div class="swiper__button swiper__button--next ml-2">
@@ -105,13 +106,6 @@
 .swiper {
     &__button-wrapper {
         display: flex;
-    }
-    &__button {
-        cursor: pointer;
-
-        &--prev {
-            transform: rotate(180deg);
-        }
     }
 }
 </style>
