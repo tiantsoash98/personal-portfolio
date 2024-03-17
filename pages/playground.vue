@@ -21,12 +21,11 @@
 .playground {
     &__ellipse-wrapper {
         position: absolute;
-        top: 0%;
-        right: 0%;
-        transform: translate(50%, 0%);
+        top: -20%;
+        left: 70%;
         z-index: -1;
-        width: 60vw;
-        height: 90vh;
+        width: 65vw;
+        height: 55vw;
     }
 }
 </style>

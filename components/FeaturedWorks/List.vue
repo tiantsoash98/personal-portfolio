@@ -28,15 +28,5 @@ const isEven = (index) => ((index - 1) % 2) == 0
 </script>
 
 <style lang="scss" scoped>
-.featured-works-list {
-    &__ellipse-wrapper {
-        position: absolute;
-        top: 23%;
-        left: 0%;
-        transform: translateX(-50%);
-        z-index: -1;
-        width: 90vw;
-        height: 90vh;
-    }
-}
+
 </style>

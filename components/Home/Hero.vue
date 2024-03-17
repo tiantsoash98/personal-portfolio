@@ -48,11 +48,10 @@ const localTime = useLocalTimeState()
 
     &__ellipse-wrapper {
         position: absolute;
-        bottom: 0%;
+        top: 50%;
         left: 0%;
         width: 100%;
         height: min(100vh, 100vw);
-        transform: translateY(50%);
     }
     &__main-wrapper {
         height: 100%;

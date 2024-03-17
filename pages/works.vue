@@ -24,7 +24,7 @@
         top: -20%;
         right: 60%;
         z-index: -1;
-        width: 75vw;
+        width: 80vw;
         height: 115vh;
     }
 }

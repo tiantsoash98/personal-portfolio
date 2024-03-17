@@ -24,7 +24,6 @@ onMounted(() => {
 
 onUnmounted(() => {
   destroy()
-    
 })
 </script>
 
