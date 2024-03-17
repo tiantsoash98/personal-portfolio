@@ -1,5 +1,5 @@
 <template>
-    <header class="header pt-8">
+    <header class="header pt-8 blend-difference">
         <div class="container">
             <div class="row">
                 <div class="header__logo col-3 col-md-3 col-lg-3">
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="header__menu-wrapper">
-                    <button class="header__menu">Menu</button>
+                    <div class="header__menu">Menu</div>
                 </div>
             </div>
         </div>
@@ -133,6 +133,7 @@ const animateHeaderScrollOut = () => {
     top: 0;
     left: 0;
     right: 0;
+    mix-blend-mode: difference;
 
     &__links-wrapper {
         display: flex;
