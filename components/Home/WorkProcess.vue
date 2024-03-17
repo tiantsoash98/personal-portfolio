@@ -58,9 +58,8 @@
 .work-process{
     &__ellipse-wrapper {
         position: absolute;
-        bottom: 0%;
-        right: 0%;
-        transform: translate(60%, 25%);
+        top: 25%;
+        left: 65%;
         z-index: -1;
         width: 80vw;
         height: 100vh;
