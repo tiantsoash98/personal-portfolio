@@ -24,8 +24,8 @@
     line-height: 1;
     font-weight: 400;
 
-    @include media(small){
-        letter-spacing: -0.02rem;
+    @include media(medium){
+        letter-spacing: -0.04rem;
     }
 }
 @mixin h2 {
@@ -34,18 +34,22 @@
     letter-spacing: -0.15rem;
     line-height: 1.1;
     font-weight: 400;
+
+    @include media(medium){
+        letter-spacing: -0.04rem;
+    }
 }
 @mixin h3 {
     font-family: var(--font-family-primary);
     font-size: var(--title-h3);
-    letter-spacing: -0.02rem;
+    letter-spacing: -0.01rem;
     line-height: 1.1;
     font-weight: 400;
 }
 @mixin h4 {
     font-family: var(--font-family-primary);
     font-size: var(--title-h4);
-    letter-spacing: -0.02rem;
+    letter-spacing: -0.01rem;
     line-height: 1.3;
     font-weight: 400;
 }

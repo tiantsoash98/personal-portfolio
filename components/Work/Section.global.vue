@@ -1,5 +1,5 @@
 <template>
-    <section class="work-section mb-30">
+    <section class="work-section mb-10 mb-md-30">
         <div class="container">
             <div class="row">
                 <div class="work-section__title-wrapper col-full col-md-3 col-lg-5 col-start-md-2">
