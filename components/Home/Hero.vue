@@ -12,7 +12,7 @@
                     <h1 class="text-visually-hidden">Web Designer & Creative Developer helping passionate people grow their business</h1>
                     <div class="title-h1">Web Designer & Creative Developer helping passionate people grow their business</div>
                 </div>
-                <div class="hero__button-wrapper col-full col-lg-4">
+                <div class="hero__button-wrapper col-full col-lg-4 mt-8 mt-md-12 mt-lg-0">
                     <ButtonMain 
                         :text="'Explore my work'" 
                         :hasIcon="true"
@@ -22,17 +22,17 @@
                 </div>
             </div>
             <div class="hero__footer row">
-                <div class="hero__footer-item col-3 col-lg-3"> 
+                <div class="hero__footer-item col-full col-md-3 order-2 order-sm-1 mt-6 mt-md-0"> 
                     <IconArrowDown class="hero__arrow"/>
                 </div>
-                <div class="hero__footer-item col-full col-md-6 col-lg-6">
+                <div class="hero__footer-item col-full col-md-5 col-lg-6 order-1 order-sm-2">
                     <ul class="hero__socials-wrapper">
                         <li class="hero__social"><a class="hover-link" href="#">Email</a></li>
                         <li class="hero__social ml-8"><a class="hover-link" href="#">Linkedin</a></li>
                         <li class="hero__social ml-8"><a class="hover-link" href="#">Instagram</a></li>
                     </ul>
                 </div>
-                <div class="hero__footer-item hero__timezone col-full col-md-6 col-lg-3">
+                <div class="hero__footer-item hero__timezone hide-on-below-sm col-full col-md-4 col-lg-3 order-3">
                     <span>Local time {{ localTime }}</span>
                 </div>
             </div>
@@ -47,7 +47,6 @@ const localTime = useLocalTimeState()
 <style lang="scss" scoped>
 .hero {
     height: 100vh;
-
     
     &__main-wrapper {
         height: 100%;
@@ -71,7 +70,18 @@ const localTime = useLocalTimeState()
         text-align: right;
     }
     &__arrow {
-        width: 4rem;
+        width: var(--title-h1);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hero{
+        &__button-wrapper {
+            justify-content: flex-start;
+        }
+        &__socials-wrapper {
+            justify-content: space-between;
+        }
     }
 }
 </style>
