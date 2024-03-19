@@ -22,17 +22,17 @@
                 </div>
             </div>
             <div class="hero__footer row">
-                <div class="hero__footer-item col-full col-md-3 order-2 order-sm-1 mt-6 mt-md-0"> 
+                <div class="hero__footer-item col-1 col-md-3 order-2 order-md-1 mt-6 mt-md-0"> 
                     <IconArrowDown class="hero__arrow"/>
                 </div>
-                <div class="hero__footer-item col-full col-md-5 col-lg-6 order-1 order-sm-2">
+                <div class="hero__footer-item col-5 col-md-5 col-lg-6 order-1 order-md-2">
                     <ul class="hero__socials-wrapper">
                         <li class="hero__social"><a class="hover-link" href="#">Email</a></li>
-                        <li class="hero__social ml-8"><a class="hover-link" href="#">Linkedin</a></li>
-                        <li class="hero__social ml-8"><a class="hover-link" href="#">Instagram</a></li>
+                        <li class="hero__social ml-0 ml-md-8"><a class="hover-link" href="#">Linkedin</a></li>
+                        <li class="hero__social ml-0 ml-md-8"><a class="hover-link" href="#">Instagram</a></li>
                     </ul>
                 </div>
-                <div class="hero__footer-item hero__timezone hide-on-below-sm col-full col-md-4 col-lg-3 order-3">
+                <div class="hero__footer-item hero__timezone hide-on-below-md col-full col-md-4 col-lg-3 order-3">
                     <span>Local time {{ localTime }}</span>
                 </div>
             </div>
@@ -80,7 +80,7 @@ const localTime = useLocalTimeState()
             justify-content: flex-start;
         }
         &__socials-wrapper {
-            justify-content: space-between;
+            flex-direction: column;
         }
     }
 }

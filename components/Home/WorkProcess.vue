@@ -62,4 +62,12 @@
         row-gap: var(--spacing-20);
     }
 }
+
+@media screen and (max-width: 991px) {
+    .work-process{
+        &__items-wrapper {
+            row-gap: var(--spacing-8);
+        }
+    }
+}
 </style>

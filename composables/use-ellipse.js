@@ -1,6 +1,8 @@
 export default () => {
     var ellipses = null
     var fieldY = 0
+    var alignY = 'top'
+    var alignX = 'left'
     var positionX = 0
     var positionY = 0
     var scale = 1
