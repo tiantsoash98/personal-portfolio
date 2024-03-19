@@ -14,13 +14,13 @@ $breakpoints:(
     --font-family-primary: 'Neue Montreal', 'Arial', sans-serif;
 
     // Typography
-    --title-h1: 5.5rem;
+    --title-h1: 2.5rem;
     --title-h2: 4.22rem;
     --title-h3: 3.1rem;
     --title-h4: 2.44rem;
     --title-h5: 1.77rem;
     --title-h6: 1.33rem;
-    --paragraph-text: 1.25rem;
+    --paragraph-text: 1rem;
     --callout-text: 0.95rem;
     --footnote-text: 0.88rem;
 
@@ -75,7 +75,7 @@ $breakpoints:(
     --container-max-width: 100%;
     --grid-columns: 6;
     --column-gap: var(--spacing-4);
-    --container-horizontal-padding: var(--spacing-10);
+    --container-horizontal-padding: var(--spacing-6);
     --section-vertical-padding: var(--spacing-40);
 
     // Z-index

@@ -23,6 +23,10 @@
     letter-spacing: -0.1rem;
     line-height: 1;
     font-weight: 400;
+
+    @include media(small){
+        letter-spacing: -0.02rem;
+    }
 }
 @mixin h2 {
     font-family: var(--font-family-primary);

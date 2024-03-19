@@ -2,8 +2,10 @@
     <footer class="footer pt-40">
         <FooterCTA/>
         <FooterActions/>
-        <div class="footer__ellipse-wrapper">
-            <div class="ellipse-decor"></div>
+        <div class="ellipse__field" data-field-y="0" data-position-y="0" data-scale="1">
+            <div class="ellipse__wrapper">
+                <div class="ellipse__decor"></div>
+            </div>
         </div>
     </footer>
 </template>

@@ -1,7 +1,9 @@
 <template>
     <div class="hero pb-12 pt-12">
-        <div class="hero__ellipse-wrapper">
-            <div class="ellipse-decor"></div>
+        <div class="ellipse__field" data-field-y="50" data-position-x="0" data-position-y="0" data-scale="1">
+            <div class="ellipse__wrapper">
+                <div class="ellipse__decor"></div>
+            </div>
         </div>
         <div class="hero__main-wrapper container">
             <div class="hero-spacer"></div>
@@ -46,13 +48,7 @@ const localTime = useLocalTimeState()
 .hero {
     height: 100vh;
 
-    &__ellipse-wrapper {
-        position: absolute;
-        top: 50%;
-        left: 0%;
-        width: 100%;
-        height: min(100vh, 100vw);
-    }
+    
     &__main-wrapper {
         height: 100%;
         display: flex;
