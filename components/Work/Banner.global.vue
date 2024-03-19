@@ -1,5 +1,5 @@
 <template>
-    <section class="work-banner mb-40">
+    <section class="work-banner mb-16 mb-md-30">
         <div class="work-banner__wrapper img-wrapper">
             <nuxt-img
                 :src="img"

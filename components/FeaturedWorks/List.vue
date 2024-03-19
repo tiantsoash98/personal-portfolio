@@ -1,10 +1,10 @@
 <template>
-    <div class="featured-works-list mt-40" role="list">
+    <div class="featured-works-list mt-16 mt-md-40" role="list">
         <FeaturedWorksItem 
             v-for="(work, index) in works"
             :key="work.link"
             role="listitem" 
-            class="mb-40"
+            class="mb-16 mb-md-40"
             :index="fullIndex(index)"
             :title="work.project"
             :description="work.description"

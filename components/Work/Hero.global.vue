@@ -12,8 +12,10 @@
             />
         </div>
         <div class="work-hero__img-filter"></div>
-        <div class="work-hero__ellipse-wrapper">
-            <div class="ellipse-decor"></div>
+        <div class="ellipse__field" data-field-y="40" data-position-x="-50" data-position-y="0" data-scale="0.85" data-z-index="2">
+            <div class="ellipse__wrapper">
+                <div class="ellipse__decor"></div>
+            </div>
         </div>
         <div class="work-hero__overlay container pb-30">
             <div class="row">
@@ -50,15 +52,6 @@ const props = defineProps({
         width: 100%;
         height: 100%;
         background: linear-gradient(to top, rgba(var(--color-neutral-950-rgb), 1), rgba(var(--color-neutral-950-rgb), 0) 30%)
-    }
-    &__ellipse-wrapper {
-        position: absolute;
-        top: 40%;
-        left: 0%;
-        transform: translateX(-50%);
-        z-index: 2;
-        width: 85vw;
-        height: 85vh;
     }
     &__overlay {
         position: absolute;

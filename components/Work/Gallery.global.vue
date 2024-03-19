@@ -1,5 +1,5 @@
 <template>
-    <section class="work-gallery mb-40">
+    <section class="work-gallery mb-10 mb-md-40">
         <div class="container">
             <div class="row">
                 <div class="work-gallery__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6">

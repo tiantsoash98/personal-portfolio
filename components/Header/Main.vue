@@ -2,7 +2,7 @@
     <header class="header pt-8 blend-difference">
         <div class="container">
             <div class="row">
-                <div class="header__logo col-3 col-md-3 col-lg-3">
+                <div class="header__logo col-4 col-md-3 col-lg-3">
                     <NuxtLink to="/">Tiantsoa Rabemananjara</NuxtLink>
                 </div>
                 <div class="header__availability col-3 col-md-3">
