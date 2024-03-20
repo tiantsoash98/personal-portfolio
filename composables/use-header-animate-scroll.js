@@ -14,7 +14,7 @@ export default () => {
             start: `top -${ headerStartAnimateScrollPosition.value }px`,
         }
     })
-    .to('.header__hide-on-scroll', { 
+    .to('.header-web__hide-on-scroll', { 
         opacity: 0, 
         yPercent: -50, 
         stagger: {
@@ -23,14 +23,14 @@ export default () => {
         },
         pointerEvents: 'none'
     })
-    .fromTo('.header__menu', { 
+    .fromTo('.header-web__show-on-scroll', { 
         opacity: 0, 
         yPercent: 50,
     }, { 
         opacity: 1, 
         yPercent: 0,
     }, '<+0.3s')  
-    .to('.header__menu-wrapper', { 
+    .to('.header-web__menu-wrapper', { 
         pointerEvents: 'all',
     }, '<')
 

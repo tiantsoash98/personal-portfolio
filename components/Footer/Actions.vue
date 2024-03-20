@@ -7,7 +7,6 @@
                 </div>
                 <div class="footer__middle col-full col-md-4">
                     <ul class="footer__socials-wrapper">
-                        <li class="footer__social"><a class="hover-link" href="#">Email</a></li>
                         <li class="footer__social ml-8"><a class="hover-link" href="#">Linkedin</a></li>
                         <li class="footer__social ml-8"><a class="hover-link" href="#">Instagram</a></li>
                     </ul>

@@ -45,27 +45,27 @@
 }
 
 .order {
-    @for $i from 1 through 12 {
+    @for $i from 1 through 3 {
         &-#{$i} {
             order: $i;
         }
     }
     @include media-min-width(small) {
-        @for $i from 1 through 12 {
+        @for $i from 1 through 3 {
             &-sm-#{$i} {
                 order: $i;
             }
         }
     }
     @include media-min-width(medium) {
-        @for $i from 1 through 12 {
+        @for $i from 1 through 3 {
             &-md-#{$i} {
                 order: $i;
             }
         }
     }
     @include media-min-width(large) {
-        @for $i from 1 through 12 {
+        @for $i from 1 through 3 {
             &-lg-#{$i} {
                 order: $i;
             }
