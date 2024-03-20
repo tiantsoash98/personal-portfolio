@@ -17,7 +17,7 @@
             </div>
             <div class="menu__links mt-8 mb-8" role="list">
                 <HeaderMenuLink to="/" title="Home" subtitle="Everything"/>
-                <HeaderMenuLink to="/#" title="About" subtitle="Who I am"/>
+                <HeaderMenuLink to="/#about" title="About" subtitle="Who I am"/>
                 <HeaderMenuLink to="/#works" title="Works" subtitle="Projects"/>
                 <HeaderMenuLink to="/#services" title="Services" subtitle="What I do"/>
                 <HeaderMenuLink to="/#contact" title="Contact" subtitle="Let's talk"/>
@@ -27,7 +27,7 @@
                     <div class="menu__box-item menu__mail">Available for freelance work</div>
                 </div>
                 <div class="menu__box menu__box--center">
-                    <div class="menu__box-item menu__mail">tiantsoa.sh@gmail.com</div>
+                    <a href="mailto:tiantsoa.sh@gmail.com" class="menu__box-item menu__mail">tiantsoa.sh@gmail.com</a>
                 </div>
                 
                 <div class="menu__box menu__box--right">
@@ -43,8 +43,9 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .menu {
+    $root:&;
     position: fixed;
     inset: 0;
     width: 100%;
@@ -69,6 +70,12 @@
     }
     &__links {
         width: 100%;
+
+        &:hover{
+            & .menu-link__title {
+                opacity: 0.4;
+            }
+        }
     }
     &__footer {
         width: 100%;
