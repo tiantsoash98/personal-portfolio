@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer pt-40">
+    <footer class="footer pt-40" id="contact">
         <FooterCTA/>
         <FooterActions/>
         <div class="ellipse__field" data-field-y="0" data-position-y="0" data-scale="1">

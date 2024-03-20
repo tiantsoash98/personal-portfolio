@@ -12,7 +12,7 @@
                 </div>
                 <div class="header__links-wrapper col-full col-md-6 col-lg-4 col-start-0 col-start-md-7 col-start-lg-9">
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/about" class="hover-animation">
+                        <NuxtLink to="/#about" class="hover-animation">
                             <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                                 <div class="hover-animation__item hover-animation__item--main">About</div>
                                 <div class="hover-animation__item hover-animation__item--second">Who I am</div>
@@ -20,7 +20,7 @@
                         </NuxtLink>
                     </div>
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/works" class="hover-animation">
+                        <NuxtLink to="/#works" class="hover-animation">
                             <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                                 <div class="hover-animation__item hover-animation__item--main">Works</div>
                                 <div class="hover-animation__item hover-animation__item--second">Projects</div>
@@ -36,7 +36,7 @@
                         </NuxtLink>
                     </div>
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/contact" class="hover-animation">
+                        <NuxtLink to="/#contact" class="hover-animation">
                             <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">
                                 <div class="hover-animation__item hover-animation__item--main">Contact</div>
                                 <div class="hover-animation__item hover-animation__item--second">Let's talk</div>

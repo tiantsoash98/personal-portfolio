@@ -1,5 +1,5 @@
 <template>
-    <section class="section services">
+    <section class="section services" id="services">
         <div class="container">
             <div class="border-item"></div>
             <div class="services__header-wrapper row mt-16">
