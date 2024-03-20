@@ -101,6 +101,7 @@ $columns:(
 }
 
 @mixin spacing($type, $direction) {
+    &-auto { #{$type}-#{$direction}: auto; }
     &-0 { #{$type}-#{$direction}: var(--spacing-0); }
     &-1 { #{$type}-#{$direction}: var(--spacing-1); }
     &-2 { #{$type}-#{$direction}: var(--spacing-2); }
