@@ -28,10 +28,10 @@
                         </NuxtLink>
                     </div>
                     <div class="header__link-wrapper header__hide-on-scroll">
-                        <NuxtLink to="/playground" class="hover-animation">
+                        <NuxtLink to="/#services" class="hover-animation">
                             <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
-                                <div class="hover-animation__item hover-animation__item--main">Playground</div>
-                                <div class="hover-animation__item hover-animation__item--second">Explorations</div>
+                                <div class="hover-animation__item hover-animation__item--main">Services</div>
+                                <div class="hover-animation__item hover-animation__item--second">What I do</div>
                             </div>
                         </NuxtLink>
                     </div>

@@ -3,8 +3,7 @@
         <div class="container">
             <div class="row">       
                 <div class="footer__left col-full col-md-4"> 
-                    <div>Tiantsoa Rabemananjara</div>
-                    <div>Web Designer & Creative Developer</div>
+                    <div>tiantsoa.sh@gmail.com</div>
                 </div>
                 <div class="footer__middle col-full col-md-4">
                     <ul class="footer__socials-wrapper">
@@ -16,7 +15,6 @@
                 <div class="footer__right col-full col-md-4">
                     <span>Back to top</span>
                 </div>
-                
             </div>
         </div>
     </div>

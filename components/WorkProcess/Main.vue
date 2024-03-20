@@ -12,35 +12,35 @@
                 </div>
             </div>
             <div class="work-process__items-wrapper row mt-20 mt-md-40" role="list">  
-                <HomeWorkProcessItem
+                <WorkProcessItem
                     role="listitem" 
                     :index="'01'"
                     title="Discovery"
                     description="The first step is getting to know you, understand your vision and your values. This will help identify the core challenges to solve for a high-performing website"
                     class="col-full col-sm-6 col-lg-4"
                 />
-                <HomeWorkProcessItem
+                <WorkProcessItem
                     role="listitem" 
                     :index="'02'"
                     title="Strategy"
                     description="I take what I have learned about you and start making competitive analysis. Then, I start building the informational architecture and the low-fidelity wireframes along with design style exploration."
                     class="col-full col-sm-6 col-lg-4"
                 />
-                <HomeWorkProcessItem
+                <WorkProcessItem
                     role="listitem" 
                     :index="'03'"
                     title="Design"
                     description="Once the foundation is set, I create the aesthetically pleasing and user-friendly website in the form of high-fidelity wireframes. I use Figma for my designs."
                     class="col-full col-sm-6 col-lg-4"
                 />
-                <HomeWorkProcessItem
+                <WorkProcessItem
                     role="listitem" 
                     :index="'04'"
                     title="Development"
                     description="Time to turn things into a real website. I make sure that everything is optimized to follow modern web practices and security. I pay very close attention to macro and micro-interactions."
                     class="col-full col-sm-6 col-lg-4"
                 />
-                <HomeWorkProcessItem
+                <WorkProcessItem
                     role="listitem" 
                     :index="'05'"
                     title="Delivery"

@@ -3,7 +3,8 @@
         <HomeHero/>
         <HomeAbout/>
         <FeaturedWorksMain/>
-        <HomeWorkProcess/>
+        <WorkProcessMain/>
+        <ServicesMain/>
         <TestimonialsMain/>
     </main>
 </template>
