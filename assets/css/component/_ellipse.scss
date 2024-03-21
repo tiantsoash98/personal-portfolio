@@ -4,10 +4,14 @@
         top: 0%;
         left: 0%;
         width: 100%;
-        height: 100vh;
+        height: var(--ellipse-field-height);
         z-index: -10;
         pointer-events: none;
         overflow: hidden;
+
+        &--force-full-height {
+            height: 100vh;
+        }
     }
     &__wrapper {
         position: absolute;

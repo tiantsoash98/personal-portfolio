@@ -111,6 +111,9 @@ $breakpoints:(
 
     // Navbar 
     --default-show-nav-menu-breakpoint: 991px;
+
+    // Custom variables
+    --ellipse-field-height: 80vh;
 }
 
 // md
@@ -128,6 +131,8 @@ $breakpoints:(
         --paragraph-text: 1.15rem;
         --callout-text: 0.9rem;
         --footnote-text: 0.88rem;  
+
+        --ellipse-field-height: 100vh;
     }
 }
 
@@ -137,11 +142,6 @@ $breakpoints:(
         --container-horizontal-padding: var(--spacing-16);
         --section-vertical-padding: var(--spacing-40);
         --base-font-size: 18px;
-        // --title-h1: 3.9rem;
-        // --title-h2: 3.2rem;
-        // --title-h3: 2.45rem;
-        // --title-h4: 2.1rem;
-        // --title-h5: 1.66rem;
     }
 }
 

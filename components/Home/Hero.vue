@@ -1,6 +1,6 @@
 <template>
     <div class="hero pb-12 pt-12">
-        <div class="ellipse__field" data-field-y="50" data-position-x="0" data-position-y="0" data-scale="1">
+        <div class="ellipse__field" data-field-y="50" data-field-mobile-y="40"  data-position-x="0" data-position-y="0" data-position-mobile-x="60"  data-scale="1">
             <div class="ellipse__wrapper">
                 <div class="ellipse__decor"></div>
             </div>

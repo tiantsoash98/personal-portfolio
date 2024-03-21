@@ -2,7 +2,7 @@
     <footer class="footer pt-40" id="contact">
         <FooterCTA/>
         <FooterActions/>
-        <div class="ellipse__field" data-field-y="0" data-position-y="0" data-scale="1">
+        <div class="ellipse__field" data-field-y="0" data-position-y="0" data-position-mobile-y="10" data-position-mobile-x="-40" data-scale="1">
             <div class="ellipse__wrapper">
                 <div class="ellipse__decor"></div>
             </div>
