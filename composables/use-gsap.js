@@ -3,6 +3,7 @@ export default () => {
 
     return {
         gsap: nuxtApp.$gsap,
-        ScrollTrigger: nuxtApp.$ScrollTrigger
+        ScrollTrigger: nuxtApp.$ScrollTrigger,
+        CustomEase: nuxtApp.$CustomEase,
     }
 }

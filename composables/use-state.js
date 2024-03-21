@@ -1,4 +1,5 @@
 export const usePageTransition = () => useState("pageTransition", () => false)
+export const useDefaultCustomEase = () => useState("defaultCustomEase", () => "")
 export const useLocalTimeState = () => useState("localTime", () => "00:00:00 AM GMT+3")
 export const useHeaderMenuState = () => useState("headerMenuState", () => "close") // close / animating-open / open / animating-close
 export const useHeaderStartAnimateScrollPosition = () => useState("headerStartAnimateScrollPosition", () => 150)

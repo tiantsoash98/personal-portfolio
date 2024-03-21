@@ -20,7 +20,6 @@ const props = defineProps({
     title: String,
     subtitle: String,
 })
-
 </script>
 
 <style lang="scss" scoped>
