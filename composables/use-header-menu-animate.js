@@ -86,12 +86,6 @@ export default () => {
                 yPercent: 0,
                 stagger: 0.15
             }, '<+0.1')
-            .fromTo('.menu__box-item', { 
-                opacity: 0,
-            }, { 
-                opacity: 1,
-                stagger: 0.15
-            }, '-=0.5')
             .to('.menu .ellipse__wrapper', { 
                 scale: 1,
                 duration: 1.3,
