@@ -13,12 +13,15 @@
                     <div class="title-h1">Web Designer & Creative Developer helping passionate people grow their business</div>
                 </div>
                 <div class="hero__button-wrapper col-full col-lg-4 mt-8 mt-md-12 mt-lg-0">
-                    <ButtonMain 
-                        :text="'Explore my work'" 
-                        :hasIcon="true"
-                        icon="IconArrowDown"
-                        animate-direction="to-bottom"
-                    />
+                    <NuxtLink to="/#works">
+                        <ButtonMain 
+                            onclick="lenis.scrollTo('#works')"
+                            :text="'Explore my work'" 
+                            :hasIcon="true"
+                            icon="IconArrowDown"
+                            animate-direction="to-bottom"
+                        />
+                    </NuxtLink>
                 </div>
             </div>
             <div class="hero__footer row">
