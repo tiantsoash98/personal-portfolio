@@ -1,5 +1,5 @@
 <template>
-    <header class="header pt-8">
+    <header class="header pt-4 pt-md-8">
         <div class="header__content-wrapper container">
             <div class="row">
                 <div class="header__logo col-4 col-md-3 col-lg-3">

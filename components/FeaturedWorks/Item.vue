@@ -58,12 +58,12 @@ const props = defineProps({
 
 const contentWrapperFullClass = computed(() => {
     if(props.isInverted) return "featured-works-item__content-wrapper col-full col-md-5 col-lg-4 col-start-md-8 pt-4 pb-0 pt-md-40 pb-md-40 order-2"
-    return "featured-works-item__content-wrapper col-full col-md-5 col-lg-4 col-start-lg-1 pt-4 pb-0 pt-md-40 pb-md-40 order-2 order-sm-1"
+    return "featured-works-item__content-wrapper col-full col-md-5 col-lg-4 col-start-lg-1 pt-4 pb-0 pt-md-40 pb-md-40 order-2 order-md-1"
 })
 
 const imgWrapperFullClass = computed(() => {
     if(props.isInverted) return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6 order-1"
-    return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6 col-start-md-7 order-1 order-sm-2"
+    return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6 col-start-md-7 order-1 order-md-2"
 })
 
 const target = computed(() => {

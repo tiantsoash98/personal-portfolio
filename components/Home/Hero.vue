@@ -8,11 +8,11 @@
         <div class="hero__main-wrapper container">
             <div class="hero-spacer"></div>
             <div class="hero__content-wrapper row pt-20 pb-20">
-                <div class="hero__headline-wrapper col-full col-lg-8">
+                <div class="hero__headline-wrapper col-full col-md-8">
                     <h1 class="text-visually-hidden">Web Designer & Creative Developer helping passionate people grow their business</h1>
                     <div class="title-h1">Web Designer & Creative Developer helping passionate people grow their business</div>
                 </div>
-                <div class="hero__button-wrapper col-full col-lg-4 mt-8 mt-md-12 mt-lg-0">
+                <div class="hero__button-wrapper col-full col-md-4 mt-8 mt-md-0">
                     <NuxtLink to="/#works">
                         <ButtonMain 
                             onclick="lenis.scrollTo('#works')"
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="hero__footer row">
-                <div class="hero__footer-item col-1 col-md-3 order-2 order-md-1 mt-6 mt-md-0"> 
+                <div class="hero__footer-item hero__footer-arrow col-1 col-md-3 order-2 order-md-1 mt-6 mt-md-0"> 
                     <IconArrowDown class="hero__arrow"/>
                 </div>
                 <div class="hero__footer-item col-5 col-md-5 col-lg-6 order-1 order-md-2">
@@ -49,7 +49,7 @@ const localTime = useLocalTimeState()
 
 <style lang="scss" scoped>
 .hero {
-    height: 100vh;
+    height: 100dvh;
     
     &__main-wrapper {
         height: 100%;
@@ -79,6 +79,9 @@ const localTime = useLocalTimeState()
 
 @media screen and (max-width: 991px) {
     .hero{
+        &__footer-arrow {
+            text-align: right;
+        }
         &__button-wrapper {
             justify-content: flex-start;
         }

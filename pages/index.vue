@@ -1,5 +1,5 @@
 <template>
-    <main class="page">
+    <main class="page" id="top">
         <HomeHero/>
         <HomeAbout/>
         <FeaturedWorksMain/>

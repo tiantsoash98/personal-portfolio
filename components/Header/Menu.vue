@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="menu__frame overlay"></div>
-        <div class="menu__main-wrapper container pt-8 pb-12">
+        <div class="menu__main-wrapper container pt-4 pt-md-8 pb-12">
             <div class="menu__header-wrapper">
                 <div class="menu__close-wrapper cursor-pointer hover-animation menu-toogler">
                     <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">

@@ -21,8 +21,5 @@
 <style lang="scss" scoped>
 .footer-cta {
     text-align: center;
-    &__mail {
-        cursor: pointer;
-    }
 }
 </style>

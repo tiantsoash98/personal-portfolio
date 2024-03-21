@@ -1,5 +1,5 @@
 <template>
-    <div class="footer mt-60 pb-8">
+    <div class="footer mt-20 mt-md-60 pb-8">
         <div class="container">
             <div class="row">       
                 <div class="footer__left col-full col-md-4"> 
@@ -7,12 +7,14 @@
                 </div>
                 <div class="footer__middle col-full col-md-4">
                     <ul class="footer__socials-wrapper">
-                        <li class="footer__social ml-8"><a class="hover-link" href="#">Linkedin</a></li>
-                        <li class="footer__social ml-8"><a class="hover-link" href="#">Instagram</a></li>
+                        <li class="footer__social"><a href="#">Linkedin</a></li>
+                        <li class="footer__social ml-8"><a href="#">Instagram</a></li>
                     </ul>
                 </div>
                 <div class="footer__right col-full col-md-4">
-                    <span>Back to top</span>
+                    <a href="#top">
+                        <span>Back to top</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -37,6 +39,18 @@
     &__right {
         text-align: right;
         align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer{
+        &__left {
+            text-align: center;
+        } 
+        &__right {
+            text-align: center;
+            align-self: flex-end;
+        }
     }
 }
 </style>
