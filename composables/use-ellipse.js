@@ -26,6 +26,7 @@ export default () => {
             let { isDesktop, isMobile } = context.conditions;
 
             ellipses.forEach((ellipse) => {
+                // Init values from attribute
                 initValues(ellipse)
                 ellipse.style.zIndex = zIndex.value
                 ellipse.style.top = isDesktop ? fieldY.value + '%' : fieldMobileY.value + '%'

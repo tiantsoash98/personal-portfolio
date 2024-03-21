@@ -24,7 +24,7 @@
             </div>
             <div class="menu__footer">
                 <div class="menu__box menu__box--left">
-                    <div class="menu__box-item menu__mail">Available for freelance work</div>
+                    <div class="menu__box-item">Available for freelance work</div>
                 </div>
                 <div class="menu__box menu__box--center">
                     <a href="mailto:tiantsoa.sh@gmail.com" class="menu__box-item menu__mail">tiantsoa.sh@gmail.com</a>

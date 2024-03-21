@@ -34,7 +34,7 @@
                         />
                         <div class="featured-works-item__img-filter overlay"></div>
                         <div class="featured-works-item__overlay overlay">
-                            <div class="featured-works-item__title featured-works-item__overlay-item featured-works-item__overlay-item--title title-h1">{{ title }}</div>
+                            <div class="featured-works-item__title featured-works-item__overlay-item featured-works-item__overlay-item--title title-h1 mr-4">{{ title }}</div>
                             <IconArrowNarrowRight class="featured-works-item__overlay-item featured-works-item__overlay-item--arrow featured-works-item__arrow"/>
                         </div>
                     </NuxtLink>
@@ -142,7 +142,7 @@ const target = computed(() => {
         }
     }
     &__arrow {
-        width: 6rem;
+        width: calc(var(--title-h1) * 1.25);
         transition: transform var(--default-animation-duration) var(--alias-default-ease),
                     opacity var(--default-animation-duration) var(--alias-default-ease); 
     }
