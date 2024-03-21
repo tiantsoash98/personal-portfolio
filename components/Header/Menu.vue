@@ -8,7 +8,7 @@
         <div class="menu__frame overlay"></div>
         <div class="menu__main-wrapper container pt-8 pb-12">
             <div class="menu__header-wrapper">
-                <div class="menu__close-wrapper cursor-pointer hover-animation menu__toogler">
+                <div class="menu__close-wrapper cursor-pointer hover-animation menu-toogler">
                     <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">
                         <div class="hover-animation__item hover-animation__item--main">Close</div>
                         <div class="hover-animation__item hover-animation__item--second">Close</div>
@@ -40,11 +40,16 @@
 </template>
 
 <script setup>
+const { initHeaderMenu } = useHeaderMenu()
 
+onMounted(() => {
+    initHeaderMenu()
+})
 </script>
 
 <style lang="scss">
 .menu {
+    display: none;
     $root:&;
     position: fixed;
     inset: 0;

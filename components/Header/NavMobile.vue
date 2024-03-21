@@ -2,7 +2,7 @@
     <nav class="header-mobile">
         <div class="header-mobile__main-wrapper">
             <div class="header-mobile__menu-wrapper">
-                <div class="header-mobile__menu hover-animation">
+                <div class="header-mobile__menu hover-animation menu-toogler">
                     <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">
                         <div class="hover-animation__item hover-animation__item--main">Menu</div>
                         <div class="hover-animation__item hover-animation__item--second">Open</div>

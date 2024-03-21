@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">       
                 <div class="footer__left col-full col-md-4"> 
-                    <div>tiantsoa.sh@gmail.com</div>
+                    <a href="mailto:tiantsoa.sh@gmail.com">tiantsoa.sh@gmail.com</a>
                 </div>
                 <div class="footer__middle col-full col-md-4">
                     <ul class="footer__socials-wrapper">

@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="header-web__menu-wrapper">
-                <div class="header-web__menu header-web__show-on-scroll hover-animation">
+                <div class="header-web__menu header-web__show-on-scroll hover-animation menu-toogler">
                     <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">
                         <div class="hover-animation__item hover-animation__item--main">Menu</div>
                         <div class="hover-animation__item hover-animation__item--second">Open</div>
