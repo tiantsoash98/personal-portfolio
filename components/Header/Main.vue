@@ -3,7 +3,7 @@
         <div class="header__content-wrapper container">
             <div class="row">
                 <div class="header__logo col-4 col-md-3 col-lg-3">
-                    <NuxtLink to="/">Tiantsoa Rabemananjara</NuxtLink>
+                    <NuxtLink :to="{ path: '/' }">Tiantsoa Rabemananjara</NuxtLink>
                 </div>
                 <HeaderNavWeb class="col-md-9 hide-on-below-md"/>
                 <HeaderNavMobile class="col-2 hide-on-above-md"/>

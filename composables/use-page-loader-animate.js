@@ -34,7 +34,7 @@ export default () => {
     function timelineLoaderOutAnimations () {
         const tl = gsap.timeline()  
         tl.add(timelineSlides())
-        tl.add(timelineLoaderFrame(), '-=0.25')
+        tl.add(timelineLoaderFrame(), '-=0.5')
 
         if(title.value)
             tl.add(timelineTitleIn(), '-=1.1')

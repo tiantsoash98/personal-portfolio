@@ -1,6 +1,7 @@
 <template>
     <div>
-        <PageLoader></PageLoader>
+        <PageLoader/>
+        <PageTransition/>
         <HeaderMain/>
         <main>
             <slot />

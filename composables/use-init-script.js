@@ -9,14 +9,19 @@ export default () => {
     const { initSplitType, destroySplitType } = useSplitType()
     // Page load
     const { initPageLoader, destroyPageLoader } = usePageLoader()
+    // Page transition
+    const { initPageTransition, destroyPageTransition } = usePageTransition()
 
     const init = () => {
         initScrollDown()
         initEllipse()
         initSplitType()
         initLocalTime()
-        // Play Page loader out when everything ready
+
+        // Play Page loader out when everything ready if once
         initPageLoader()
+        // Or play page transition
+        initPageTransition()
     }
 
     const destroy = () => {
@@ -25,6 +30,7 @@ export default () => {
         destroySplitType()
         destroyLocalTime()
         destroyPageLoader()
+        destroyPageTransition()
     }
 
     return { 

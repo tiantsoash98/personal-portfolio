@@ -80,11 +80,11 @@ export default () => {
             })
             .fromTo('.menu-link__title', { 
                 opacity: 0,
-                yPercent: -10
+                xPercent: 20
             }, { 
                 opacity: 1,
-                yPercent: 0,
-                stagger: 0.15
+                xPercent: 0,
+                stagger: 0.1
             }, '<+0.1')
             .to('.menu .ellipse__wrapper', { 
                 scale: 1,

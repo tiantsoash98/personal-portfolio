@@ -15,7 +15,6 @@
                 <div class="hero__button-wrapper col-full col-md-4 mt-8 mt-md-0">
                     <NuxtLink to="/#works">
                         <ButtonMain 
-                            onclick="lenis.scrollTo('#works')"
                             :text="'Explore my work'" 
                             :hasIcon="true"
                             icon="IconArrowDown"

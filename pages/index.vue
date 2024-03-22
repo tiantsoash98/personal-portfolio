@@ -1,5 +1,7 @@
 <template>
+    
     <main class="page" id="top">
+        <Title>Tiantsoa Rabemananjara | Freelance designer & Creative Developer</Title>
         <HomeHero/>
         <HomeAbout/>
         <FeaturedWorksMain/>
