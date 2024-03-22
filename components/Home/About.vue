@@ -6,7 +6,7 @@
                 <div class="home-about__description-wrapper col-full col-md-6">
                     <h2 class="home-about__description title-h4">
                         Hi, bonjour, salama ! I am Tiantsoa, freelance Web designer & Creative designer based in Madagascar. I closely collaborate with agencies and passionate people who want to solve problems through beautiful and user-centered products. 
-                        <br><br>With a keen focus on user experience and creative interactions, I always aim to create memorable experiences that will set your brand apart.
+                        <br><br>With a keen focus on user experience and creative interactions, I always aim to create memorable experiences that will set you apart.
                     </h2>
                     <ButtonMain 
                         :text="'Get to know me'" 
