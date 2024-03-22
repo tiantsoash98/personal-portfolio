@@ -5,11 +5,10 @@ export default () => {
     const slides = ref(null)
     const ellipse = ref(null)
     const title = ref(null)
+    const { gsap, CustomEase } = useGsap()
 
     // Init animate on mounted
     const initPageLoaderAnimate = () => {
-        const { gsap } = useGsap()
-
         defaultEase.value = getComputedStyle(document.body).getPropertyValue('--default-ease') || "power2.inOut"
         slides.value = document.querySelectorAll(".page-loader__slide--overflow")
         ellipse.value = document.querySelector(".animate__ellipse-in")
@@ -33,8 +32,6 @@ export default () => {
 
 
     function timelineLoaderOutAnimations () {
-        const { gsap } = useGsap()
-
         const tl = gsap.timeline()  
         tl.add(timelineSlides())
         tl.add(timelineLoaderFrame(), '-=0.25')
@@ -50,7 +47,6 @@ export default () => {
 
     // Slides timeline (Tiantsoa -> Web Designer -> Creative Dev)
     function timelineSlides (){
-        const { gsap, CustomEase } = useGsap()
         let slideAppearDuration = 0.2
 
         const tl = gsap.timeline({
@@ -85,8 +81,6 @@ export default () => {
 
     // Animate Page loader frame out
     function timelineLoaderFrame (){
-        const { gsap } = useGsap()
-
         const tl = gsap.timeline({
             defaults: {
                 duration: 1,
@@ -102,8 +96,6 @@ export default () => {
 
     // Animate title reveal
     function timelineTitleIn (){
-        const { gsap } = useGsap()
-
         const tl = gsap.timeline({
             defaults: {
                 duration: 1,
@@ -114,7 +106,6 @@ export default () => {
         tl
             .from('.animate__title-in .split-type--word', { 
                 yPercent: 100,
-                opacity: 0,
                 stagger: 0.04,
             })
 
@@ -123,7 +114,6 @@ export default () => {
 
     // Animate Ellipse in
     function timelineEllipseIn (){
-        const { gsap } = useGsap()
         let ellipseInitialScale = ellipse.value.dataset.scale || 1
 
         const tl = gsap.timeline({

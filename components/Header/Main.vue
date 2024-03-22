@@ -15,8 +15,17 @@
 </template>
 
 <script setup>
+    const { 
+        initHeaderAnimateScroll, 
+        destroyHeaderAnimateScroll 
+    } = useHeaderAnimateScroll()
+
     onMounted(() => {
-        useHeaderAnimateScroll()
+        initHeaderAnimateScroll()
+    })
+
+    onUnmounted(() => {
+        destroyHeaderAnimateScroll()
     })
 </script>
 

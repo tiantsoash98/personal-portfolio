@@ -1,5 +1,8 @@
 import SplitType from "split-type";
 
+// Split type class : .split-type
+// Line class : .split-type--line-wrapper
+// Word class : .split-type--word
 export default () => {
     const splits = ref(null)
 
