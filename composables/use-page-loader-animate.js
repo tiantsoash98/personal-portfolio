@@ -1,16 +1,17 @@
 // Page loader animations
 export default () => {
     let timelineLoaderOut = null
-    const slides = ref(null)
     const defaultEase = ref("")
-    let delay = 0
+    const slides = ref(null)
+    const ellipse = ref(null)
 
     // Init animate on mounted
     const initPageLoaderAnimate = () => {
         const { gsap } = useGsap()
 
-        slides.value = document.querySelectorAll(".page-loader__slide--overflow")
         defaultEase.value = getComputedStyle(document.body).getPropertyValue('--default-ease') || "power2.inOut"
+        slides.value = document.querySelectorAll(".page-loader__slide--overflow")
+        ellipse.value = document.querySelector(".animate__ellipse-in")
 
         // Init open timeline
         timelineLoaderOut = gsap.timeline()
@@ -34,7 +35,10 @@ export default () => {
 
         const tl = gsap.timeline()  
         tl.add(timelineSlides())
-        tl.add(timelineFrame(), '-=0.5')
+        tl.add(timelineLoaderFrame(), '-=0.2')
+
+        if(ellipse.value)
+            tl.add(timelineEllipseIn(), '-=0.9')
 
         return tl
     }
@@ -42,7 +46,7 @@ export default () => {
     // Slides timeline (Tiantsoa -> Web Designer -> Creative Dev)
     function timelineSlides (){
         const { gsap, CustomEase } = useGsap()
-        let slideAppearDuration = 0.3
+        let slideAppearDuration = 0.2
 
         const tl = gsap.timeline({
             defaults: {
@@ -75,22 +79,41 @@ export default () => {
     }
 
     // Animate Page loader frame out
-    function timelineFrame (){
-        const { gsap, CustomEase } = useGsap()
+    function timelineLoaderFrame (){
+        const { gsap } = useGsap()
 
         const tl = gsap.timeline({
             defaults: {
-                duration: 0.9,
+                duration: 1,
+                ease: "power1.inOut"
+            },
+        })  
+
+        tl
+            .to('.page-loader__frame', { opacity: 0 })
+
+        return tl
+    }
+
+    // Animate Ellipse in
+    function timelineEllipseIn (){
+        const { gsap, CustomEase } = useGsap()
+        let ellipseInitialScale = ellipse.value.dataset.scale || 1
+
+        const tl = gsap.timeline({
+            defaults: {
+                duration: 1.3,
                 ease: CustomEase.create("customEase", defaultEase.value)
             },
         })  
 
         tl
-            .fromTo('.page-loader__frame', { 
-                clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
-                
+            .fromTo('.animate__ellipse-in', { 
+                scaleX: ellipseInitialScale,
+                scaleY: 0
             }, {
-                clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' 
+                scaleX: ellipseInitialScale,
+                scaleY: ellipseInitialScale
             })
 
         return tl

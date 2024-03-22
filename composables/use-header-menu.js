@@ -1,7 +1,6 @@
 export default () => {
     const menu = ref(null)
     const tooglers = ref(null)
-    const ellipse = ref(null)
     const links = ref(null)
     const headerMenuState = useHeaderMenuState()
     const { 
@@ -26,7 +25,6 @@ export default () => {
             toogler.addEventListener("click", toogleMenu)
         })
 
-        ellipse.value = menu.value.querySelector(".ellipse__wrapper")
         links.value = menu.value.querySelector(".menu__links")
         links.value.addEventListener("mouseenter", playLinksHoverAnimation)
         links.value.addEventListener("mouseleave", playLinksHoverOutAnimation)

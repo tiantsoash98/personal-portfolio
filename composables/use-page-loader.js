@@ -1,5 +1,4 @@
 export default () => {
-    const { gsap } = useGsap()
     const { 
         initPageLoaderAnimate,
         destroyPageLoaderAnimate,
