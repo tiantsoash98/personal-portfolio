@@ -1,5 +1,5 @@
 <template>
-    <div class="page-loader">
+    <div class="page-loader" >
         <div class="page-loader__frame overlay"></div>
         <div class="page-loader__wrapper">
             <div class="page-loader__slides">
@@ -39,7 +39,6 @@ onMounted(() => {
         height: 100dvh;
         width: 100%;
         background-color: var(--color-neutral-950);
-        transform-origin: top;
     }
     &__wrapper {
         width: 100%;
@@ -58,7 +57,7 @@ onMounted(() => {
 
         &--overflow {
             position: absolute;
-            top: 0%;
+            top: 100%;
             left: 0;
             width: 100%;
         }
