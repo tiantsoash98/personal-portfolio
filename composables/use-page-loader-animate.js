@@ -4,6 +4,7 @@ export default () => {
     const defaultEase = ref("")
     const slides = ref(null)
     const ellipse = ref(null)
+    const title = ref(null)
 
     // Init animate on mounted
     const initPageLoaderAnimate = () => {
@@ -12,6 +13,7 @@ export default () => {
         defaultEase.value = getComputedStyle(document.body).getPropertyValue('--default-ease') || "power2.inOut"
         slides.value = document.querySelectorAll(".page-loader__slide--overflow")
         ellipse.value = document.querySelector(".animate__ellipse-in")
+        title.value = document.querySelector(".animate__title-in")
 
         // Init open timeline
         timelineLoaderOut = gsap.timeline()
@@ -35,10 +37,13 @@ export default () => {
 
         const tl = gsap.timeline()  
         tl.add(timelineSlides())
-        tl.add(timelineLoaderFrame(), '-=0.2')
+        tl.add(timelineLoaderFrame(), '-=0.25')
+
+        if(title.value)
+            tl.add(timelineTitleIn(), '-=1.1')
 
         if(ellipse.value)
-            tl.add(timelineEllipseIn(), '-=0.9')
+            tl.add(timelineEllipseIn(), '-=1')
 
         return tl
     }
@@ -95,15 +100,36 @@ export default () => {
         return tl
     }
 
+    // Animate title reveal
+    function timelineTitleIn (){
+        const { gsap } = useGsap()
+
+        const tl = gsap.timeline({
+            defaults: {
+                duration: 1,
+                ease: "power2.out"
+            },
+        })  
+
+        tl
+            .from('.animate__title-in .split-type--word', { 
+                yPercent: 100,
+                opacity: 0,
+                stagger: 0.04,
+            })
+
+        return tl
+    }
+
     // Animate Ellipse in
     function timelineEllipseIn (){
-        const { gsap, CustomEase } = useGsap()
+        const { gsap } = useGsap()
         let ellipseInitialScale = ellipse.value.dataset.scale || 1
 
         const tl = gsap.timeline({
             defaults: {
-                duration: 1.3,
-                ease: CustomEase.create("customEase", defaultEase.value)
+                duration: 1.5,
+                ease: "power2.out"
             },
         })  
 

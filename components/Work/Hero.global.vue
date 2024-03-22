@@ -12,7 +12,7 @@
             />
         </div>
         <div class="work-hero__img-filter"></div>
-        <div class="ellipse__field" data-field-y="40" data-position-x="-50" data-position-y="0" data-scale="0.85" data-z-index="2">
+        <div class="ellipse__field animate__ellipse-in" data-field-y="40" data-position-x="-50" data-position-y="0" data-scale="1" data-z-index="2">
             <div class="ellipse__wrapper">
                 <div class="ellipse__decor"></div>
             </div>
@@ -21,7 +21,7 @@
             <div class="row">
                  <div class="work-hero__content-wrapper col-full col-sm-4 col-md-6 col-lg-4">
                     <h1 class="text-visually-hidden">{{ project }}</h1>
-                    <div class="work-hero__title title-h1">{{ project }}</div>
+                    <div class="work-hero__title title-h1 split-type animate__title-in">{{ project }}</div>
                     <p class="text-visually-hidden"><ContentSlot unwrap="p"/></p>
                     <div class="work-hero__description title-h5 mt-4"><ContentSlot unwrap="p"/></div>
                  </div>

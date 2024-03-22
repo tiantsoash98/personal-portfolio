@@ -9,13 +9,16 @@ export default () => {
     // Init page loader behavior
     const initPageLoader = () => {
         // Init page loader animate on mounted
-        initPageLoaderAnimate()
-        pageLoaderState.value = "loading"
+        // Only execute when page load hasn't been called yet
+        if(pageLoaderState.value != "loaded"){
+            initPageLoaderAnimate()
+            pageLoaderState.value = "loading"
 
-        // Start page loader out animation
-        playPageLoaderOut().then(() => {
-            pageLoaderState.value = "loaded"
-        })
+            // Start page loader out animation
+            playPageLoaderOut().then(() => {
+                pageLoaderState.value = "loaded"
+            })
+        }
     }
 
     const destroyPageLoader = () => {

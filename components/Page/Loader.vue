@@ -13,15 +13,6 @@
 
 <script setup>
 const pageLoaderState = usePageLoaderState()
-const { initPageLoader, destroyPageLoader } = usePageLoader()
-
-onMounted(() => {
-    initPageLoader()
-})
-
-onMounted(() => {
-    destroyPageLoader()
-})
 </script>
 
 <style lang="scss" scoped>

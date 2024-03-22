@@ -7,12 +7,16 @@ export default () => {
     const { initEllipse, destroyEllipse } = useEllipse()
     // Split types
     const { initSplitType, destroySplitType } = useSplitType()
+    // Page load
+    const { initPageLoader, destroyPageLoader } = usePageLoader()
 
     const init = () => {
         initScrollDown()
         initEllipse()
         initSplitType()
         initLocalTime()
+        // Play Page loader out when everything ready
+        initPageLoader()
     }
 
     const destroy = () => {
@@ -20,6 +24,7 @@ export default () => {
         destroyEllipse()
         destroySplitType()
         destroyLocalTime()
+        destroyPageLoader()
     }
 
     return { 
