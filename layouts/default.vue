@@ -1,7 +1,6 @@
 <template>
     <div>
-        <!-- <PageLoader :loaded="loaded" ></PageLoader> -->
-        <!-- <PageTransition></PageTransition> -->
+        <PageLoader></PageLoader>
         <HeaderMain/>
         <main>
             <slot />
@@ -11,9 +10,5 @@
 </template>
 
 <script setup>
-const loaded = ref(false)
 
-onMounted(() => {
-    loaded.value = true
-})
 </script>
