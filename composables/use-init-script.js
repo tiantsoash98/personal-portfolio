@@ -5,17 +5,21 @@ export default () => {
     const { initScrollDown, destroyScrollDown } = useScrollDown()
     // Ellipses
     const { initEllipse, destroyEllipse } = useEllipse()
+    // Split types
+    const { initSplitType, destroySplitType } = useSplitType()
 
     const init = () => {
-        initLocalTime()
         initScrollDown()
         initEllipse()
+        initSplitType()
+        initLocalTime()
     }
 
     const destroy = () => {
-        destroyLocalTime()
         destroyScrollDown()
         destroyEllipse()
+        destroySplitType()
+        destroyLocalTime()
     }
 
     return { 
