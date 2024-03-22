@@ -1,5 +1,5 @@
 <template>
-    <div class="page-loader" >
+    <div class="page-loader" v-if="pageLoaderState != 'loaded'">
         <div class="page-loader__frame overlay"></div>
         <div class="page-loader__wrapper">
             <div class="page-loader__slides">
