@@ -7,8 +7,8 @@
                 </div>
                 <div class="footer__middle col-full col-md-4">
                     <ul class="footer__socials-wrapper">
-                        <li class="footer__social"><a href="https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/">Linkedin</a></li>
-                        <li class="footer__social ml-8"><a href="https://www.instagram.com/tiantsoa_sh/">Instagram</a></li>
+                        <li class="footer__social"><a href="https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/" target="_blank">Linkedin</a></li>
+                        <li class="footer__social ml-8"><a href="https://www.instagram.com/tiantsoa_sh/" target="_blank">Instagram</a></li>
                     </ul>
                 </div>
                 <div class="footer__right col-full col-md-4">
