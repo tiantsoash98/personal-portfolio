@@ -25,21 +25,14 @@
                         <TestimonialsItem
                             name="Miandra Raharison"
                             role="Co-founder of My Smart Content"
-                            content="“Nous avons particulièrement apprécié la collaboration avec Tiantsoa pour la refonte de notre site internet. C'est un créatif talentueux, à l'écoute, méthodique, bien organisé, réactif, il a su comprendre nos besoins et traduire nos envies et notre vision en un véritable chef d'oeuvre.  Tiantsoa est un véritable professionnel que je recommande vivement pour vos projets de webdesign ou tout autre projet créatif.”"
+                            content="“We particularly appreciated working with Tiantsoa on the redesign of our website. He is a talented creative, attentive, methodical, well-organized, responsive; he understood our needs and translated our desires and vision into a true masterpiece. Tiantsoa is a true professional I highly recommend for your web design projects or any other creative project.”"
                         />
                     </swiper-slide>
                     <swiper-slide>
                         <TestimonialsItem
                             name="Julien Dutartre"
                             role="Engagement Manager - Versusmind"
-                            content="“En tant que chef de projet, travailler avec Tiantsoa est facile. Particulièrement sur l'aspect UI où il a su être force de proposition pour aboutir à un design agréable et intuitif en prenant en compte les nombreuses contraintes techniques.”"
-                        />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <TestimonialsItem
-                            name="John Doe"
-                            role="3D Artist"
-                            content="“Franchement, travailler avec Tiantsoa est un plaisir ! Je recommande vivement pour vos projets de site web”"
+                            content="“As a project manager, working with Tiantsoa is easy. Particularly on the UI aspect where he has been proactive in proposing solutions to achieve a pleasant and intuitive design while considering the numerous technical constraints.”"
                         />
                     </swiper-slide>
                     <div class="row mt-8 mt-md-12">

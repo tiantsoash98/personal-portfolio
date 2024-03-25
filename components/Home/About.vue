@@ -10,12 +10,12 @@
                     <p class="home-about__description title-h4 split-type mt-6 mt-md-12 section-reveal__title">
                         With a keen focus on user experience and creative interactions, I always aim to create memorable experiences that will set you apart.
                     </p>
-                    <ButtonMain 
+                    <!-- <ButtonMain 
                         :text="'Get to know me'" 
                         type="secondary"
                         :hasIcon="true" 
                         class="mt-16"
-                    />
+                    /> -->
                 </div>
             </div>
         </div>
