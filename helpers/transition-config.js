@@ -16,7 +16,6 @@ const pageTransition = {
     },
     onBeforeEnter: (el) => {
         // Before Enter
-        window
     },
     onEnter: (el, done) => {
         setTimeout(() => { done()}, 10)

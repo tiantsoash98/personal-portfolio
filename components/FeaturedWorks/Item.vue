@@ -29,6 +29,7 @@
                     <NuxtLink :to="path" :target="target" class="overlay">
                         <NuxtImg 
                             :src="imgSrc" 
+                            :alt="imgAlt"
                             class="img featured-works-item__img"
                             sizes="sm:90vw md:50vw lg:50vw 90vw"
                         />
@@ -52,6 +53,7 @@ const props = defineProps({
     roles: Array,
     year: Number,
     imgSrc: String,
+    imgAlt: String,
     path: String,
     isInverted: Boolean
 })

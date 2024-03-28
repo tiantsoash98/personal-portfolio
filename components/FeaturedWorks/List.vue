@@ -10,7 +10,8 @@
             :description="work.description"
             :roles="work.roles"
             :year="work.year"
-            :img-src="work.img"
+            :img-src="work.image.src"
+            :img-alt="work.image.alt"
             :path="work.path ? work.path : work._path"
             :is-inverted="isEven(index)"
         />
@@ -19,7 +20,7 @@
 
 <script setup>
 const works = await queryContent('work')
-        .only(['project', 'description', 'img', 'year', 'roles', 'path', '_path'])
+        .only(['project', 'description', 'image', 'year', 'roles', 'path', '_path'])
         .limit(5)
         .find()
 
