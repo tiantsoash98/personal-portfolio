@@ -10,14 +10,15 @@
                 height="1080"
                 loading="lazy"
             />
+            <div class="work-hero__img-filter"></div>
         </div>
-        <div class="work-hero__img-filter"></div>
-        <div class="ellipse__field animate__ellipse-in" data-field-y="40" data-position-x="-50" data-position-y="0" data-scale="1" data-z-index="2">
+        
+        <div class="ellipse__field animate__ellipse-in" data-field-y="40" data-position-x="-50" data-position-y="0" data-scale="1" data-z-index="0">
             <div class="ellipse__wrapper">
                 <div class="ellipse__decor"></div>
             </div>
         </div>
-        <div class="work-hero__overlay container pb-30">
+        <div class="work-hero__overlay container pb-20 pb-md-30 pt-8 pt-md-0">
             <div class="row">
                  <div class="work-hero__content-wrapper col-full col-sm-4 col-md-6 col-lg-4">
                     <h1 class="text-visually-hidden">{{ project }}</h1>
@@ -43,6 +44,7 @@ const props = defineProps({
 
     &__img-wrapper {
         height: 100%;
+        z-index: -1;
     }
     &__img-filter {
         pointer-events: none;
@@ -61,6 +63,18 @@ const props = defineProps({
         height: 100%;
         display: flex;
         align-items: flex-end;
+    }
+}
+@media screen and (max-width: 991px) {
+    .work-hero {
+        height: auto;
+
+        &__img-filter {
+            background: linear-gradient(to top, rgba(var(--color-neutral-950-rgb), 1) 5%, rgba(var(--color-neutral-950-rgb), 0) 30%)
+        }
+        &__overlay {
+            position: relative;
+        }
     }
 }
 </style>

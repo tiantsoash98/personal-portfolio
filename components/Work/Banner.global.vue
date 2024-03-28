@@ -19,9 +19,4 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.work-banner{
-    &__wrapper {
-        height: 100vh;
-    }
-}
 </style>
