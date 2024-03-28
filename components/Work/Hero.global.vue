@@ -18,7 +18,7 @@
                 <div class="ellipse__decor"></div>
             </div>
         </div>
-        <div class="work-hero__overlay container pb-20 pb-md-30 pt-8 pt-md-0">
+        <div class="work-hero__overlay container pb-4 pb-md-30 pt-4 pt-md-0">
             <div class="row">
                  <div class="work-hero__content-wrapper col-full col-sm-4 col-md-6 col-lg-4">
                     <h1 class="text-visually-hidden">{{ project }}</h1>

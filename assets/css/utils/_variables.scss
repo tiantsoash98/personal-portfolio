@@ -96,7 +96,7 @@ $breakpoints:(
     --container-max-width: 100%;
     --grid-columns: 6;
     --column-gap: var(--spacing-4);
-    --container-horizontal-padding: var(--spacing-6);
+    --container-horizontal-padding: var(--spacing-4);
     --section-vertical-padding: var(--spacing-20);
 
     // Z-index
@@ -113,7 +113,7 @@ $breakpoints:(
     --default-show-nav-menu-breakpoint: 991px;
 
     // Custom variables
-    --ellipse-field-height: 80vh;
+    --ellipse-field-height: auto;
 }
 
 // md
@@ -133,6 +133,7 @@ $breakpoints:(
         --footnote-text: 0.88rem;  
 
         --ellipse-field-height: 100vh;
+        --ellipse-field-height: 80vh;
     }
 }
 
