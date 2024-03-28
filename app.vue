@@ -1,6 +1,6 @@
 <template>
   <lenis
-    :options="lenisOptions"
+    :options="lenisConfig"
   >
       <NuxtLayout>
           <NuxtPage/>
@@ -9,8 +9,9 @@
 </template>
 
 <script setup>
-const lenisOptions = useLenis()  
+import lenisConfig from '../helpers/lenis-config'
 </script>
 
-<style>
+<style lang="scss">
+
 </style>
