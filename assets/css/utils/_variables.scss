@@ -113,7 +113,7 @@ $breakpoints:(
     --default-show-nav-menu-breakpoint: 991px;
 
     // Custom variables
-    --ellipse-field-height: auto;
+    --ellipse-field-height: 80vh;
 }
 
 // md
@@ -133,7 +133,6 @@ $breakpoints:(
         --footnote-text: 0.88rem;  
 
         --ellipse-field-height: 100vh;
-        --ellipse-field-height: 80vh;
     }
 }
 

@@ -31,8 +31,8 @@
                 </div>
                 
                 <div class="menu__box menu__box--right">
-                    <a class="menu__box-item" href="#">Linkedin</a>
-                    <a class="menu__box-item ml-0 ml-md-8" href="#">Instagram</a>
+                    <a class="menu__box-item" href="https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/" target="_blank">Linkedin</a>
+                    <a class="menu__box-item ml-0 ml-md-8" href="https://www.instagram.com/tiantsoa_sh/" target="_blank">Instagram</a>
                 </div>
             </div>
         </div>
@@ -71,6 +71,7 @@ onUnmounted(() => {
     &__main-wrapper{
         width: 100%;
         height: 100%;
+        z-index: 1;
 
         display: flex;
         flex-direction: column;
