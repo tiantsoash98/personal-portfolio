@@ -5,7 +5,7 @@
             <div class="testimonial__role">{{ role }}</div>
         </div>
         <div class="testimonal__content-wrapper col-full col-md-7">
-            <div class="testimonial__content title-h4" >{{ content }}</div>
+            <div class="testimonial__content title-h4" ><ContentSlot unwrap="p"/></div>
         </div>
     </div>
 </template>

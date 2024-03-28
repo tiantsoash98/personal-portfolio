@@ -21,19 +21,11 @@
                         prevEl: '.swiper__button--prev',
                     }"
                 >
-                    <swiper-slide>
-                        <TestimonialsItem
-                            name="Miandra Raharison"
-                            role="Co-founder of My Smart Content"
-                            content="“We particularly appreciated working with Tiantsoa on the redesign of our website. He is a talented creative, attentive, methodical, well-organized, responsive; he understood our needs and translated our desires and vision into a true masterpiece. Tiantsoa is a true professional I highly recommend for your web design projects or any other creative project.”"
-                        />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <TestimonialsItem
-                            name="Julien Dutartre"
-                            role="Engagement Manager - Versusmind"
-                            content="“As a project manager, working with Tiantsoa is easy. Particularly on the UI aspect where he has been proactive in proposing solutions to achieve a pleasant and intuitive design while considering the numerous technical constraints.”"
-                        />
+                    <swiper-slide
+                        v-for="(testimonial, index) in testimonials"
+                        :key="index"
+                    >
+                        <ContentRenderer :value="testimonial" />
                     </swiper-slide>
                     <div class="row mt-8 mt-md-12">
                         <div class="col-full col-md-5"></div>
@@ -70,7 +62,6 @@
 
     // Import Swiper styles
     import 'swiper/css';
-
     import 'swiper/css/effect-fade';
     import 'swiper/css/navigation';
     import 'swiper/css/pagination';
@@ -83,9 +74,12 @@
             Swiper,
             SwiperSlide,
         },
-        setup() {
+        async setup() {
             return {
                 modules: [EffectFade, Navigation, Pagination],
+                testimonials: await queryContent('_partials','testimonials')
+                                .where({ _partial: true })
+                                .find()
             }
         },
         props: {
