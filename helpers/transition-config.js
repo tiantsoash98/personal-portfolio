@@ -1,5 +1,6 @@
 import gsap from 'gsap'
 const title = ref(null)
+const ellipse = ref(null)
 
 const pageTransition = {
     name: 'page-transiton',
@@ -15,12 +16,15 @@ const pageTransition = {
     },
     onBeforeEnter: (el) => {
         // Before Enter
+        window
     },
     onEnter: (el, done) => {
         setTimeout(() => { done()}, 10)
     },
     onAfterEnter: (el, done) => {
-        title.value = el.querySelector('.animate__title-in')
+        window.scrollTo(0, 0)
+        title.value = el.querySelector(".animate__title-in")
+        ellipse.value = el.querySelector(".animate__ellipse-in")
 
         const tl = gsap.timeline({
             paused: true,
@@ -30,6 +34,9 @@ const pageTransition = {
 
         if(title.value)
             tl.add(timelineTitleIn(), '-=1.1')
+
+        if(ellipse.value)
+            tl.add(timelineEllipseIn(), '-=1')
         
         tl.restart()
     }
@@ -89,6 +96,28 @@ function timelineTitleIn (el){
         .from(words, { 
             yPercent: 100,
             stagger: 0.04,
+        })
+
+    return tl
+}
+
+function timelineEllipseIn (el){
+    let ellipseInitialScale = ellipse.value.dataset.scale || 1
+
+    const tl = gsap.timeline({
+        defaults: {
+            duration: 1.5,
+            ease: "power2.out"
+        },
+    })  
+
+    tl
+        .fromTo(ellipse.value, { 
+            scaleX: ellipseInitialScale,
+            scaleY: 0
+        }, {
+            scaleX: ellipseInitialScale,
+            scaleY: ellipseInitialScale
         })
 
     return tl

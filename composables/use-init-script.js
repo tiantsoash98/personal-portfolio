@@ -18,7 +18,6 @@ export default () => {
         
         // Play Page loader out when everything ready if once
         initPageLoader()
-        console.log('Init done')
     }
 
     const destroy = () => {

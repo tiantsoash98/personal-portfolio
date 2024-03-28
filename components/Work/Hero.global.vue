@@ -22,9 +22,9 @@
             <div class="row">
                  <div class="work-hero__content-wrapper col-full col-sm-4 col-md-6 col-lg-4">
                     <h1 class="text-visually-hidden">{{ project }}</h1>
-                    <div class="work-hero__title title-h1 split-type animate__title-in">{{ project }}</div>
+                    <div class="work-hero__title title-h1">{{ project }}</div>
                     <p class="text-visually-hidden"><ContentSlot unwrap="p"/></p>
-                    <div class="work-hero__description title-h5 mt-4"><ContentSlot unwrap="p"/></div>
+                    <div class="work-hero__description title-h5 mt-4 split-type animate__title-in"><ContentSlot unwrap="p"/></div>
                  </div>
             </div>
         </div>      
