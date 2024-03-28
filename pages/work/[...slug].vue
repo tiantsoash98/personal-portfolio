@@ -16,7 +16,12 @@
 </template>  
 
 <script setup>
+import transitionConfig from '../helpers/transition-config'
 const { init, destroy } = useInitScript()
+
+definePageMeta({
+    pageTransition: transitionConfig,
+})
 
 onMounted(() => {
     init()

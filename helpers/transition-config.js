@@ -3,8 +3,8 @@ import gsap from 'gsap'
 const pageTransition = {
     name: 'page-transiton',
     mode: 'out-in',
-    onBeforeLeave: (el, done) => {
-        console.log('On Leave start')
+    onLeave: (el, done) => {
+
         const tl = gsap.timeline({
             paused: true,
             onComplete: done,
@@ -21,12 +21,17 @@ const pageTransition = {
 
         tl.restart()
     },
+    onBeforeEnter: (el) => {
+        el.style.opacity = 0
+        // el.querySelectorAll('.split-type--word')
+        //     .forEach(function(word){
+        //         word.style.transform = 'translate(0%, 100%)'
+        //     })
+    },
     onEnter: (el, done) => {
-        console.log('On Enter')
-        setTimeout(() => { done( )}, 10)
+        setTimeout(() => { done()}, 10)
     },
     onAfterEnter: (el, done) => {
-        console.log('After enter')
 
         const tl = gsap.timeline({
             paused: true,
@@ -38,20 +43,22 @@ const pageTransition = {
         })  
         
         tl
-            .from(el, { 
-                opacity: 0,
+            .to(el, { 
+                opacity: 1,
             })
 
-        let delay = 0
+        // let delay = 0
 
-        el.querySelectorAll('.animate__title-in .split-type--word')
-            .forEach(function(word){
-                tl.from(word, { 
-                    yPercent: 100,
-                    delay: delay,
-                })
-                delay += 0.04
-            })
+        // el.querySelectorAll('.split-type--word')
+        //     .forEach(function(word){
+        //         console.log('Word')
+        //         tl.to(word, { 
+        //             yPercent: 0,
+        //             delay: delay
+        //         }, 0)
+
+        //         delay += 0.04
+        //     })
             
         
         tl.restart()

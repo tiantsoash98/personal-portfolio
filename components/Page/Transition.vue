@@ -2,7 +2,7 @@
     <div :class="['page-transition', { 'transitioning': pageTransitionState }]">
         <div class="page-transition__frame overlay"></div>
         <div class="page-transition__wrapper">
-
+            Transition
         </div>
     </div>
 </template>
