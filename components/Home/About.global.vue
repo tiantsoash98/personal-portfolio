@@ -5,10 +5,10 @@
                 <div class="home-about__img-wrapper col-full col-md-6"></div>
                 <div class="home-about__description-wrapper col-full col-md-6">
                     <p class="home-about__description title-h4 split-type section-reveal__title">
-                        Hi, bonjour, salama ! I am Tiantsoa, freelance Web designer & Creative designer based in Madagascar. I closely collaborate with agencies and passionate people who want to solve problems through beautiful and user-centered products. 
+                        <ContentSlot unwrap="p"/>
                     </p>
                     <p class="home-about__description title-h4 split-type mt-6 mt-md-12 section-reveal__title">
-                        With a keen focus on user experience and creative interactions, I always aim to create memorable experiences that will set you apart.
+                        <ContentSlot unwrap="p" name="second-paragraph"/>
                     </p>
                     <!-- <ButtonMain 
                         :text="'Get to know me'" 

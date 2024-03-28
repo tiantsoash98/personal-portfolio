@@ -1,4 +1,6 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-    // Middleware
+    if(to.path != from.path){
+        // code here
+    }
 })
   

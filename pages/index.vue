@@ -1,8 +1,16 @@
 <template>
     <main class="page" id="top" data-transition-text="Welcome">
-        <Title>Tiantsoa Rabemananjara | Freelance designer & Creative Developer</Title>
-        <HomeHero/>
-        <HomeAbout/>
+        <ContentDoc>
+            <template #not-found>
+                <h1>Oups...the content was not found</h1>
+                <NuxtLink to="/">
+                <ButtonMain 
+                    :text="'Back home'" 
+                    :hasIcon="true" 
+                />
+                </NuxtLink>
+            </template>
+        </ContentDoc>
         <FeaturedWorksMain/>
         <WorkProcessMain/>
         <ServicesMain/>

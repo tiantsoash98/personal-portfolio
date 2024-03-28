@@ -20,7 +20,7 @@ const pageTransition = {
     onEnter: (el, done) => {
         setTimeout(() => { done()}, 10)
     },
-    onAfterEnter: (el, done) => {
+    onAfterEnter: (el, done) => { // On mounted init has been called
         window.scrollTo(0, 0)
         title.value = el.querySelector(".animate__title-in")
         ellipse.value = el.querySelector(".animate__ellipse-in")
