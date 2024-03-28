@@ -4,6 +4,12 @@
     object-fit: cover;
     object-position: center;
     background-color: var(--color-neutral-900);
+    opacity: 0;
+    transition: opacity var(--default-animation-duration) var(--alias-default-ease); 
+
+    &--loaded {
+        opacity: 1;
+    }
 }
 
 .img-wrapper {

@@ -7,15 +7,18 @@ export default () => {
     const { initEllipse, destroyEllipse } = useEllipse()
     // Split types
     const { initSplitType, destroySplitType } = useSplitType()
+    // Img loaded
+    const { initImgLoaded, destroyImgLoaded } = useImgLoaded()
     // Page load
     const { initPageLoader, destroyPageLoader } = usePageLoader()
+
 
     const init = () => {
         initScrollDown()
         initEllipse()
         initSplitType()
-        initLocalTime()
-        
+        initLocalTime()  
+        initImgLoaded()
         // Play Page loader out when everything ready if once
         initPageLoader()
     }
@@ -26,6 +29,7 @@ export default () => {
         destroySplitType()
         destroyLocalTime()
         destroyPageLoader()
+        destroyImgLoaded()
     }
 
     return { 

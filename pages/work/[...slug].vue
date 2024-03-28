@@ -1,5 +1,5 @@
 <template>
-    <main data-transition-text="Work">
+    <main class="page" data-transition-text="Work">
       <ContentDoc>
         <template #not-found>
             <h1>Oups...the content was not found</h1>

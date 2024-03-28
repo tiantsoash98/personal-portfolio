@@ -1,6 +1,6 @@
 export default () => {
-    var ellipses = null
-    var wrapper = null
+    const ellipses = ref(null)
+    const wrapper = ref(null)
     const fieldY = ref(0)
     const fieldMobileY = ref(0)
     const positionX = ref(0)
@@ -12,7 +12,7 @@ export default () => {
 
     const initEllipse = () => {
         const { gsap } = useGsap()
-        ellipses = document.querySelectorAll('.ellipse__field')
+        ellipses.value = document.querySelectorAll('.ellipse__field')
 
         let breakPoint = 991
         let mm = gsap.matchMedia()
@@ -25,17 +25,18 @@ export default () => {
         (context) => {
             let { isDesktop, isMobile } = context.conditions;
 
-            ellipses.forEach((ellipse) => {
+            ellipses.value = document.querySelectorAll('.ellipse__field')
+            ellipses.value.forEach((ellipse) => {
                 // Init values from attribute
                 initValues(ellipse)
                 ellipse.style.zIndex = zIndex.value
                 ellipse.style.top = isDesktop ? fieldY.value + '%' : fieldMobileY.value + '%'
                 ellipse.style.zIndex = zIndex.value
 
-                wrapper = ellipse.querySelector('.ellipse__wrapper')
-                wrapper.style.top = isDesktop ? positionY.value + '%' : positionMobileY.value + '%'
-                wrapper.style.left = isDesktop ? positionX.value + '%' : positionMobileX.value + '%'
-                wrapper.style.transform = 'scale(' + scale.value + ')'  
+                wrapper.value = ellipse.querySelector('.ellipse__wrapper')
+                wrapper.value.style.top = isDesktop ? positionY.value + '%' : positionMobileY.value + '%'
+                wrapper.value.style.left = isDesktop ? positionX.value + '%' : positionMobileX.value + '%'
+                wrapper.value.style.transform = 'scale(' + scale.value + ')'  
             })
 
             return () => {
@@ -62,7 +63,8 @@ export default () => {
 
     const destroyEllipse = () => {
         const { gsap } = useGsap()
-        ellipses = null
+        ellipses.value = null
+        wrapper.value = null
         window.removeEventListener("resize", gsap.matchMediaRefresh)
     }
 
