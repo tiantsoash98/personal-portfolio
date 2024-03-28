@@ -27,4 +27,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['gsap'],
   },
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.BASE_URL,
+    }
+  }
 })
