@@ -96,7 +96,7 @@ const target = computed(() => {
         opacity: 0.4;
     }
     &__img-wrapper {
-        min-height: 80vh;
+        height: var(--featured-works-item-img-height);
         &:hover {
             #{$root}__img {
                 transform: scale(1);

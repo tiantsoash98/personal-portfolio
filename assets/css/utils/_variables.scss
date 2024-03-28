@@ -114,6 +114,7 @@ $breakpoints:(
 
     // Custom variables
     --ellipse-field-height: 80vh;
+    --featured-works-item-img-height: 60vh;
 }
 
 // md
@@ -156,5 +157,7 @@ $breakpoints:(
         --title-h3: 3.1rem;
         --title-h4: 2.44rem;
         --title-h5: 1.77rem;
+
+        --featured-works-item-img-height: 80vh;
     }
 }
