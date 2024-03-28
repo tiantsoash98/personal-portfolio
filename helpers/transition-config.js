@@ -1,4 +1,5 @@
 import gsap from 'gsap'
+const title = ref(null)
 
 const pageTransition = {
     name: 'page-transiton',
@@ -6,63 +7,91 @@ const pageTransition = {
     onLeave: (el, done) => {
         const tl = gsap.timeline({
             paused: true,
-            onComplete: done,
-            defaults: {
-                duration: 0.6,
-                ease: "power2.out",
-            }
+            onComplete: done
         })  
-      
-        tl
-            .set('.page-transition', { 
-                display: 'block',
-            })
-            .set('.page-transition__text', { 
-                yPercent: 100,
-            })
-
-        tl
-            .to('.page-transition__frame', { 
-                opacity: 1,
-            })
-            .to('.page-transition__text', { 
-                yPercent: 0,
-            })
-
+        tl.add(timelineFrameIn())
+        
         tl.restart()
     },
     onBeforeEnter: (el) => {
-
+        // Before Enter
     },
     onEnter: (el, done) => {
         setTimeout(() => { done()}, 10)
     },
     onAfterEnter: (el, done) => {
+        title.value = el.querySelector('.animate__title-in')
 
         const tl = gsap.timeline({
             paused: true,
-            onComplete: done,
-            defaults: {
-                duration: 0.6,
-                ease: "power2.in",
-            }
+            onComplete: done
         })  
-        
-        tl
-            .to('.page-transition__text', { 
-                yPercent: -100,
-            })
-            .to('.page-transition__frame', { 
-                opacity: 0,
-            })
-            .to('.page-transition', { 
-                display: 'none',
-            }, '<')
+        tl.add(timelineFrameOut())
 
-            
+        if(title.value)
+            tl.add(timelineTitleIn(), '-=1.1')
         
         tl.restart()
     }
+}
+
+function timelineFrameIn (el){
+    const tl = gsap.timeline({
+        defaults: {
+            duration: 0.6,
+            ease: "power2.inOut",
+        }
+    })  
+    
+    tl
+        .set('.page-transition', { 
+            display: 'block',
+        })
+
+    tl
+        .to('.page-transition__frame', { 
+            opacity: 1,
+        }, '<')
+
+    return tl
+}
+
+function timelineFrameOut (el){
+    const tl = gsap.timeline({
+        defaults: {
+            duration: 0.6,
+            ease: "power2.inOut",
+        }
+    })  
+    
+    tl
+        .to('.page-transition__frame', { 
+            opacity: 0,
+        }, '<')
+        .to('.page-transition', { 
+            display: 'none',
+        })
+
+    return tl
+}
+
+function timelineTitleIn (el){
+    var words = title.value.querySelectorAll('.split-type--word')
+
+    const tl = gsap.timeline({
+        defaults: {
+            duration: 1,
+            ease: "power2.out"
+        },
+    })  
+
+    tl
+        .from(words, { 
+            yPercent: 100,
+            stagger: 0.04,
+        })
+
+    return tl
 }
 
 export default pageTransition;

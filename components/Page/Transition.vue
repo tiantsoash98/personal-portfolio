@@ -2,9 +2,7 @@
     <div class="page-transition">
         <div class="page-transition__frame overlay"></div>
         <div class="page-transition__wrapper">
-            <div class="page-transition__line-wrapper">
-                <div class="page-transition__text title-h1">{{ pageTransitionText }}</div>
-            </div>
+
         </div>
     </div>
 </template>
@@ -23,7 +21,7 @@ const pageTransitionText = usePageTransitionText()
     bottom: 0;
     width: 100%;
     height: 100dvh;
-    z-index: var(--z-index-loader);
+    z-index: var(--z-index-transition);
 
     &__frame {
         opacity: 0;
@@ -40,6 +38,7 @@ const pageTransitionText = usePageTransitionText()
     }
     &__line-wrapper {
         overflow: hidden;
+        text-align: center;
     }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <main class="page" id="top">
+    <main class="page" id="top" data-transition-text="Welcome">
         <Title>Tiantsoa Rabemananjara | Freelance designer & Creative Developer</Title>
         <HomeHero/>
         <HomeAbout/>
@@ -22,7 +22,7 @@ onMounted(() => {
     init()
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
     destroy()
 })
 </script>

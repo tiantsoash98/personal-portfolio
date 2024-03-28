@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main data-transition-text="Work">
       <ContentDoc>
         <template #not-found>
             <h1>Oups...the content was not found</h1>
@@ -27,7 +27,7 @@ onMounted(() => {
     init()
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
     destroy()
 })
 </script>

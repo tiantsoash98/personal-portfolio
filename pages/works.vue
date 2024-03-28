@@ -1,5 +1,5 @@
 <template>
-    <main class="page">
+    <main class="page" data-transition-text="Works">
         <section class="section works">
             <div class="works__ellipse-wrapper">
                 <div class="ellipse-decor"></div>
@@ -25,7 +25,7 @@ onMounted(() => {
     init()
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
     destroy()
 })
 </script>
