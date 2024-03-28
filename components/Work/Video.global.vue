@@ -7,6 +7,8 @@
                         :src="video" 
                         class="video"
                         autoplay muted loop playsinline
+                        width="1660"
+                        height="1038"
                     >
                     </video>
                 </div>
