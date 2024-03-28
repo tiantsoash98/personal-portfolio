@@ -11,7 +11,6 @@ export default () => {
     const { initPageLoader, destroyPageLoader } = usePageLoader()
 
     const init = () => {
-        console.log('Init start')
         initScrollDown()
         initEllipse()
         initSplitType()
@@ -19,7 +18,6 @@ export default () => {
         
         // Play Page loader out when everything ready if once
         initPageLoader()
-        console.log('Init finished')
     }
 
     const destroy = () => {
