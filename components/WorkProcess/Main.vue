@@ -8,28 +8,18 @@
             </div>
             <div class="border-item"></div>
             <div class="work-process__header-wrapper row mt-16">
-                <h3 class="work-process__label col-full col-md-6 paragraph-text">My work process</h3>
-                <p class="work-process__label col-full col-md-6 title-h3">A clear process is the key to successful projects. These five steps are what I closely follow to create high-quality products.</p>
+                <h3 class="work-process__label col-full col-md-6 paragraph-text">{{ workProcess.title }}</h3>
+                <p class="work-process__label col-full col-md-6 title-h3">{{ workProcess.description }}</p>
             </div>
-            <div class="work-process__items-wrapper row mt-20 mt-md-40" role="list">  
-                <WorkProcessItem
-                    v-for="(item, index) in workProcess"
-                    :key="index"
-                    role="listitem" 
-                    :index="`0${ index }`"
-                    :title="item.title"
-                    :description="item.description"
-                    class="col-full col-sm-6 col-lg-4"
-                />
-            </div>
+            <ContentRenderer :value="workProcess" class="work-process__items-wrapper row mt-20 mt-md-40" role="list" />
         </div>
     </section>
 </template>
 
 <script setup>
 const workProcess = await queryContent('_partials','work-process')
-                                .where({ _partial: true })
-                                .find()
+                        .where({ _partial: true })
+                        .findOne()
 </script>
 
 <style lang="scss" scoped>
