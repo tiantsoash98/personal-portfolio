@@ -5,7 +5,7 @@
                 <div :class="contentWrapperFullClass">
                     <div class="featured-works-item__main-infos">
                         <div class="featured-works-item__title">{{ title }}</div>
-                        <div class="featured-works-item__title title-h4 mt-2">{{ description }}</div>
+                        <div class="featured-works-item__title title-h3 mt-2">{{ description }}</div>
                     </div>
                     <div class="featured-works-item__second-infos mt-8 mt-md-10">
                         <div class="featured-works-item__list-wrapper">
@@ -62,8 +62,8 @@ const contentWrapperFullClass = computed(() => {
 })
 
 const imgWrapperFullClass = computed(() => {
-    if(props.isInverted) return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6 order-1"
-    return "featured-works-item__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6 col-start-md-7 order-1 order-md-2"
+    if(props.isInverted) return "featured-works-item__img-wrapper img-wrapper col-full col-md-6 order-1"
+    return "featured-works-item__img-wrapper img-wrapper col-full col-md-6 col-start-md-7 order-1 order-md-2"
 })
 
 const target = computed(() => {
@@ -96,7 +96,7 @@ const target = computed(() => {
         opacity: 0.4;
     }
     &__img-wrapper {
-        min-height: 50vh;
+        min-height: 80vh;
         &:hover {
             #{$root}__img {
                 transform: scale(1);
@@ -128,7 +128,7 @@ const target = computed(() => {
         pointer-events: none;
         color: var(--color-neutral-0);
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding: var(--spacing-20);
     }

@@ -2,7 +2,7 @@
     <section class="work-gallery mb-10 mb-md-40">
         <div class="container">
             <div class="row">
-                <div class="work-gallery__img-wrapper img-wrapper img-wrapper--radius col-full col-md-6">
+                <div class="work-gallery__img-wrapper img-wrapper col-full col-md-6">
                     <nuxt-img
                         :src="imgLeft"
                         class="work-gallery__img img img-load" 
@@ -11,7 +11,7 @@
                         loading="lazy"
                     />
                 </div>
-                <div class="work-gallery__img-wrapper img-wrapper img-wrapper--radius  col-full col-md-6">
+                <div class="work-gallery__img-wrapper img-wrapper col-full col-md-6">
                     <nuxt-img
                         :src="imgRight"
                         class="work-gallery__img img img-load" 

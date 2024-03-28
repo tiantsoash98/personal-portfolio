@@ -4,7 +4,7 @@
             v-for="(work, index) in works"
             :key="work.link"
             role="listitem" 
-            class="mb-16 mb-md-40"
+            class="mb-16 mb-md-60"
             :index="fullIndex(index)"
             :title="work.project"
             :description="work.description"
