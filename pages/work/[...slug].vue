@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main data-transition-text="Work">
       <ContentDoc>
         <template #not-found>
             <h1>Oups...the content was not found</h1>
@@ -16,14 +16,19 @@
 </template>  
 
 <script setup>
+import transitionConfig from '../helpers/transition-config'
 const { init, destroy } = useInitScript()
+
+definePageMeta({
+    pageTransition: transitionConfig,
+})
 
 onMounted(() => {
     init()
 })
 
-onUnmounted(() => {
-  destroy()
+onBeforeUnmount(() => {
+    destroy()
 })
 </script>
 

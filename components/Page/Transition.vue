@@ -1,5 +1,5 @@
 <template>
-    <div :class="['page-transition', { 'transitioning': pageTransitionState }]">
+    <div class="page-transition">
         <div class="page-transition__frame overlay"></div>
         <div class="page-transition__wrapper">
 
@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-const pageTransitionState = usePageTransitionState()
+const pageTransitionText = usePageTransitionText()
 </script>
 
 <style lang="scss" scoped>
@@ -21,7 +21,7 @@ const pageTransitionState = usePageTransitionState()
     bottom: 0;
     width: 100%;
     height: 100dvh;
-    z-index: var(--z-index-loader);
+    z-index: var(--z-index-transition);
 
     &__frame {
         opacity: 0;
@@ -35,6 +35,10 @@ const pageTransitionState = usePageTransitionState()
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    &__line-wrapper {
+        overflow: hidden;
+        text-align: center;
     }
 }
 </style>

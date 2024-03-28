@@ -1,5 +1,5 @@
 <template>
-    <main class="page">
+    <main class="page" data-transition-text="Works">
         <section class="section works">
             <div class="works__ellipse-wrapper">
                 <div class="ellipse-decor"></div>
@@ -14,7 +14,20 @@
 </template>
 
 <script setup>
+import transitionConfig from '../helpers/transition-config'
+const { init, destroy } = useInitScript()
 
+definePageMeta({
+    pageTransition: transitionConfig,
+})
+
+onMounted(() => {
+    init()
+})
+
+onBeforeUnmount(() => {
+    destroy()
+})
 </script>
 
 <style lang="scss" scoped>

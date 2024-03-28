@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-full col-md-6 col-lg-8">
                 <h1 class="text-visually-hidden">{{ headline }}</h1>
-                <div class="title-h1">{{ headline }}</div>
+                <div class="title-h1 animate__title-in split-type">{{ headline }}</div>
             </div>
             <div class="page-headline__subheadline col-full col-md-6 col-lg-3">
                 <p class="title-h6">{{ subheadline }}</p>
