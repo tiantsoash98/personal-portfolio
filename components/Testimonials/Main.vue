@@ -77,16 +77,11 @@
         async setup() {
             return {
                 modules: [EffectFade, Navigation, Pagination],
-                testimonials: await queryContent('_partials','testimonials')
+                testimonials: await queryContent('_partials','testimonial')
                                 .where({ _partial: true })
                                 .find()
             }
         },
-        props: {
-            name: String,
-            role: String,
-            content: String,
-        }
     }
 </script>
 
