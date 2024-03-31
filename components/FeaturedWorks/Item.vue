@@ -43,6 +43,7 @@
                     </NuxtLink>
                 </figure>
             </div>
+            <div class="border-item mt-16 mt-md-20"></div>
         </div>
     </article>
 </template>
@@ -59,7 +60,7 @@ const props = defineProps({
     imgWidth: Number,
     imgHeight: Number,
     path: String,
-    isInverted: Boolean
+    isInverted: Boolean,
 })
 
 const contentWrapperFullClass = computed(() => {
@@ -80,6 +81,12 @@ const target = computed(() => {
 <style lang="scss" scoped>
 .featured-works-item {
     $root:&;
+
+    &:last-child {
+        & .border-item {
+            display: none;
+        }
+    }
 
     &__content-wrapper {
         display: flex;
@@ -102,7 +109,7 @@ const target = computed(() => {
         opacity: 0.4;
     }
     &__img-wrapper {
-        height: var(--featured-works-item-img-height);
+        min-height: var(--featured-works-item-img-height);
         &:hover {
             #{$root}__img {
                 transform: scale(1);

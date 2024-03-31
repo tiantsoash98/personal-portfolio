@@ -7,7 +7,7 @@
                     <p class="home-about__description title-h4 split-type section-reveal__title">
                         <ContentSlot unwrap="p"/>
                     </p>
-                    <p class="home-about__description title-h4 split-type mt-6 mt-md-12 section-reveal__title">
+                    <p class="home-about__description title-h4 mt-6 mt-md-12 split-type section-reveal__title">
                         <ContentSlot unwrap="p" name="second-paragraph"/>
                     </p>
                     <!-- <ButtonMain 
