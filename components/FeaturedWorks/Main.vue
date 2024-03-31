@@ -1,6 +1,6 @@
 <template>
     <section class="section featured-works" id="works">
-        <div class="border-item mb-20"></div>
+        <div class="border-item mb-10 mb-md-20"></div>
         <FeaturedWorksMarquee/>
         <FeaturedWorksList/>
         <div class="ellipse__field" data-field-y="30" data-position-x="-50" data-position-y="0" data-scale="0.9">

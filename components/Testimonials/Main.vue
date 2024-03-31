@@ -1,12 +1,12 @@
 <template>
-    <section class="section testimonials">
+    <section class="section testimonials" ref="targetSection">
         <div class="container">
             <div class="border-item"></div>
             <div class="testimonials__title-wrapper mt-16">
-                <div class="title-h3">What they say</div>
+                <div class="title-h3 split-type section-reveal__title">What they say</div>
             </div>
             <div class="testimonials__swiper-wrapper mt-8 mt-md-12">
-                <swiper
+                <Swiper
                     :speed="600"
                     :loop="true"
                     :slides-per-view="1"
@@ -21,12 +21,12 @@
                         prevEl: '.swiper__button--prev',
                     }"
                 >
-                    <swiper-slide
+                    <SwiperSlide
                         v-for="(testimonial, index) in testimonials"
                         :key="index"
                     >
                         <ContentRenderer :value="testimonial" />
-                    </swiper-slide>
+                    </SwiperSlide>
                     <div class="row mt-8 mt-md-12">
                         <div class="col-full col-md-5"></div>
                         <div class="swiper__button-wrapper col-full col-md-7">
@@ -50,39 +50,60 @@
                             </div>
                         </div> 
                     </div>
-                </swiper>
+                </Swiper>
             </div>
         </div>
     </section>
 </template>
 
-<script>
-    // Import Swiper Vue.js components
-    import { Swiper, SwiperSlide } from 'swiper/vue';
+<script setup>
+// Swiper
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { EffectFade, Navigation, Pagination } from 'swiper/modules'
+const modules = [EffectFade, Navigation, Pagination]
 
-    // Import Swiper styles
-    import 'swiper/css';
-    import 'swiper/css/effect-fade';
-    import 'swiper/css/navigation';
-    import 'swiper/css/pagination';
+const targetSection = ref(null)
+const { gsap } = useGsap()
+const testimonials = await queryContent('_partials','testimonial')
+                            .where({ _partial: true })
+                            .find()
 
-    // import required modules
-    import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+    
+    
+onMounted(() => {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: targetSection.value,
+            //trigger element - viewport
+            start: "top 80%",
+            end: "top center"
+        }
+    })
+    .add(timelineTitleIn())
+})
 
-    export default {
-        components: {
-            Swiper,
-            SwiperSlide,
+function timelineTitleIn (){
+    var words = targetSection.value.querySelectorAll('.section-reveal__title .split-type--word')
+
+    const tl = gsap.timeline({
+        defaults: {
+            duration: 1,
+            ease: "power2.out"
         },
-        async setup() {
-            return {
-                modules: [EffectFade, Navigation, Pagination],
-                testimonials: await queryContent('_partials','testimonial')
-                                .where({ _partial: true })
-                                .find()
-            }
-        },
-    }
+    })  
+
+    tl
+        .from(words, { 
+            yPercent: 100,
+            stagger: 0.04,
+        })
+
+    return tl
+}
 </script>
 
 <style lang="scss" scoped>
