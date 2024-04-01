@@ -30,8 +30,9 @@ export default () => {
             lenis.value.destroy()
         }
     }
-
+    
     return { 
+        lenis,
         initLenis,
         destroyLenis
     }

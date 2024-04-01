@@ -1,5 +1,7 @@
 export default () => {
     // Local Time
+    const { initLenis, destroyLenis } = useLenis()
+    // Local Time
     const { initLocalTime, destroyLocalTime } = useLocalTime()
     // Scroll window listener
     const { initScrollDown, destroyScrollDown } = useScrollDown()
@@ -16,6 +18,7 @@ export default () => {
 
 
     const init = () => {
+        initLenis()
         initScrollDown()
         initEllipse()
         initSplitType()
@@ -27,6 +30,7 @@ export default () => {
     }
 
     const destroy = () => {
+        destroyLenis()
         destroyScrollDown()
         destroyEllipse()
         destroySplitType()
