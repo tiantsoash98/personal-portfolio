@@ -3,7 +3,7 @@
         <div class="container">
             <div class="border-item"></div>
             <div class="testimonials__title-wrapper mt-16">
-                <div class="title-h3 split-type section-reveal__title">What they say</div>
+                <div class="title-h3 split-type section-reveal__text">What they say</div>
             </div>
             <div class="testimonials__swiper-wrapper mt-8 mt-md-12">
                 <Swiper
@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-// Swiper
+// swiper
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
@@ -65,15 +65,13 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { EffectFade, Navigation, Pagination } from 'swiper/modules'
 const modules = [EffectFade, Navigation, Pagination]
-
 const targetSection = ref(null)
 const { gsap } = useGsap()
+const { textRevealByWord } = useSectionScrollRevealAnimate()
 const testimonials = await queryContent('_partials','testimonial')
                             .where({ _partial: true })
                             .find()
 
-    
-    
 onMounted(() => {
     gsap.timeline({
         scrollTrigger: {
@@ -83,27 +81,8 @@ onMounted(() => {
             end: "top center"
         }
     })
-    .add(timelineTitleIn())
+    .add(textRevealByWord(targetSection))
 })
-
-function timelineTitleIn (){
-    var words = targetSection.value.querySelectorAll('.section-reveal__title .split-type--word')
-
-    const tl = gsap.timeline({
-        defaults: {
-            duration: 1,
-            ease: "power2.out"
-        },
-    })  
-
-    tl
-        .from(words, { 
-            yPercent: 100,
-            stagger: 0.04,
-        })
-
-    return tl
-}
 </script>
 
 <style lang="scss" scoped>

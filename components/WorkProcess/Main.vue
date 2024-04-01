@@ -9,7 +9,7 @@
             <div class="border-item"></div>
             <div class="work-process__header-wrapper row mt-16">
                 <h3 class="work-process__label col-full col-md-6 paragraph-text">{{ workProcess.title }}</h3>
-                <p class="work-process__label col-full col-md-6 title-h3 split-type section-reveal__title">{{ workProcess.description }}</p>
+                <p class="work-process__label col-full col-md-6 title-h3 split-type section-reveal__text">{{ workProcess.description }}</p>
             </div>
             <ContentRenderer :value="workProcess" class="work-process__items-wrapper row mt-20 mt-md-40" role="list" />
         </div>
@@ -19,6 +19,7 @@
 <script setup>
 const targetSection = ref(null)
 const { gsap } = useGsap()
+const { textRevealByWord } = useSectionScrollRevealAnimate()
 const workProcess = await queryContent('_partials','work-process')
                         .where({ _partial: true })
                         .findOne()
@@ -29,30 +30,12 @@ onMounted(() => {
             trigger: targetSection.value,
             //trigger element - viewport
             start: "top 80%",
-            end: "top center"
+            end: "top center",
+            toogleActions: "play restart restart none",
         }
     })
-    .add(timelineTitleIn())
+    .add(textRevealByWord(targetSection))
 })
-
-function timelineTitleIn (){
-    var lines = targetSection.value.querySelectorAll('.section-reveal__title .split-type--line')
-
-    const tl = gsap.timeline({
-        defaults: {
-            duration: 1,
-            ease: "power2.out"
-        },
-    })  
-
-    tl
-        .from(lines, { 
-            yPercent: 100,
-            stagger: 0.09,
-        })
-
-    return tl
-}
 </script>
 
 <style lang="scss" scoped>

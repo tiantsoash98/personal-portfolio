@@ -4,10 +4,10 @@
             <div class="row">
                 <div class="home-about__img-wrapper col-full col-md-6"></div>
                 <div class="home-about__description-wrapper col-full col-md-6">
-                    <p class="home-about__description title-h4 split-type section-reveal__title">
+                    <p class="home-about__description title-h4 split-type section-reveal__text">
                         <ContentSlot unwrap="p"/>
                     </p>
-                    <p class="home-about__description title-h4 mt-6 mt-md-12 split-type section-reveal__title">
+                    <p class="home-about__description title-h4 mt-6 mt-md-12 split-type section-reveal__text">
                         <ContentSlot unwrap="p" name="second-paragraph"/>
                     </p>
                     <!-- <ButtonMain 
@@ -25,37 +25,21 @@
 <script setup>
 const targetSection = ref(null)
 const { gsap } = useGsap()
+const { textRevealByLine } = useSectionScrollRevealAnimate()
 
 onMounted(() => {
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: targetSection.value,
-            //trigger element - viewport
-            start: "top 80%",
-            end: "top center"
-        }
-    })
-    .add(timelineTitleIn())
-})
-
-function timelineTitleIn (){
-    var lines = targetSection.value.querySelectorAll('.section-reveal__title .split-type--line')
-
-    const tl = gsap.timeline({
-        defaults: {
-            duration: 1,
-            ease: "power2.out"
-        },
-    })  
-
-    tl
-        .from(lines, { 
-            yPercent: 100,
-            stagger: 0.09,
+    if(targetSection.value){
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: targetSection.value,
+                //trigger element - viewport
+                start: "top 80%",
+                end: "top center",
+            }
         })
-
-    return tl
-}
+        .add(textRevealByLine(targetSection))
+    } 
+})
 </script>
 
 <style lang="scss" scoped>

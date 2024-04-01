@@ -11,12 +11,11 @@ export default () => {
     }
 
     // Animate title reveal by words
-    const titleRevealByWord = (target) => {
-        const _target = document.querySelector(target)
-        if(!_target.value)
-            return
+    const textRevealByWord = (targetSection) => {
+        if(!targetSection || !targetSection.value)
+            return null
 
-        var words = _target.value.querySelectorAll('.section-reveal__title .split-type--word')
+        var words = targetSection.value.querySelectorAll('.section-reveal__text .split-type--word')
 
         const tl = gsap.timeline({
             defaults: {
@@ -35,12 +34,11 @@ export default () => {
     }
 
     // Animate title reveal by line
-    const titleRevealByLine = (target) => {
-        const _target = document.querySelector(target)
-        if(!_target.value)
-            return
+    const textRevealByLine = (targetSection) => {
+        if(!targetSection || !targetSection.value)
+            return null
 
-        var words = _target.value.querySelectorAll('.section-reveal__title .split-type--line')
+        var lines = targetSection.value.querySelectorAll('.section-reveal__text .split-type--line')
 
         const tl = gsap.timeline({
             defaults: {
@@ -50,7 +48,7 @@ export default () => {
         })  
 
         tl
-            .from(words, { 
+            .from(lines, { 
                 yPercent: 100,
                 stagger: 0.09,
             })
@@ -61,7 +59,7 @@ export default () => {
     return { 
         initSectionScrollRevealAnimate,
         destroySectionScrollRevealAnimate,
-        titleRevealByWord,
-        titleRevealByLine
+        textRevealByWord,
+        textRevealByLine
     }
 }
