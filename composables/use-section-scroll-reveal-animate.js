@@ -72,7 +72,7 @@ export default () => {
 
         tl
             .from(blocks, { 
-                y: '10vh',
+                y: '5vh',
                 opacity: 0,
                 stagger: 0.1,
             })
@@ -102,14 +102,36 @@ export default () => {
         return tl
     }
 
+    // Animate ellipse
+    const ellipseReveal = (targetSection) => {
+        if(!targetSection || !targetSection.value)
+            return null
 
+        var ellipse = targetSection.value.querySelector('.section-reveal__ellipse')
+
+        const tl = gsap.timeline({
+            defaults: {
+                duration: 1.5,
+                ease: "power1.inOut"
+            },
+        })  
+
+        tl
+            .from(ellipse.querySelector('.ellipse__wrapper'), { 
+                scaleX: 0,
+                opacity: 0
+            })
+
+        return tl
+    }
 
     return { 
         initSectionScrollRevealAnimate,
         destroySectionScrollRevealAnimate,
+        borderReveal,
+        ellipseReveal,
+        textBlockReveal,
         textRevealByWord,
         textRevealByLine,
-        textBlockReveal,
-        borderReveal
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <section class="section work-process" ref="targetSection">
         <div class="container">
-            <div class="ellipse__field" data-field-y="20" data-position-x="65" data-scale="1">
+            <div class="ellipse__field section-reveal__ellipse" data-field-y="20" data-position-x="65" data-scale="1">
                 <div class="ellipse__wrapper">
                     <div class="ellipse__decor"></div>
                 </div>
@@ -19,7 +19,7 @@
 <script setup>
 const targetSection = ref(null)
 const { gsap } = useGsap()
-const { textRevealByWord, borderReveal, textBlockReveal } = useSectionScrollRevealAnimate()
+const { textRevealByWord, borderReveal, textBlockReveal, ellipseReveal } = useSectionScrollRevealAnimate()
 const workProcess = await queryContent('_partials','work-process')
                         .where({ _partial: true })
                         .findOne()
@@ -36,7 +36,8 @@ onMounted(() => {
     })
     .add(borderReveal(targetSection))
     .add(textRevealByWord(targetSection), '-=0.8')
-    .add(textBlockReveal(targetSection), '-=1')
+    .add(textBlockReveal(targetSection), '-=1.3')
+    .add(ellipseReveal(targetSection), '-=1.3')
 })
 </script>
 
