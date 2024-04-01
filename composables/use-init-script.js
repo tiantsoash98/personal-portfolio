@@ -7,6 +7,8 @@ export default () => {
     const { initEllipse, destroyEllipse } = useEllipse()
     // Split types
     const { initSplitType, destroySplitType } = useSplitType()
+    // Scroll reveal animate
+    const { initSectionScrollRevealAnimate, destroySectionScrollRevealAnimate } = useSectionScrollRevealAnimate()
     // Img loaded
     const { initImgLoaded, destroyImgLoaded } = useImgLoaded()
     // Page load
@@ -17,6 +19,7 @@ export default () => {
         initScrollDown()
         initEllipse()
         initSplitType()
+        initSectionScrollRevealAnimate()
         initLocalTime()  
         initImgLoaded()
         // Play Page loader out when everything ready if once
@@ -27,6 +30,7 @@ export default () => {
         destroyScrollDown()
         destroyEllipse()
         destroySplitType()
+        destroySectionScrollRevealAnimate()
         destroyLocalTime()
         destroyPageLoader()
         destroyImgLoaded()
