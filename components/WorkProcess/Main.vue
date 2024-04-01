@@ -31,7 +31,6 @@ onMounted(() => {
             //trigger element - viewport
             start: "top 80%",
             end: "top center",
-            toogleActions: "play restart restart none",
         }
     })
     .add(borderReveal(targetSection))

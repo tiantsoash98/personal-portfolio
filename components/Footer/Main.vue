@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer pt-40" id="contact">
+    <footer class="footer pt-40" id="contact" ref="targetSection">
         <FooterCTA/>
         <FooterActions/>
         <div class="ellipse__field" data-field-y="0" data-position-y="0" data-position-mobile-y="10" data-position-mobile-x="-40" data-scale="1">
@@ -11,6 +11,25 @@
 </template>
 
 <script setup>
+const targetSection = ref(null)
+const { gsap } = useGsap()
+
+onMounted(() => {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: targetSection.value,
+            //trigger element - viewport
+            start: "top bottom",
+            end: "bottom bottom",
+            scrub: 3,
+        }
+    })
+    .from(targetSection.value.querySelector('.ellipse__wrapper'), { 
+        scale: 0,
+        opacity: 0,
+    })
+})
+
 
 </script>
 
