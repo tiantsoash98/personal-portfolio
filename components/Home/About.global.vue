@@ -2,8 +2,18 @@
     <section class="section home-about section-reveal" id="about" ref="targetSection">
         <div class="container">
             <div class="row">
-                <div class="home-about__img-wrapper col-full col-md-6"></div>
-                <div class="home-about__description-wrapper col-full col-md-6">
+                <div class="home-about__img-wrapper col-full col-md-4">
+                    <nuxt-img 
+                        src="/tiantsoa-portrait.jpg" 
+                        alt="Tiantsoa Rabemananjara portrait"
+                        width="1536"
+                        height="1310"
+                        class="img home-about__portrait"
+                        sizes="sm:90vw md:50vw lg:50vw 90vw"
+                    />
+                    <div class="home-about__img-overlay overlay"></div>
+                </div>
+                <div class="home-about__description-wrapper col-full col-md-6 col-start-md-7 mt-8 mt-md-0">
                     <p class="home-about__description title-h4 split-type section-reveal__text">
                         <ContentSlot unwrap="p"/>
                     </p>
