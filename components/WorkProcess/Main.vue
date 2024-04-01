@@ -6,7 +6,7 @@
                     <div class="ellipse__decor"></div>
                 </div>
             </div>
-            <div class="border-item"></div>
+            <div class="border-item section-reveal__border"></div>
             <div class="work-process__header-wrapper row mt-16">
                 <h3 class="work-process__label col-full col-md-6 paragraph-text">{{ workProcess.title }}</h3>
                 <p class="work-process__label col-full col-md-6 title-h3 split-type section-reveal__text">{{ workProcess.description }}</p>
@@ -19,7 +19,7 @@
 <script setup>
 const targetSection = ref(null)
 const { gsap } = useGsap()
-const { textRevealByWord } = useSectionScrollRevealAnimate()
+const { textRevealByWord, borderReveal, textBlockReveal } = useSectionScrollRevealAnimate()
 const workProcess = await queryContent('_partials','work-process')
                         .where({ _partial: true })
                         .findOne()
@@ -34,7 +34,9 @@ onMounted(() => {
             toogleActions: "play restart restart none",
         }
     })
-    .add(textRevealByWord(targetSection))
+    .add(borderReveal(targetSection))
+    .add(textRevealByWord(targetSection), '-=0.8')
+    .add(textBlockReveal(targetSection), '-=1')
 })
 </script>
 

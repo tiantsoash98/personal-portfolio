@@ -1,7 +1,7 @@
 <template>
     <section class="section testimonials" ref="targetSection">
         <div class="container">
-            <div class="border-item"></div>
+            <div class="border-item section-reveal__border"></div>
             <div class="testimonials__title-wrapper mt-16">
                 <div class="title-h3 split-type section-reveal__text">What they say</div>
             </div>
@@ -67,7 +67,7 @@ import { EffectFade, Navigation, Pagination } from 'swiper/modules'
 const modules = [EffectFade, Navigation, Pagination]
 const targetSection = ref(null)
 const { gsap } = useGsap()
-const { textRevealByWord } = useSectionScrollRevealAnimate()
+const { textRevealByWord, borderReveal } = useSectionScrollRevealAnimate()
 const testimonials = await queryContent('_partials','testimonial')
                             .where({ _partial: true })
                             .find()
@@ -81,7 +81,8 @@ onMounted(() => {
             end: "top center"
         }
     })
-    .add(textRevealByWord(targetSection))
+    .add(borderReveal(targetSection))
+    .add(textRevealByWord(targetSection), '-=0.8')
 })
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <section class="section services" id="services" ref="targetSection">
         <div class="container">
-            <div class="border-item"></div>
+            <div class="border-item section-reveal__border"></div>
             <div :value="services" class="services__header-wrapper row mt-16">
                 <h3 class="services__label col-full col-md-4 col-lg-4 title-h3 split-type section-reveal__text">What I do</h3>
                 <ServicesItem
@@ -18,7 +18,7 @@
 <script setup>
 const targetSection = ref(null)
 const { gsap } = useGsap()
-const { textRevealByWord } = useSectionScrollRevealAnimate()
+const { textRevealByWord, borderReveal, textBlockReveal } = useSectionScrollRevealAnimate()
 const services  = await queryContent('_partials','services')
                                 .where({ _partial: true })
                                 .find()
@@ -34,7 +34,9 @@ onMounted(() => {
             end: "top center"
         }
     })
-    .add(textRevealByWord(targetSection))
+    .add(borderReveal(targetSection))
+    .add(textRevealByWord(targetSection), '-=0.8')
+    .add(textBlockReveal(targetSection), '-=1')
 })
 </script>
 

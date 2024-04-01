@@ -1,5 +1,5 @@
 <template>
-    <div class="services__item col-full col-md-4 col-lg-4 mt-4 mt-md-0">
+    <div class="services__item col-full col-md-4 col-lg-4 mt-4 mt-md-0 section-reveal__block">
         <h4 class="services__item-title title-h5">{{ title }}</h4>
         <p class="services__item-description mt-4">{{ description }}</p>
     </div>

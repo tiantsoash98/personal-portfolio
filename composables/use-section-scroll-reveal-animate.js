@@ -56,10 +56,60 @@ export default () => {
         return tl
     }
 
+    // Animate text block item
+    const textBlockReveal = (targetSection) => {
+        if(!targetSection || !targetSection.value)
+            return null
+
+        var blocks = targetSection.value.querySelectorAll('.section-reveal__block')
+
+        const tl = gsap.timeline({
+            defaults: {
+                duration: 1,
+                ease: "power2.out"
+            },
+        })  
+
+        tl
+            .from(blocks, { 
+                y: '10vh',
+                opacity: 0,
+                stagger: 0.1,
+            })
+
+        return tl
+    }
+
+    // Animate Border item
+    const borderReveal = (targetSection) => {
+        if(!targetSection || !targetSection.value)
+            return null
+
+        var border = targetSection.value.querySelector('.section-reveal__border')
+
+        const tl = gsap.timeline({
+            defaults: {
+                duration: 1,
+                ease: "power2.out"
+            },
+        })  
+
+        tl
+            .from(border, { 
+                scaleX: 0,
+            })
+
+        return tl
+    }
+
+
+
     return { 
         initSectionScrollRevealAnimate,
         destroySectionScrollRevealAnimate,
         textRevealByWord,
-        textRevealByLine
+        textRevealByLine,
+        textBlockReveal,
+        borderReveal
     }
 }

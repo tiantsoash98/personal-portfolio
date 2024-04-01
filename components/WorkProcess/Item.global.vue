@@ -1,5 +1,5 @@
 <template>
-    <div class="work-process-item col-full col-sm-6 col-lg-4" role="listitem" >
+    <div class="work-process-item col-full col-sm-6 col-lg-4 section-reveal__block" role="listitem" >
         <div class="work-process-item__index callout-text">{{ index }}</div>
         <div class="border-item mt-4"></div>
         <h4 class="work-process-item__title title-h5 mt-6">{{ title }}</h4>
