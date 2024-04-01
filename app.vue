@@ -1,15 +1,19 @@
 <template>
-  <lenis
-    :options="lenisConfig"
-  >
-      <NuxtLayout>
-          <NuxtPage/>
-      </NuxtLayout>
-  </lenis>
+  <NuxtLayout>
+      <NuxtPage/>
+  </NuxtLayout>
 </template>
 
 <script setup>
-import lenisConfig from '../helpers/lenis-config'
+const { initLenis, destroyLenis } = useLenis()
+
+onMounted(() => {
+  initLenis()
+})
+
+onBeforeUnmount(() => {
+  destroyLenis()
+})
 </script>
 
 <style lang="scss">

@@ -1,0 +1,7 @@
+// Detect if not touchscreen
+// Remove scrollbar on not touchscreen
+@media (hover: hover) {
+    html {
+        overflow: hidden;
+    }
+}
