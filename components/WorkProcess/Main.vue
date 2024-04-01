@@ -25,6 +25,7 @@ const workProcess = await queryContent('_partials','work-process')
                         .findOne()
 
 onMounted(() => {
+    // Reveal
     gsap.timeline({
         scrollTrigger: {
             trigger: targetSection.value,

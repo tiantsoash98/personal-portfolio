@@ -29,8 +29,6 @@ onMounted(() => {
         opacity: 0,
     })
 })
-
-
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,5 @@
 <template>
-    <div class="hero pb-12 pt-12">
+    <div class="hero pb-12 pt-12" ref="targetSection">
         <div class="ellipse__field animate__ellipse-in" data-field-y="50" data-field-mobile-y="40"  data-position-x="0" data-position-y="0" data-position-mobile-x="60"  data-scale="1">
             <div class="ellipse__wrapper">
                 <div class="ellipse__decor"></div>
@@ -48,6 +48,23 @@ const props = defineProps({
     email: String,
     linkedin: String,
     instagram: String,
+})
+const targetSection = ref(null)
+const { gsap } = useGsap()
+
+onMounted(() => {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: targetSection.value,
+            //trigger element - viewport
+            start: "bottom bottom",
+            end: "bottom top",
+            scrub: 3,
+        }
+    })
+    .to(targetSection.value.querySelector('.ellipse__wrapper'), { 
+        scale: "-=0.3",
+    })
 })
 </script>
 
