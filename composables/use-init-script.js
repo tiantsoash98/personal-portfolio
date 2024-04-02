@@ -25,7 +25,7 @@ export default () => {
         initSectionScrollRevealAnimate()
         initLocalTime()  
         initImgLoaded()
-        // Play Page loader out when everything ready if once
+        // Play Page loader out when everything ready if first load
         initPageLoader()
     }
 

@@ -23,6 +23,7 @@ export default () => {
         }
     
         requestAnimationFrame(raf)
+        initAnchorScroll()
     }
 
     const destroyLenis = () => {
@@ -31,6 +32,25 @@ export default () => {
         }
     }
     
+    const initAnchorScroll = () => {
+        document.querySelectorAll('a[href^="/#"]').forEach((el) => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault()
+
+                let id = el.getAttribute('href')?.slice(2)
+                if (!id) return
+                
+                const target = document.getElementById(id)
+                if (target) {
+                    lenis.value.scrollTo(target.value, { 
+                        offset: -100, 
+                        duration: 3,
+                    })
+                }
+            })
+        })
+    }
+
     return { 
         lenis,
         initLenis,
