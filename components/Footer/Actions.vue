@@ -14,7 +14,7 @@
                 <div class="footer__right col-full col-md-4">
                     <a href="#top">
                         <div class="cursor-pointer hover-animation">
-                            <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">
+                            <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                                 <div class="hover-animation__item hover-animation__item--main">Back to top</div>
                                 <div class="hover-animation__item hover-animation__item--second">Back to top</div>
                             </div>

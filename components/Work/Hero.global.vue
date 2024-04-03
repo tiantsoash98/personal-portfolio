@@ -40,7 +40,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .work-hero {
-    height: 105vh;
+    height: 105lvh;
 
     &__img-wrapper {
         height: 100%;

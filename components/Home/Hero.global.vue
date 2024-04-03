@@ -70,7 +70,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .hero {
-    height: 100dvh;
+    height: 100lvh;
     
     &__main-wrapper {
         height: 100%;
