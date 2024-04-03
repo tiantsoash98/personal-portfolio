@@ -20,7 +20,14 @@ export default () => {
         }
     
         requestAnimationFrame(raf)
+        initScrollToAnchorOnClick(lenis)
+    }
 
+    const destroyLenis = () => {
+
+    }
+    
+    const initScrollToAnchorOnClick = (lenis) => {
         document.querySelectorAll('a[href*="#"]').forEach((el) => {
             el.addEventListener('click', (e) => {
                 const hashIndex = el.getAttribute('href').indexOf('#')
@@ -33,41 +40,12 @@ export default () => {
 
                     lenis.scrollTo(id, { 
                         offset: -40, 
-                        duration: 1.5
+                        duration: 2,
                     })            
                 }
             })
         })
     }
-
-    const destroyLenis = () => {
-
-    }
-    
-    // const initAnchorScroll = (lenis) => {
-    //     document.querySelectorAll('a[href^="/#"]').forEach((anchor) => {
-    //         anchor.addEventListener('click', (e) => {
-    //             e.preventDefault()
-
-    //             let id = anchor.getAttribute('href')?.slice(1)
-    //             if (!id) return
-
-    //             console.log(id)
-
-    //             lenis.scrollTo(id)
-
-    //             // const target = document.getElementById(id)
-    //             // if (target) {
-                    
-    //             //     lenis.value.scrollTo(target.value, { 
-    //             //         offset: -100, 
-    //             //         duration: 3,
-    //             //     })
-    //             // }
-                
-    //         })
-    //     })
-    // }
 
     return {
         initLenis,
