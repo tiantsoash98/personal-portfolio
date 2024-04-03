@@ -109,10 +109,10 @@ export default () => {
 
         // Animations
         tl
-            .to('.menu', { opacity: 0 })
+            .to('.menu', { opacity: 0 }, '<')
             .to('.menu', { display: 'none' })
-            .to('.header', { mixBlendMode: 'difference' })
-
+            .to('.header', { mixBlendMode: 'difference' }, '<')
+            
         return tl
     }
 
