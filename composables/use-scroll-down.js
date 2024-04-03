@@ -7,7 +7,7 @@ export default () => {
     }
 
     const destroyScrollDown = () => {
-        window.addEventListener("scroll", onScroll)
+        window.removeEventListener("scroll", onScroll)
     }
 
     function onScroll() {

@@ -16,28 +16,26 @@ export default () => {
                 repeat: -1, 
                 duration: 20, 
                 ease: "linear"
-            }).totalProgress(0.5)
+            })
     
             toogleMarqueeDirectionOnScroll()
         }
     }
 
     const toogleMarqueeDirectionOnScroll = () => {
-        const { gsap } = useGsap()
-        
-        watch(scrollDown, (newScrollDirection) => {
+        watch(scrollDown, (newScrollDirection) => {    
             if(marqueeTween.value){
-                gsap.to(marqueeTween.value, {
-                    timeScale: newScrollDirection? 1 : -1 // -1 will reverse the animation
-                })
+                marqueeTween.value.timeScale(newScrollDirection? 1 : -1)
             }
         })
     }
 
     const destroyMarquee = () => {
-        marqueeTween.value = null
+        if(marqueeTween.value){
+            marqueeTween.value.kill()
+            marqueeTween.value = null
+        }
     }
-
 
     return {
         initMarquee,
