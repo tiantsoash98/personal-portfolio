@@ -24,7 +24,28 @@
 </template>
 
 <script setup>
+// https://gsap.com/community/forums/topic/27739-change-marquee-direction-on-scroll/
+import gsap  from 'gsap'
 const scrollDown = useScrollDownState()
+const marqueeTween = ref(null)
+
+watch(scrollDown, (newScrollDirection) => {
+    if(marqueeTween.value){
+        gsap.to(marqueeTween.value, {
+            timeScale: newScrollDirection? 1 : -1 // -1 will reverse the animation
+        })
+    }
+})
+
+onMounted(() => {
+    marqueeTween.value = gsap.to(".featured-works-marquee__wrapper", {
+        xPercent: -100, 
+        repeat: -1, 
+        duration: 20, 
+        ease: "linear"
+    }).totalProgress(0.5)
+})
+
 </script>
 
 <style lang="scss" scoped>
@@ -39,11 +60,6 @@ const scrollDown = useScrollDownState()
         align-items: center;
         flex-shrink: 0;
         gap: var(--spacing-4);
-        animation: marquee-loop 20s linear infinite;
-
-        &--reverse {
-            animation: marquee-loop-reverse 20s linear infinite;
-        }
     }
 }
 </style>
