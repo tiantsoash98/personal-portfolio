@@ -64,6 +64,9 @@ export default () => {
 
         // Initial state
         tl
+            .set('.header', { 
+                mixBlendMode: 'normal'
+            })
             .set('.menu', { 
                 display: 'block', 
                 opacity: 1,
@@ -108,6 +111,7 @@ export default () => {
         tl
             .to('.menu', { opacity: 0 })
             .to('.menu', { display: 'none' })
+            .to('.header', { mixBlendMode: 'difference' })
 
         return tl
     }
