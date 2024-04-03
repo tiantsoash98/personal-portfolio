@@ -7,10 +7,14 @@ html {
     box-sizing: border-box;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    // Disable bounce effect on Safari/ios
-    overscroll-behavior: none;
     font-kerning: none;
     position: relative;
+}
+
+html, body{
+    width: 100%;
+    overscroll-behavior: none;
+    min-height: 100%;
 }
 
 ::selection{
@@ -21,6 +25,10 @@ html {
 body {
     background-color: var(--color-neutral-950);
     color: var(--color-neutral-100);
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 a {

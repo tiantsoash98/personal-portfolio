@@ -1,15 +1,11 @@
 <template>
-  <lenis
-    :options="lenisConfig"
-  >
-      <NuxtLayout>
-          <NuxtPage/>
-      </NuxtLayout>
-  </lenis>
+  <NuxtLayout>
+      <NuxtPage/>
+  </NuxtLayout>
 </template>
 
 <script setup>
-import lenisConfig from '../helpers/lenis-config'
+
 </script>
 
 <style lang="scss">

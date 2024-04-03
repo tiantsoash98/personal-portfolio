@@ -20,7 +20,6 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.scss'],
   modules: [
-    'nuxt-lenis',
     '@nuxt/content',
     '@nuxt/image',
   ],

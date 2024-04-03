@@ -8,36 +8,36 @@
             </div>
             <div class="header-web__links-wrapper col-md-5 col-lg-4">
                 <div class="header-web__link-wrapper header-web__hide-on-scroll">
-                    <NuxtLink to="/#about" class="hover-animation">
+                    <a :href="`${ config.public.baseUrl }/#about`" class="hover-animation">
                         <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                             <div class="hover-animation__item hover-animation__item--main">About</div>
                             <div class="hover-animation__item hover-animation__item--second">Who I am</div>
                         </div>
-                    </NuxtLink>
+                    </a>
                 </div>
                 <div class="header-web__link-wrapper header-web__hide-on-scroll">
-                    <NuxtLink to="/#works" class="hover-animation">
+                    <a :href="`${ config.public.baseUrl }/#works`" class="hover-animation">
                         <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                             <div class="hover-animation__item hover-animation__item--main">Works</div>
                             <div class="hover-animation__item hover-animation__item--second">Projects</div>
                         </div>
-                    </NuxtLink>
+                    </a>
                 </div>
                 <div class="header-web__link-wrapper header-web__hide-on-scroll">
-                    <NuxtLink to="/#services" class="hover-animation">
+                    <a :href="`${ config.public.baseUrl }/#services`" class="hover-animation">
                         <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                             <div class="hover-animation__item hover-animation__item--main">Services</div>
                             <div class="hover-animation__item hover-animation__item--second">What I do</div>
                         </div>
-                    </NuxtLink>
+                    </a>
                 </div>
                 <div class="header-web__link-wrapper header-web__hide-on-scroll">
-                    <NuxtLink to="/#contact" class="hover-animation">
+                    <a href="#contact" class="hover-animation">
                         <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation__wrapper--align-right hover-animation--to-top">
                             <div class="hover-animation__item hover-animation__item--main">Contact</div>
                             <div class="hover-animation__item hover-animation__item--second">Let's talk</div>
                         </div>
-                    </NuxtLink>
+                    </a>
                 </div>
             </div>
             <div class="header-web__menu-wrapper">
@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-
+const config = useRuntimeConfig()
 </script>
 
 <style lang="scss" scoped>

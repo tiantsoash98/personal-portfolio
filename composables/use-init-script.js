@@ -1,5 +1,7 @@
 export default () => {
     // Local Time
+    const { initLenis, destroyLenis } = useLenis()
+    // Local Time
     const { initLocalTime, destroyLocalTime } = useLocalTime()
     // Scroll window listener
     const { initScrollDown, destroyScrollDown } = useScrollDown()
@@ -22,8 +24,9 @@ export default () => {
         initSectionScrollRevealAnimate()
         initLocalTime()  
         initImgLoaded()
-        // Play Page loader out when everything ready if once
+        // Play Page loader out when everything ready if first load
         initPageLoader()
+        initLenis()
     }
 
     const destroy = () => {
@@ -34,6 +37,7 @@ export default () => {
         destroyLocalTime()
         destroyPageLoader()
         destroyImgLoaded()
+        destroyLenis()
     }
 
     return { 
