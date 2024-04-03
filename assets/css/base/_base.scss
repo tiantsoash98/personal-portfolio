@@ -11,24 +11,24 @@ html {
     position: relative;
 }
 
+html, body{
+    width: 100%;
+    overscroll-behavior: none;
+    min-height: 100%;
+}
+
 ::selection{
     background-color: var(--color-neutral-100);
     color: var(--color-neutral-950);
 }
 
-html {
-    // Disable bounce effect on Safari/ios
-    overscroll-behavior: none;
-    scroll-behavior: initial;
-    width: 100%;
-    min-height: 100%;
-}
-
 body {
     background-color: var(--color-neutral-950);
     color: var(--color-neutral-100);
-    width: 100%;
-    min-height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 a {

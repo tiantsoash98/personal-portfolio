@@ -18,7 +18,6 @@ export default () => {
 
 
     const init = () => {
-        initLenis()
         initScrollDown()
         initEllipse()
         initSplitType()
@@ -27,10 +26,10 @@ export default () => {
         initImgLoaded()
         // Play Page loader out when everything ready if first load
         initPageLoader()
+        initLenis()
     }
 
     const destroy = () => {
-        destroyLenis()
         destroyScrollDown()
         destroyEllipse()
         destroySplitType()
@@ -38,6 +37,7 @@ export default () => {
         destroyLocalTime()
         destroyPageLoader()
         destroyImgLoaded()
+        destroyLenis()
     }
 
     return { 
