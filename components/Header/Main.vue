@@ -36,10 +36,8 @@
     top: 0;
     left: 0;
     right: 0;
+    mix-blend-mode: difference;
 
-    &__content-wrapper {
-        mix-blend-mode: difference;
-    }
     &__logo{
         z-index: var(--z-index-nav);
     }
