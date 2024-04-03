@@ -8,7 +8,7 @@
             </div>
             <div class="header-web__links-wrapper col-md-5 col-lg-4">
                 <div class="header-web__link-wrapper header-web__hide-on-scroll">
-                    <a href="#about" class="hover-animation">
+                    <a :href="`${ config.public.baseUrl }/#about`" class="hover-animation">
                         <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                             <div class="hover-animation__item hover-animation__item--main">About</div>
                             <div class="hover-animation__item hover-animation__item--second">Who I am</div>
@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-
+const config = useRuntimeConfig()
 </script>
 
 <style lang="scss" scoped>
