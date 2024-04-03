@@ -16,11 +16,11 @@
                 </div>
             </div>
             <div class="menu__links mt-8 mb-8" role="list">
-                <HeaderMenuLink to="/" title="Home" subtitle="Everything" class="menu-toogler"/>
-                <HeaderMenuLink to="/#about" title="About" subtitle="Who I am" class="menu-toogler"/>
-                <HeaderMenuLink to="/#works" title="Works" subtitle="Projects" class="menu-toogler"/>
-                <HeaderMenuLink to="/#services" title="Services" subtitle="What I do" class="menu-toogler"/>
-                <HeaderMenuLink to="/#contact" title="Contact" subtitle="Let's talk" class="menu-toogler"/>
+                <HeaderMenuLink :to="config.public.baseUrl" title="Home" subtitle="Everything" class="menu-toogler"/>
+                <HeaderMenuLink :to="`${ config.public.baseUrl }/#about`" title="About" subtitle="Who I am" class="menu-toogler"/>
+                <HeaderMenuLink :to="`${ config.public.baseUrl }/#works`" title="Works" subtitle="Projects" class="menu-toogler"/>
+                <HeaderMenuLink :to="`${ config.public.baseUrl }/#services`" title="Services" subtitle="What I do" class="menu-toogler"/>
+                <HeaderMenuLink to="#contact" title="Contact" subtitle="Let's talk" class="menu-toogler"/>
             </div>
             <div class="menu__footer">
                 <div class="menu__box menu__box--left">
@@ -40,6 +40,7 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig()
 const { initHeaderMenu, destroyHeaderMenu } = useHeaderMenu()
 
 onMounted(() => {

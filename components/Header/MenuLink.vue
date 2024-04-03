@@ -1,6 +1,6 @@
 <template>
     <div class="menu-link mb-8" role="listitem">
-        <NuxtLink :to="to" class="menu-link__container">
+        <a :href="to" class="menu-link__container">
             <div class="menu-link__wrapper pb-4 pb-md-5">
                 <div class="menu-link__title menu-link__text-transition title-h2">{{ title }}</div>
                 <div class="menu-link__subtitle menu-link__text-transition">{{ subtitle }}</div>
@@ -10,7 +10,7 @@
                 <div class="border-item menu-link__border menu-link__border--second"></div>
             </div>
             
-        </NuxtLink>
+        </a>
     </div>
 </template>
 

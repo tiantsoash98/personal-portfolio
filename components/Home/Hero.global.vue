@@ -13,14 +13,14 @@
                     <div class="title-h1 split-type animate__title-in"><ContentSlot unwrap="p"/></div>
                 </div>
                 <div class="hero__button-wrapper col-full col-md-4 mt-8 mt-md-0">
-                    <NuxtLink to="/#works">
+                    <a href="#works">
                         <ButtonMain 
                             :text="'Explore my work'" 
                             :hasIcon="true"
                             icon="IconArrowDown"
                             animate-direction="to-bottom"
                         />
-                    </NuxtLink>
+                    </a>
                 </div>
             </div>
             <div class="hero__footer row">

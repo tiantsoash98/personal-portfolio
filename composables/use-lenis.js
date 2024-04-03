@@ -32,7 +32,7 @@ export default () => {
                     e.preventDefault()
 
                     lenis.scrollTo(id, { 
-                        offset: -70, 
+                        offset: -40, 
                         duration: 1.5
                     })            
                 }

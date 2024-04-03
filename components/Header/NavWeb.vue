@@ -16,7 +16,7 @@
                     </a>
                 </div>
                 <div class="header-web__link-wrapper header-web__hide-on-scroll">
-                    <a href="#works" class="hover-animation">
+                    <a :href="`${ config.public.baseUrl }/#works`" class="hover-animation">
                         <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                             <div class="hover-animation__item hover-animation__item--main">Works</div>
                             <div class="hover-animation__item hover-animation__item--second">Projects</div>
@@ -24,7 +24,7 @@
                     </a>
                 </div>
                 <div class="header-web__link-wrapper header-web__hide-on-scroll">
-                    <a href="#services" class="hover-animation">
+                    <a :href="`${ config.public.baseUrl }/#services`" class="hover-animation">
                         <div class="hover-animation__wrapper hover-animation__wrapper--text hover-animation--to-top">
                             <div class="hover-animation__item hover-animation__item--main">Services</div>
                             <div class="hover-animation__item hover-animation__item--second">What I do</div>
