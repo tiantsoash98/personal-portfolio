@@ -13,6 +13,8 @@ export default () => {
     const { initSectionScrollRevealAnimate, destroySectionScrollRevealAnimate } = useSectionScrollRevealAnimate()
     // Img loaded
     const { initImgLoaded, destroyImgLoaded } = useImgLoaded()
+    // Marquee
+    const { initMarquee, destroyMarquee } = useMarquee()
     // Page load
     const { initPageLoader, destroyPageLoader } = usePageLoader()
 
@@ -24,6 +26,7 @@ export default () => {
         initSectionScrollRevealAnimate()
         initLocalTime()  
         initImgLoaded()
+        initMarquee()
         // Play Page loader out when everything ready if first load
         initPageLoader()
         initLenis()
@@ -37,6 +40,7 @@ export default () => {
         destroyLocalTime()
         destroyPageLoader()
         destroyImgLoaded()
+        destroyMarquee()
         destroyLenis()
     }
 

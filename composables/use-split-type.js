@@ -43,6 +43,7 @@ export default () => {
 
     const destroySplitType = () => {
         revertSplit()
+        window.removeEventListener("resize", resetSplit)
     }
 
     return { 
