@@ -2,13 +2,7 @@
     <main class="page" data-transition-text="Work">
       <ContentDoc>
         <template #not-found>
-            <h1>Oups...the content was not found</h1>
-            <NuxtLink to="/">
-              <ButtonMain 
-                  :text="'Back home'" 
-                  :hasIcon="true" 
-              />
-            </NuxtLink>
+            <ContentNotFound/>
         </template>
       </ContentDoc>
       <FeaturedWorksMain/>

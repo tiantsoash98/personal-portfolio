@@ -10,7 +10,7 @@ export default () => {
         const { gsap } = useGsap()
         var marquees = document.querySelectorAll('.marquee')
         
-        if(marquees){
+        if(marquees.length){
             marqueeTween.value = gsap.to(".marquee", {
                 xPercent: -100, 
                 repeat: -1, 

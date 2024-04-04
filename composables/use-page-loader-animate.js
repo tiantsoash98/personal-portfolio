@@ -34,7 +34,9 @@ export default () => {
     function timelineLoaderOutAnimations () {
         const tl = gsap.timeline()  
         tl.add(timelineSlides())
-        tl.add(timelineLoaderFrame(), '-=0.5')
+
+        if(document.querySelector('.page-loader__frame'))
+            tl.add(timelineLoaderFrame(), '-=0.5')
 
         if(title.value)
             tl.add(timelineTitleIn(), '-=1.1')
@@ -56,12 +58,14 @@ export default () => {
             },
         })  
         
-        tl
-            .to('.page-loader__slide--visible', { 
-                yPercent: -100,
-                delay: slideAppearDuration
-            })
-
+        if(document.querySelector('.page-loader__slide--visible')) {
+            tl
+                .to('.page-loader__slide--visible', { 
+                    yPercent: -100,
+                    delay: slideAppearDuration
+                })
+        }
+        
         // Animations
         slides.value.forEach(slide => {
             tl
