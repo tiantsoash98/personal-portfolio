@@ -28,14 +28,19 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/image',
+    'nuxt-gtag',
     '@nuxtjs/seo'
   ],
   build: {
     transpile: ['gsap'],
   },
+  gtag: {
+    id: process.env.NUXT_PUBLIC_GTAG_ID,
+  },
   runtimeConfig: {
     public: {
       baseUrl: process.env.BASE_URL,
+      gtagId: process.env.NUXT_PUBLIC_GTAG_ID,
     }
   },
 })

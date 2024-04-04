@@ -17,6 +17,7 @@
     "gsap": "^3.12.5",
     "imagesloaded": "^5.0.0",
     "nuxt": "^3.10.3",
+    "nuxt-gtag": "^2.0.5",
     "split-type": "^0.3.4",
     "swiper": "^11.0.7",
     "vue": "^3.4.21",
