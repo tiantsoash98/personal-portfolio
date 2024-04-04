@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  site: {
+    url: process.env.BASE_URL,
+    name: 'Tiantsoa Rabemananjara | Freelance designer & Creative Developer',
+    description: 'Web Designer & Creative Developer helping passionate people grow their business',
+    defaultLocale: 'en',
+  },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -22,6 +28,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/image',
+    '@nuxtjs/seo'
   ],
   build: {
     transpile: ['gsap'],
@@ -31,10 +38,4 @@ export default defineNuxtConfig({
       baseUrl: process.env.BASE_URL,
     }
   },
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/sitemap.xml']
-    }
-  }
 })
