@@ -1,7 +1,7 @@
 .hover-animation {
     --hover-translate-base-distance: 150%;
     --hover-translate-x: 0%;
-    --hover-translate-y: calc(-var(--hover-translate-base-distance));
+    --hover-translate-y: calc(-1 * var(--hover-translate-base-distance));
     $root:&;
     
     &__wrapper {

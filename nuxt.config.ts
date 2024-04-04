@@ -30,5 +30,11 @@ export default defineNuxtConfig({
     public: {
       baseUrl: process.env.BASE_URL,
     }
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/sitemap.xml']
+    }
   }
 })

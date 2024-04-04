@@ -16,7 +16,7 @@ export default () => {
                 repeat: -1, 
                 duration: 20, 
                 ease: "linear"
-            })
+            }).totalProgress(0.5)
     
             toogleMarqueeDirectionOnScroll()
         }
