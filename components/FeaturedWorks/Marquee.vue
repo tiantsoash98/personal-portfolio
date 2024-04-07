@@ -20,6 +20,26 @@
             <span class="featured-works-marquee__word">Featured works</span>
             <span class="featured-works-marquee__separator">—</span>
         </div>
+        <div class="featured-works-marquee__wrapper marquee ml-4">
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+        </div>
+        <div class="featured-works-marquee__wrapper marquee ml-4">
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+        </div>
     </div>
 </template>
 
