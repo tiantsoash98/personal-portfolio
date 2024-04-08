@@ -1,5 +1,5 @@
 ---
-title: Tiantsoa Rabemananjara | Freelance designer & Creative Developer
+title: 
 description: Web designer & creative developer helping passionate people grow their business
 image:
   src: https://tiantsoarabemananjara.com/app-cover.jpg
