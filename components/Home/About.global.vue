@@ -20,12 +20,6 @@
                     <p class="home-about__description title-h4 mt-6 mt-md-12 split-type section-reveal__text">
                         <ContentSlot unwrap="p" name="second-paragraph"/>
                     </p>
-                    <!-- <ButtonMain 
-                        :text="'Get to know me'" 
-                        type="secondary"
-                        :hasIcon="true" 
-                        class="mt-16"
-                    /> -->
                 </div>
             </div>
         </div>

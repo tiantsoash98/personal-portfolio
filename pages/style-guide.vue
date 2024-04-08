@@ -47,7 +47,7 @@
 
 <script setup>
 useHead({
-    title: content.value.metadata.metaTitle,
+    title: 'Style guide',
     meta: [
         { name: 'robots', content: 'noindex, nofollow' }
     ],
