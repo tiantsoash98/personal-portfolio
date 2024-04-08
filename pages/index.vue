@@ -27,6 +27,12 @@ definePageMeta({
     pageTransition: transitionConfig,
 })
 
+useHead({
+    meta: [
+        { name: 'robots', content: 'index, follow' },
+    ],
+})
+
 onMounted(() => {
     init()
 })

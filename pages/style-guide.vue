@@ -46,7 +46,12 @@
 </template>
 
 <script setup>
-
+useHead({
+    title: content.value.metadata.metaTitle,
+    meta: [
+        { name: 'robots', content: 'noindex, nofollow' }
+    ],
+})
 </script>
 
 <style lang="scss" scoped>
