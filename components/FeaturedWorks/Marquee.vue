@@ -9,8 +9,12 @@
             <span class="featured-works-marquee__separator">—</span>
             <span class="featured-works-marquee__word">Featured works</span>
             <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__word">Featured works</span>
+            <span class="featured-works-marquee__separator">—&nbsp;</span>
         </div>
-        <div class="featured-works-marquee__wrapper marquee ml-4">
+        <div class="featured-works-marquee__wrapper marquee">
             <span class="featured-works-marquee__word">Featured works</span>
             <span class="featured-works-marquee__separator">—</span>
             <span class="featured-works-marquee__word">Featured works</span>
@@ -19,26 +23,10 @@
             <span class="featured-works-marquee__separator">—</span>
             <span class="featured-works-marquee__word">Featured works</span>
             <span class="featured-works-marquee__separator">—</span>
-        </div>
-        <div class="featured-works-marquee__wrapper marquee ml-4">
             <span class="featured-works-marquee__word">Featured works</span>
             <span class="featured-works-marquee__separator">—</span>
             <span class="featured-works-marquee__word">Featured works</span>
-            <span class="featured-works-marquee__separator">—</span>
-            <span class="featured-works-marquee__word">Featured works</span>
-            <span class="featured-works-marquee__separator">—</span>
-            <span class="featured-works-marquee__word">Featured works</span>
-            <span class="featured-works-marquee__separator">—</span>
-        </div>
-        <div class="featured-works-marquee__wrapper marquee ml-4">
-            <span class="featured-works-marquee__word">Featured works</span>
-            <span class="featured-works-marquee__separator">—</span>
-            <span class="featured-works-marquee__word">Featured works</span>
-            <span class="featured-works-marquee__separator">—</span>
-            <span class="featured-works-marquee__word">Featured works</span>
-            <span class="featured-works-marquee__separator">—</span>
-            <span class="featured-works-marquee__word">Featured works</span>
-            <span class="featured-works-marquee__separator">—</span>
+            <span class="featured-works-marquee__separator">—&nbsp;</span>
         </div>
     </div>
 </template>

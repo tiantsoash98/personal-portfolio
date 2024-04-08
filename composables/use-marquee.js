@@ -14,7 +14,7 @@ export default () => {
             marqueeTween.value = gsap.to(".marquee", {
                 xPercent: -100, 
                 repeat: -1, 
-                duration: 20, 
+                duration: 22, 
                 ease: "linear"
             }).totalProgress(0.5)
     
