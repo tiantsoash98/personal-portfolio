@@ -1,6 +1,5 @@
 export const usePageLoaderState = () => useState("pageLoaderState", () => "load") // load / loading / loaded
-export const usePageTransitionText = () => useState("pageTransitionText", () => "Hello")
-export const useDefaultCustomEase = () => useState("defaultCustomEase", () => "")
+export const usePageTransitionState = () => useState("pageTransitionState", () => false)
 export const useLocalTimeState = () => useState("localTime", () => "00:00:00 AM GMT+3")
 export const useHeaderMenuState = () => useState("headerMenuState", () => "close") // close / animating-open / open / animating-close
 export const useHeaderStartAnimateScrollPosition = () => useState("headerStartAnimateScrollPosition", () => 150)

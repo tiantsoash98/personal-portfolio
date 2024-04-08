@@ -2,12 +2,12 @@
     <div class="work-hero">
         <div class="work-hero__img-wrapper">
             <nuxt-img
-                :src="img"
+                :src="img.src"
                 class="work-hero__img img img-load" 
                 sizes="sm:100vw md:100vw lg:100vw 100vw"
                 :alt="`${project} main image`"
-                width="1920"
-                height="1080"
+                :width="img.width"
+                :height="img.height"
                 loading="lazy"
             />
             <div class="work-hero__img-filter"></div>
@@ -33,7 +33,7 @@
 
 <script setup>
 const props = defineProps({
-    img: String,
+    img: Object,
     project: String,
 })
 </script>
