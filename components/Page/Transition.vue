@@ -1,14 +1,55 @@
 <template>
     <div class="page-transition">
         <div class="page-transition__frame overlay"></div>
-        <div class="page-transition__wrapper">
-
-        </div>
+        <div class="page-transition__wrapper"></div>
     </div>
 </template>
 
 <script setup>
-const pageTransitionText = usePageTransitionText()
+import gsap from 'gsap'
+const showPageTransition = usePageTransitionState()
+
+watch(showPageTransition, (newVal) => {
+    if(newVal == true){
+        console.log('Watcher')
+        animateTransitionIn()
+            .play(0)
+            .then(() => {
+                console.log('Animate in done')
+                showPageTransition.value = false
+            })
+    }
+})
+
+const animateTransitionIn = () => {
+    const tl = gsap.timeline({
+        paused: true,
+    })  
+    tl.add(timelineFrameIn())
+    
+    return tl
+}
+
+function timelineFrameIn (el){
+    const tl = gsap.timeline({
+        defaults: {
+            duration: 0.6,
+            ease: "power2.inOut",
+        }
+    })  
+    
+    tl
+        .set('.page-transition', { 
+            display: 'block',
+        })
+
+    tl
+        .to('.page-transition__frame', { 
+            opacity: 1,
+        }, '<')
+
+    return tl
+}
 </script>
 
 <style lang="scss" scoped>
