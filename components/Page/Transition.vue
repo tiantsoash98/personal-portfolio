@@ -11,11 +11,9 @@ const showPageTransition = usePageTransitionState()
 
 watch(showPageTransition, (newVal) => {
     if(newVal == true){
-        console.log('Watcher')
         animateTransitionIn()
             .play(0)
             .then(() => {
-                console.log('Animate in done')
                 showPageTransition.value = false
             })
     }
