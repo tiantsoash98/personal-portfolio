@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   site: {
     url: process.env.BASE_URL,
     name: 'Tiantsoa Rabemananjara | Freelance designer & Creative Developer',
-    description: 'Web Designer & Creative Developer helping passionate people grow their business',
+    description: "Hi, I am Tiantsoa, I focus on both web design and development, from concept to launch. Let's work together!",
     defaultLocale: 'en',
   },
   app: {

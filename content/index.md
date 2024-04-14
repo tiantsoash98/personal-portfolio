@@ -1,9 +1,8 @@
 ---
 title: 
-description: Web designer & creative developer helping passionate people grow their business
+description: Hi, I am Tiantsoa, I focus on both web design and development, from concept to launch. Let's work together !
 image:
   src: https://tiantsoarabemananjara.com/app-cover.jpg
-  alt: A screen of Volumen
   width: 540 
   height: 438
 ---

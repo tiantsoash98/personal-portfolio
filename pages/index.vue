@@ -21,6 +21,7 @@
 <script setup>
 import transitionConfig from '../helpers/transition-config'
 const { init, destroy } = useInitScript()
+const runtimeConfig = useRuntimeConfig()
 
 
 definePageMeta({
@@ -31,6 +32,21 @@ useHead({
     meta: [
         { name: 'robots', content: 'index, follow' },
     ],
+    script: [{
+        type: 'application/ld+json',
+        innerHTML: {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Tiantsoa Rabemananjara",
+            "url": runtimeConfig.public.baseUrl,
+            "jobTitle": "Freelance Web designer & Creative Developer",
+            "email": "tiantsoa.sh@gmail.com",
+            "sameAs": [
+                "https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/",
+                "https://www.instagram.com/tiantsoa_sh"
+            ]
+        }
+    }],
 })
 
 onMounted(() => {
