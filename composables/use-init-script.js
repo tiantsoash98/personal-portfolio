@@ -1,5 +1,5 @@
 export default () => {
-    // Local Time
+    // Lenis scroll
     const { initLenis, destroyLenis } = useLenis()
     // Local Time
     const { initLocalTime, destroyLocalTime } = useLocalTime()

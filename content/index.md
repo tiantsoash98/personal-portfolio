@@ -13,7 +13,7 @@ email: mailto:tiantsoa.sh@gmail.com
 linkedin: https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/
 instagram: https://www.instagram.com/tiantsoa_sh/
 ---
-Web designer & creative developer helping passionate people grow their business
+Web designer & creative developer helping companies build high-quality websites
 ::
 
 ::home-about
