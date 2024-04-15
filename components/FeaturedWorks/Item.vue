@@ -34,6 +34,7 @@
                             :height="imgHeight"
                             class="img featured-works-item__img"
                             sizes="sm:90vw md:50vw lg:50vw 90vw"
+                            loading="lazy"
                         />
                         <div class="featured-works-item__img-filter overlay"></div>
                         <div class="featured-works-item__overlay overlay">
