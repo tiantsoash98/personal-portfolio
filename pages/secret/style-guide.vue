@@ -48,9 +48,6 @@
 <script setup>
 useHead({
     title: 'Style guide',
-    meta: [
-        { name: 'robots', content: 'noindex, nofollow' }
-    ],
 })
 </script>
 

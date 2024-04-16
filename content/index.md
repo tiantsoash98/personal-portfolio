@@ -5,6 +5,11 @@ image:
   src: https://tiantsoarabemananjara.com/app-cover.jpg
   width: 540 
   height: 438
+sitemap:
+  loc: /
+  lastmod: 2024-04-14
+  changefreq: monthly
+  priority: 0.8
 ---
 
 ::home-hero

@@ -7,6 +7,10 @@ export default defineNuxtConfig({
     description: "Hi, I am Tiantsoa, I focus on both web design and development, from concept to launch. Let's work together!",
     defaultLocale: 'en',
   },
+  routeRules: {
+    // Don't add any /secret/** URLs to the sitemap.xml
+    '/secret/**': { robots: false },
+  },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {

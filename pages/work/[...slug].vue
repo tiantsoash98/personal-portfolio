@@ -4,6 +4,9 @@
         <template #not-found>
             <ContentNotFound/>
         </template>
+        <template #empty>
+            <ContentEmpty/>
+        </template>
       </ContentDoc>
       <FeaturedWorksMain/>
     </main>
@@ -15,12 +18,6 @@ const { init, destroy } = useInitScript()
 
 definePageMeta({
     pageTransition: transitionConfig,
-})
-
-useHead({
-    meta: [
-        { name: 'robots', content: 'index, follow' },
-    ],
 })
 
 onMounted(() => {
