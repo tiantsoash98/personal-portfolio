@@ -129,7 +129,8 @@ const target = computed(() => {
     }
     &__img {
         transform: scale(1.02);
-        transition: transform var(--default-animation-duration) var(--alias-default-ease);
+        transition: transform var(--default-animation-duration) var(--alias-default-ease),  
+                    opacity var(--default-animation-duration) var(--alias-default-ease);
     }
     &__img-filter {
         pointer-events: none;
