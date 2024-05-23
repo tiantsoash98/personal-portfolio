@@ -18,11 +18,11 @@ email: mailto:tiantsoa.sh@gmail.com
 linkedin: https://www.linkedin.com/in/tiantsoa-rabemananjara-254655152/
 instagram: https://www.instagram.com/tiantsoa_sh/
 ---
-Web designer & creative developer helping companies build high-quality websites
+Web designer & creative developer helping startups grow their business
 ::
 
 ::home-about
-Hi, bonjour, salama ! I am Tiantsoa, freelance web designer & creative developer located in Madagascar. I enjoy collaborating with agencies and people who want to solve problems through beautiful and user-centered products. 
+Hi, bonjour, salama ! I am Tiantsoa, freelance web designer & creative developer located in Madagascar. I enjoy collaborating with startups and people who want to solve problems through beautiful and user-centered products. 
 
 #second-paragraph
 As a creative developer, I focus on both design and development, allowing me to seamlessly handle projects from concept to the final website, with a keen focus on user experience and creative interactions.
