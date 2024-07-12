@@ -14,10 +14,10 @@
                     <div class="home-about__img-overlay overlay"></div>
                 </div>
                 <div class="home-about__description-wrapper col-full col-md-6 col-start-md-7 mt-8 mt-md-0">
-                    <p class="home-about__description title-h4 split-type section-reveal__text">
+                    <p class="home-about__description title-h3 split-type section-reveal__text">
                         <ContentSlot unwrap="p"/>
                     </p>
-                    <p class="home-about__description title-h4 mt-6 mt-md-12 split-type section-reveal__text">
+                    <p class="home-about__description title-h3 mt-6 mt-md-12 split-type section-reveal__text">
                         <ContentSlot unwrap="p" name="second-paragraph"/>
                     </p>
                 </div>

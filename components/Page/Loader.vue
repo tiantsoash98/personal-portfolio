@@ -5,7 +5,6 @@
             <div class="page-loader__slides">
                 <div class="page-loader__slide page-loader__slide--visible">Tiantsoa Rabemananjara</div>
                 <div class="page-loader__slide page-loader__slide--overflow">Web designer</div>
-                <div class="page-loader__slide page-loader__slide--overflow">Creative developer</div>
             </div>
         </div>
     </div>

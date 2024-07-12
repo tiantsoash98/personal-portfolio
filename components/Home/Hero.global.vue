@@ -8,11 +8,11 @@
         <div class="hero__main-wrapper container">
             <div class="hero-spacer"></div>
             <div class="hero__content-wrapper row pt-20 pb-20">
-                <div class="hero__headline-wrapper col-full col-md-8">
+                <div class="hero__headline-wrapper col-5 col-md-6">
                     <h1 class="text-visually-hidden"><ContentSlot unwrap="p"/></h1>
                     <div class="title-h1 split-type animate__title-in"><ContentSlot unwrap="p"/></div>
                 </div>
-                <div class="hero__button-wrapper col-full col-md-4 mt-8 mt-md-0">
+                <div class="hero__button-wrapper col-full col-md-4 col-start-md-9 mt-8 mt-md-0">
                     <a href="#works">
                         <ButtonMain 
                             :text="'Explore my work'" 
