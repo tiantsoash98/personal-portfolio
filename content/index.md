@@ -25,7 +25,7 @@ Web designer helping passionnate startups grow their business
 Hi, bonjour, salama ! I am Tiantsoa, freelance web designer located in Madagascar.
 
 #second-paragraph
-I enjoy collaborating with startups websites by crafting websites in line with their brand identity. 
+I enjoy collaborating with startups by crafting websites in line with their brand identity. 
 ::
 
 
